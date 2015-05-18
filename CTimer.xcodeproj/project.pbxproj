@@ -1,0 +1,791 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58DE530DA26D39611B097703 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D1A6033C50243A7F54501A /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		8E1FCE781AF4C256004F5DD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE771AF4C256004F5DD7 /* main.m */; };
+		8E1FCE7B1AF4C256004F5DD7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE7A1AF4C256004F5DD7 /* AppDelegate.m */; };
+		8E1FCE7E1AF4C256004F5DD7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE7D1AF4C256004F5DD7 /* ViewController.m */; };
+		8E1FCE811AF4C256004F5DD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCE7F1AF4C256004F5DD7 /* Main.storyboard */; };
+		8E1FCE831AF4C256004F5DD7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCE821AF4C256004F5DD7 /* Images.xcassets */; };
+		8E1FCE861AF4C256004F5DD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCE841AF4C256004F5DD7 /* LaunchScreen.xib */; };
+		8E1FCE921AF4C256004F5DD7 /* CTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE911AF4C256004F5DD7 /* CTimerTests.m */; };
+		8E1FCE9E1AF4C326004F5DD7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE9D1AF4C326004F5DD7 /* BaseViewController.m */; };
+		8E1FCEA91AF4C782004F5DD7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCEA81AF4C782004F5DD7 /* SettingsViewController.m */; };
+		8E1FCEAF1AF4C8AE004F5DD7 /* add_timer_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEAC1AF4C8AE004F5DD7 /* add_timer_icon.png */; };
+		8E1FCEB01AF4C8AE004F5DD7 /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEAD1AF4C8AE004F5DD7 /* back_arrow.png */; };
+		8E1FCEB11AF4C8AE004F5DD7 /* settings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEAE1AF4C8AE004F5DD7 /* settings_icon.png */; };
+		8E1FCEB51AF4D09E004F5DD7 /* Timer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCEB41AF4D09E004F5DD7 /* Timer.m */; };
+		8E1FCEBA1AF4D910004F5DD7 /* AddTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCEB91AF4D910004F5DD7 /* AddTimerViewController.m */; };
+		8E1FCEBE1AF4DE5A004F5DD7 /* music_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEBD1AF4DE5A004F5DD7 /* music_icon.png */; };
+		8E2DCB4A1AF9B08500E30F0F /* AlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DCB491AF9B08500E30F0F /* AlarmManager.m */; };
+		8E322ADA1AFCAEF70078517C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E322AD91AFCAEF70078517C /* AudioToolbox.framework */; };
+		8E322AE81AFCB11E0078517C /* Bells.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADB1AFCB11E0078517C /* Bells.caf */; };
+		8E322AE91AFCB11E0078517C /* Classic.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADC1AFCB11E0078517C /* Classic.caf */; };
+		8E322AEA1AFCB11E0078517C /* Digital.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADD1AFCB11E0078517C /* Digital.caf */; };
+		8E322AEB1AFCB11E0078517C /* Paradise.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADE1AFCB11E0078517C /* Paradise.caf */; };
+		8E322AEC1AFCB11E0078517C /* Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADF1AFCB11E0078517C /* Piano.caf */; };
+		8E322AED1AFCB11E0078517C /* Radar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE01AFCB11E0078517C /* Radar.caf */; };
+		8E322AEE1AFCB11E0078517C /* ringtone.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE11AFCB11E0078517C /* ringtone.caf */; };
+		8E322AEF1AFCB11E0078517C /* Silk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE21AFCB11E0078517C /* Silk.caf */; };
+		8E322AF01AFCB11E0078517C /* Singing_Birds.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE31AFCB11E0078517C /* Singing_Birds.caf */; };
+		8E322AF11AFCB11E0078517C /* Sweet_Day.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE41AFCB11E0078517C /* Sweet_Day.caf */; };
+		8E322AF21AFCB11E0078517C /* Tayde.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE51AFCB11E0078517C /* Tayde.caf */; };
+		8E322AF31AFCB11E0078517C /* Trumpets.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE61AFCB11E0078517C /* Trumpets.caf */; };
+		8E322AF41AFCB11E0078517C /* Workout.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE71AFCB11E0078517C /* Workout.caf */; };
+		8E322AF61AFCBD5B0078517C /* Note (default).caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AF51AFCBD5B0078517C /* Note (default).caf */; };
+		8E376C1D1AFB6AC300030489 /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E376C1B1AFB6AC300030489 /* pause_button.png */; };
+		8E376C1E1AFB6AC300030489 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E376C1C1AFB6AC300030489 /* play_button.png */; };
+		8E385CC61B0980DA0045D09E /* void.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E385CC51B0980DA0045D09E /* void.wav */; };
+		8E3B36A81AFA054500ADCF28 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B36A71AFA054500ADCF28 /* EditViewController.m */; };
+		8E3B36AC1AFA060700ADCF28 /* EditTimerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B36AA1AFA060700ADCF28 /* EditTimerTableViewCell.m */; };
+		8E3B36AD1AFA060700ADCF28 /* EditTimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B36AB1AFA060700ADCF28 /* EditTimerTableViewCell.xib */; };
+		8E3B36B11AFA06A800ADCF28 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B36AE1AFA06A800ADCF28 /* menu_icon.png */; };
+		8E3B36B21AFA06A800ADCF28 /* plus_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B36AF1AFA06A800ADCF28 /* plus_icon.png */; };
+		8E3B36B31AFA06A800ADCF28 /* trash_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B36B01AFA06A800ADCF28 /* trash_icon.png */; };
+		8E3D26F91AF8B5A600D01BE5 /* ColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D26F81AF8B5A600D01BE5 /* ColorView.m */; };
+		8E3D26FB1AF8B5B300D01BE5 /* ColorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D26FA1AF8B5B300D01BE5 /* ColorView.xib */; };
+		8E3D26FD1AF8B67200D01BE5 /* check_mark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D26FC1AF8B67200D01BE5 /* check_mark.png */; };
+		8E3D27011AF8D42100D01BE5 /* SoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D27001AF8D42100D01BE5 /* SoundViewController.m */; };
+		8E3D27051AF8D83A00D01BE5 /* SoundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D27031AF8D83A00D01BE5 /* SoundTableViewCell.m */; };
+		8E3D27061AF8D83A00D01BE5 /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D27041AF8D83A00D01BE5 /* SoundTableViewCell.xib */; };
+		8E3D27081AF8D8FB00D01BE5 /* small_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D27071AF8D8FB00D01BE5 /* small_check.png */; };
+		8E3D344E1B08FF2100C3AAAD /* RunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D344D1B08FF2100C3AAAD /* RunViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E1FCE8C1AF4C256004F5DD7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E1FCE6A1AF4C256004F5DD7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E1FCE711AF4C256004F5DD7;
+			remoteInfo = CTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39A0FF0E0A5A06F3621E1EA0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		56D1A6033C50243A7F54501A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C54C7E0C36AB2394EC24A46 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8E1FCE721AF4C256004F5DD7 /* CTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1FCE761AF4C256004F5DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E1FCE771AF4C256004F5DD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8E1FCE791AF4C256004F5DD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8E1FCE7A1AF4C256004F5DD7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8E1FCE7C1AF4C256004F5DD7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8E1FCE7D1AF4C256004F5DD7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8E1FCE801AF4C256004F5DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E1FCE821AF4C256004F5DD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8E1FCE851AF4C256004F5DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		8E1FCE8B1AF4C256004F5DD7 /* CTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1FCE901AF4C256004F5DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E1FCE911AF4C256004F5DD7 /* CTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTimerTests.m; sourceTree = "<group>"; };
+		8E1FCE9C1AF4C326004F5DD7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		8E1FCE9D1AF4C326004F5DD7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		8E1FCEA71AF4C782004F5DD7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		8E1FCEA81AF4C782004F5DD7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		8E1FCEAC1AF4C8AE004F5DD7 /* add_timer_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_timer_icon.png; sourceTree = "<group>"; };
+		8E1FCEAD1AF4C8AE004F5DD7 /* back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_arrow.png; sourceTree = "<group>"; };
+		8E1FCEAE1AF4C8AE004F5DD7 /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_icon.png; sourceTree = "<group>"; };
+		8E1FCEB31AF4D09E004F5DD7 /* Timer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Timer.h; path = CTimer/Timer.h; sourceTree = SOURCE_ROOT; };
+		8E1FCEB41AF4D09E004F5DD7 /* Timer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Timer.m; path = CTimer/Timer.m; sourceTree = SOURCE_ROOT; };
+		8E1FCEB81AF4D910004F5DD7 /* AddTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTimerViewController.h; sourceTree = "<group>"; };
+		8E1FCEB91AF4D910004F5DD7 /* AddTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTimerViewController.m; sourceTree = "<group>"; };
+		8E1FCEBB1AF4DA69004F5DD7 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
+		8E1FCEBC1AF4DAC1004F5DD7 /* CTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTimer-Prefix.pch"; sourceTree = "<group>"; };
+		8E1FCEBD1AF4DE5A004F5DD7 /* music_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music_icon.png; sourceTree = "<group>"; };
+		8E2DCB481AF9B08500E30F0F /* AlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlarmManager.h; path = CTimer/AlarmManager.h; sourceTree = SOURCE_ROOT; };
+		8E2DCB491AF9B08500E30F0F /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlarmManager.m; path = CTimer/AlarmManager.m; sourceTree = SOURCE_ROOT; };
+		8E322AD81AFCAEF70078517C /* CTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CTimer.entitlements; sourceTree = "<group>"; };
+		8E322AD91AFCAEF70078517C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		8E322ADB1AFCB11E0078517C /* Bells.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bells.caf; sourceTree = "<group>"; };
+		8E322ADC1AFCB11E0078517C /* Classic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classic.caf; sourceTree = "<group>"; };
+		8E322ADD1AFCB11E0078517C /* Digital.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Digital.caf; sourceTree = "<group>"; };
+		8E322ADE1AFCB11E0078517C /* Paradise.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Paradise.caf; sourceTree = "<group>"; };
+		8E322ADF1AFCB11E0078517C /* Piano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.caf; sourceTree = "<group>"; };
+		8E322AE01AFCB11E0078517C /* Radar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radar.caf; sourceTree = "<group>"; };
+		8E322AE11AFCB11E0078517C /* ringtone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ringtone.caf; sourceTree = "<group>"; };
+		8E322AE21AFCB11E0078517C /* Silk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Silk.caf; sourceTree = "<group>"; };
+		8E322AE31AFCB11E0078517C /* Singing_Birds.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Singing_Birds.caf; sourceTree = "<group>"; };
+		8E322AE41AFCB11E0078517C /* Sweet_Day.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sweet_Day.caf; sourceTree = "<group>"; };
+		8E322AE51AFCB11E0078517C /* Tayde.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tayde.caf; sourceTree = "<group>"; };
+		8E322AE61AFCB11E0078517C /* Trumpets.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trumpets.caf; sourceTree = "<group>"; };
+		8E322AE71AFCB11E0078517C /* Workout.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Workout.caf; sourceTree = "<group>"; };
+		8E322AF51AFCBD5B0078517C /* Note (default).caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Note (default).caf"; sourceTree = "<group>"; };
+		8E376C1B1AFB6AC300030489 /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
+		8E376C1C1AFB6AC300030489 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
+		8E385CC51B0980DA0045D09E /* void.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = void.wav; sourceTree = "<group>"; };
+		8E3B36A61AFA054500ADCF28 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = CTimer/EditViewController.h; sourceTree = SOURCE_ROOT; };
+		8E3B36A71AFA054500ADCF28 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = CTimer/EditViewController.m; sourceTree = SOURCE_ROOT; };
+		8E3B36A91AFA060700ADCF28 /* EditTimerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTimerTableViewCell.h; path = CTimer/EditTimerTableViewCell.h; sourceTree = SOURCE_ROOT; };
+		8E3B36AA1AFA060700ADCF28 /* EditTimerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTimerTableViewCell.m; path = CTimer/EditTimerTableViewCell.m; sourceTree = SOURCE_ROOT; };
+		8E3B36AB1AFA060700ADCF28 /* EditTimerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditTimerTableViewCell.xib; path = CTimer/EditTimerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
+		8E3B36AE1AFA06A800ADCF28 /* menu_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menu_icon.png; sourceTree = "<group>"; };
+		8E3B36AF1AFA06A800ADCF28 /* plus_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus_icon.png; sourceTree = "<group>"; };
+		8E3B36B01AFA06A800ADCF28 /* trash_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = trash_icon.png; sourceTree = "<group>"; };
+		8E3D26F71AF8B5A600D01BE5 /* ColorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorView.h; sourceTree = "<group>"; };
+		8E3D26F81AF8B5A600D01BE5 /* ColorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorView.m; sourceTree = "<group>"; };
+		8E3D26FA1AF8B5B300D01BE5 /* ColorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorView.xib; sourceTree = "<group>"; };
+		8E3D26FC1AF8B67200D01BE5 /* check_mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_mark.png; sourceTree = "<group>"; };
+		8E3D26FF1AF8D42100D01BE5 /* SoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundViewController.h; sourceTree = "<group>"; };
+		8E3D27001AF8D42100D01BE5 /* SoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundViewController.m; sourceTree = "<group>"; };
+		8E3D27021AF8D83A00D01BE5 /* SoundTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoundTableViewCell.h; sourceTree = "<group>"; };
+		8E3D27031AF8D83A00D01BE5 /* SoundTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundTableViewCell.m; sourceTree = "<group>"; };
+		8E3D27041AF8D83A00D01BE5 /* SoundTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SoundTableViewCell.xib; sourceTree = "<group>"; };
+		8E3D27071AF8D8FB00D01BE5 /* small_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_check.png; sourceTree = "<group>"; };
+		8E3D344C1B08FF2100C3AAAD /* RunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunViewController.h; sourceTree = "<group>"; };
+		8E3D344D1B08FF2100C3AAAD /* RunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E1FCE6F1AF4C256004F5DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58DE530DA26D39611B097703 /* Pods.framework in Frameworks */,
+				8E322ADA1AFCAEF70078517C /* AudioToolbox.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E1FCE881AF4C256004F5DD7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30420FA57D6D3628CCAB296B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				39A0FF0E0A5A06F3621E1EA0 /* Pods.debug.xcconfig */,
+				8C54C7E0C36AB2394EC24A46 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7E215A16164583549F22A005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E322AD91AFCAEF70078517C /* AudioToolbox.framework */,
+				56D1A6033C50243A7F54501A /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8E1FCE691AF4C256004F5DD7 = {
+			isa = PBXGroup;
+			children = (
+				8E1FCE741AF4C256004F5DD7 /* CTimer */,
+				8E1FCE8E1AF4C256004F5DD7 /* CTimerTests */,
+				8E1FCE731AF4C256004F5DD7 /* Products */,
+				30420FA57D6D3628CCAB296B /* Pods */,
+				7E215A16164583549F22A005 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E1FCE731AF4C256004F5DD7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FCE721AF4C256004F5DD7 /* CTimer.app */,
+				8E1FCE8B1AF4C256004F5DD7 /* CTimerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E1FCE741AF4C256004F5DD7 /* CTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8E322AD81AFCAEF70078517C /* CTimer.entitlements */,
+				8E1FCEAA1AF4C8AE004F5DD7 /* Resources */,
+				8E1FCEBB1AF4DA69004F5DD7 /* Global.h */,
+				8E1FCE791AF4C256004F5DD7 /* AppDelegate.h */,
+				8E1FCE7A1AF4C256004F5DD7 /* AppDelegate.m */,
+				8E1FCEB21AF4D07B004F5DD7 /* Model */,
+				8E1FCE9B1AF4C30F004F5DD7 /* Base */,
+				8E1FCE7C1AF4C256004F5DD7 /* ViewController.h */,
+				8E1FCE7D1AF4C256004F5DD7 /* ViewController.m */,
+				8E3D344B1B08FF0900C3AAAD /* Run */,
+				8E3B36A51AFA052900ADCF28 /* EditTimer */,
+				8E1FCEB71AF4D8FA004F5DD7 /* AddTimer */,
+				8E1FCEA61AF4C76F004F5DD7 /* Settings */,
+				8E1FCE7F1AF4C256004F5DD7 /* Main.storyboard */,
+				8E1FCE821AF4C256004F5DD7 /* Images.xcassets */,
+				8E1FCE841AF4C256004F5DD7 /* LaunchScreen.xib */,
+				8E1FCE751AF4C256004F5DD7 /* Supporting Files */,
+			);
+			path = CTimer;
+			sourceTree = "<group>";
+		};
+		8E1FCE751AF4C256004F5DD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FCE761AF4C256004F5DD7 /* Info.plist */,
+				8E1FCE771AF4C256004F5DD7 /* main.m */,
+				8E1FCEBC1AF4DAC1004F5DD7 /* CTimer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E1FCE8E1AF4C256004F5DD7 /* CTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FCE911AF4C256004F5DD7 /* CTimerTests.m */,
+				8E1FCE8F1AF4C256004F5DD7 /* Supporting Files */,
+			);
+			path = CTimerTests;
+			sourceTree = "<group>";
+		};
+		8E1FCE8F1AF4C256004F5DD7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FCE901AF4C256004F5DD7 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8E1FCE9B1AF4C30F004F5DD7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FCE9C1AF4C326004F5DD7 /* BaseViewController.h */,
+				8E1FCE9D1AF4C326004F5DD7 /* BaseViewController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		8E1FCEA61AF4C76F004F5DD7 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FCEA71AF4C782004F5DD7 /* SettingsViewController.h */,
+				8E1FCEA81AF4C782004F5DD7 /* SettingsViewController.m */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		8E1FCEAA1AF4C8AE004F5DD7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E322ABD1AFCA99F0078517C /* Sounds */,
+				8E1FCEAB1AF4C8AE004F5DD7 /* Images */,
+			);
+			path = Resources;
+			sourceTree = SOURCE_ROOT;
+		};
+		8E1FCEAB1AF4C8AE004F5DD7 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				8E376C1B1AFB6AC300030489 /* pause_button.png */,
+				8E376C1C1AFB6AC300030489 /* play_button.png */,
+				8E3B36AE1AFA06A800ADCF28 /* menu_icon.png */,
+				8E3B36AF1AFA06A800ADCF28 /* plus_icon.png */,
+				8E3B36B01AFA06A800ADCF28 /* trash_icon.png */,
+				8E3D27071AF8D8FB00D01BE5 /* small_check.png */,
+				8E3D26FC1AF8B67200D01BE5 /* check_mark.png */,
+				8E1FCEBD1AF4DE5A004F5DD7 /* music_icon.png */,
+				8E1FCEAC1AF4C8AE004F5DD7 /* add_timer_icon.png */,
+				8E1FCEAD1AF4C8AE004F5DD7 /* back_arrow.png */,
+				8E1FCEAE1AF4C8AE004F5DD7 /* settings_icon.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		8E1FCEB21AF4D07B004F5DD7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E2DCB481AF9B08500E30F0F /* AlarmManager.h */,
+				8E2DCB491AF9B08500E30F0F /* AlarmManager.m */,
+				8E1FCEB31AF4D09E004F5DD7 /* Timer.h */,
+				8E1FCEB41AF4D09E004F5DD7 /* Timer.m */,
+			);
+			name = Model;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		8E1FCEB71AF4D8FA004F5DD7 /* AddTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8E1FCEB81AF4D910004F5DD7 /* AddTimerViewController.h */,
+				8E1FCEB91AF4D910004F5DD7 /* AddTimerViewController.m */,
+				8E3D26F71AF8B5A600D01BE5 /* ColorView.h */,
+				8E3D26F81AF8B5A600D01BE5 /* ColorView.m */,
+				8E3D26FA1AF8B5B300D01BE5 /* ColorView.xib */,
+				8E3D26FF1AF8D42100D01BE5 /* SoundViewController.h */,
+				8E3D27001AF8D42100D01BE5 /* SoundViewController.m */,
+				8E3D27021AF8D83A00D01BE5 /* SoundTableViewCell.h */,
+				8E3D27031AF8D83A00D01BE5 /* SoundTableViewCell.m */,
+				8E3D27041AF8D83A00D01BE5 /* SoundTableViewCell.xib */,
+			);
+			name = AddTimer;
+			sourceTree = "<group>";
+		};
+		8E322ABD1AFCA99F0078517C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				8E385CC51B0980DA0045D09E /* void.wav */,
+				8E322AF51AFCBD5B0078517C /* Note (default).caf */,
+				8E322ADB1AFCB11E0078517C /* Bells.caf */,
+				8E322ADC1AFCB11E0078517C /* Classic.caf */,
+				8E322ADD1AFCB11E0078517C /* Digital.caf */,
+				8E322ADE1AFCB11E0078517C /* Paradise.caf */,
+				8E322ADF1AFCB11E0078517C /* Piano.caf */,
+				8E322AE01AFCB11E0078517C /* Radar.caf */,
+				8E322AE11AFCB11E0078517C /* ringtone.caf */,
+				8E322AE21AFCB11E0078517C /* Silk.caf */,
+				8E322AE31AFCB11E0078517C /* Singing_Birds.caf */,
+				8E322AE41AFCB11E0078517C /* Sweet_Day.caf */,
+				8E322AE51AFCB11E0078517C /* Tayde.caf */,
+				8E322AE61AFCB11E0078517C /* Trumpets.caf */,
+				8E322AE71AFCB11E0078517C /* Workout.caf */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		8E3B36A51AFA052900ADCF28 /* EditTimer */ = {
+			isa = PBXGroup;
+			children = (
+				8E3B36A61AFA054500ADCF28 /* EditViewController.h */,
+				8E3B36A71AFA054500ADCF28 /* EditViewController.m */,
+				8E3B36A91AFA060700ADCF28 /* EditTimerTableViewCell.h */,
+				8E3B36AA1AFA060700ADCF28 /* EditTimerTableViewCell.m */,
+				8E3B36AB1AFA060700ADCF28 /* EditTimerTableViewCell.xib */,
+			);
+			name = EditTimer;
+			path = ../Resources;
+			sourceTree = "<group>";
+		};
+		8E3D344B1B08FF0900C3AAAD /* Run */ = {
+			isa = PBXGroup;
+			children = (
+				8E3D344C1B08FF2100C3AAAD /* RunViewController.h */,
+				8E3D344D1B08FF2100C3AAAD /* RunViewController.m */,
+			);
+			name = Run;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E1FCE711AF4C256004F5DD7 /* CTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E1FCE951AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimer" */;
+			buildPhases = (
+				4B980C7530C7EB1E7F7B3DFA /* Check Pods Manifest.lock */,
+				8E1FCE6E1AF4C256004F5DD7 /* Sources */,
+				8E1FCE6F1AF4C256004F5DD7 /* Frameworks */,
+				8E1FCE701AF4C256004F5DD7 /* Resources */,
+				69E782223742E0BA9226823E /* Copy Pods Resources */,
+				413412E1FE793507D44621E3 /* Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CTimer;
+			productName = CTimer;
+			productReference = 8E1FCE721AF4C256004F5DD7 /* CTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E1FCE8A1AF4C256004F5DD7 /* CTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E1FCE981AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimerTests" */;
+			buildPhases = (
+				8E1FCE871AF4C256004F5DD7 /* Sources */,
+				8E1FCE881AF4C256004F5DD7 /* Frameworks */,
+				8E1FCE891AF4C256004F5DD7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E1FCE8D1AF4C256004F5DD7 /* PBXTargetDependency */,
+			);
+			name = CTimerTests;
+			productName = CTimerTests;
+			productReference = 8E1FCE8B1AF4C256004F5DD7 /* CTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E1FCE6A1AF4C256004F5DD7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = Matei;
+				TargetAttributes = {
+					8E1FCE711AF4C256004F5DD7 = {
+						CreatedOnToolsVersion = 6.0;
+						SystemCapabilities = {
+							com.apple.InterAppAudio = {
+								enabled = 1;
+							};
+						};
+					};
+					8E1FCE8A1AF4C256004F5DD7 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 8E1FCE711AF4C256004F5DD7;
+					};
+				};
+			};
+			buildConfigurationList = 8E1FCE6D1AF4C256004F5DD7 /* Build configuration list for PBXProject "CTimer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E1FCE691AF4C256004F5DD7;
+			productRefGroup = 8E1FCE731AF4C256004F5DD7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E1FCE711AF4C256004F5DD7 /* CTimer */,
+				8E1FCE8A1AF4C256004F5DD7 /* CTimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E1FCE701AF4C256004F5DD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3D26FB1AF8B5B300D01BE5 /* ColorView.xib in Resources */,
+				8E3B36AD1AFA060700ADCF28 /* EditTimerTableViewCell.xib in Resources */,
+				8E322AEE1AFCB11E0078517C /* ringtone.caf in Resources */,
+				8E1FCEBE1AF4DE5A004F5DD7 /* music_icon.png in Resources */,
+				8E1FCE811AF4C256004F5DD7 /* Main.storyboard in Resources */,
+				8E3B36B21AFA06A800ADCF28 /* plus_icon.png in Resources */,
+				8E1FCEB11AF4C8AE004F5DD7 /* settings_icon.png in Resources */,
+				8E1FCE861AF4C256004F5DD7 /* LaunchScreen.xib in Resources */,
+				8E322AF41AFCB11E0078517C /* Workout.caf in Resources */,
+				8E322AE81AFCB11E0078517C /* Bells.caf in Resources */,
+				8E3D27061AF8D83A00D01BE5 /* SoundTableViewCell.xib in Resources */,
+				8E1FCEB01AF4C8AE004F5DD7 /* back_arrow.png in Resources */,
+				8E3B36B11AFA06A800ADCF28 /* menu_icon.png in Resources */,
+				8E3B36B31AFA06A800ADCF28 /* trash_icon.png in Resources */,
+				8E322AEC1AFCB11E0078517C /* Piano.caf in Resources */,
+				8E1FCEAF1AF4C8AE004F5DD7 /* add_timer_icon.png in Resources */,
+				8E322AF61AFCBD5B0078517C /* Note (default).caf in Resources */,
+				8E322AEA1AFCB11E0078517C /* Digital.caf in Resources */,
+				8E322AF11AFCB11E0078517C /* Sweet_Day.caf in Resources */,
+				8E322AE91AFCB11E0078517C /* Classic.caf in Resources */,
+				8E376C1D1AFB6AC300030489 /* pause_button.png in Resources */,
+				8E322AF31AFCB11E0078517C /* Trumpets.caf in Resources */,
+				8E385CC61B0980DA0045D09E /* void.wav in Resources */,
+				8E3D27081AF8D8FB00D01BE5 /* small_check.png in Resources */,
+				8E322AF21AFCB11E0078517C /* Tayde.caf in Resources */,
+				8E322AED1AFCB11E0078517C /* Radar.caf in Resources */,
+				8E322AEB1AFCB11E0078517C /* Paradise.caf in Resources */,
+				8E3D26FD1AF8B67200D01BE5 /* check_mark.png in Resources */,
+				8E1FCE831AF4C256004F5DD7 /* Images.xcassets in Resources */,
+				8E322AF01AFCB11E0078517C /* Singing_Birds.caf in Resources */,
+				8E376C1E1AFB6AC300030489 /* play_button.png in Resources */,
+				8E322AEF1AFCB11E0078517C /* Silk.caf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E1FCE891AF4C256004F5DD7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		413412E1FE793507D44621E3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B980C7530C7EB1E7F7B3DFA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		69E782223742E0BA9226823E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E1FCE6E1AF4C256004F5DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3D27011AF8D42100D01BE5 /* SoundViewController.m in Sources */,
+				8E3D26F91AF8B5A600D01BE5 /* ColorView.m in Sources */,
+				8E1FCE7E1AF4C256004F5DD7 /* ViewController.m in Sources */,
+				8E3B36AC1AFA060700ADCF28 /* EditTimerTableViewCell.m in Sources */,
+				8E3D27051AF8D83A00D01BE5 /* SoundTableViewCell.m in Sources */,
+				8E3B36A81AFA054500ADCF28 /* EditViewController.m in Sources */,
+				8E1FCE9E1AF4C326004F5DD7 /* BaseViewController.m in Sources */,
+				8E1FCEBA1AF4D910004F5DD7 /* AddTimerViewController.m in Sources */,
+				8E1FCEA91AF4C782004F5DD7 /* SettingsViewController.m in Sources */,
+				8E1FCEB51AF4D09E004F5DD7 /* Timer.m in Sources */,
+				8E1FCE7B1AF4C256004F5DD7 /* AppDelegate.m in Sources */,
+				8E1FCE781AF4C256004F5DD7 /* main.m in Sources */,
+				8E3D344E1B08FF2100C3AAAD /* RunViewController.m in Sources */,
+				8E2DCB4A1AF9B08500E30F0F /* AlarmManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E1FCE871AF4C256004F5DD7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E1FCE921AF4C256004F5DD7 /* CTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E1FCE8D1AF4C256004F5DD7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E1FCE711AF4C256004F5DD7 /* CTimer */;
+			targetProxy = 8E1FCE8C1AF4C256004F5DD7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E1FCE7F1AF4C256004F5DD7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E1FCE801AF4C256004F5DD7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E1FCE841AF4C256004F5DD7 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E1FCE851AF4C256004F5DD7 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E1FCE931AF4C256004F5DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E1FCE941AF4C256004F5DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E1FCE961AF4C256004F5DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39A0FF0E0A5A06F3621E1EA0 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenneth Haller (5F6K9KZGU7)";
+				GCC_PREFIX_HEADER = "CTimer/CTimer-Prefix.pch";
+				INFOPLIST_FILE = CTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "08db055c-eae1-4d22-b20f-51213e9fd0f7";
+			};
+			name = Debug;
+		};
+		8E1FCE971AF4C256004F5DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C54C7E0C36AB2394EC24A46 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenneth Haller (5F6K9KZGU7)";
+				GCC_PREFIX_HEADER = "CTimer/CTimer-Prefix.pch";
+				INFOPLIST_FILE = CTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "08db055c-eae1-4d22-b20f-51213e9fd0f7";
+			};
+			name = Release;
+		};
+		8E1FCE991AF4C256004F5DD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CTimer.app/CTimer";
+			};
+			name = Debug;
+		};
+		8E1FCE9A1AF4C256004F5DD7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = CTimerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CTimer.app/CTimer";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E1FCE6D1AF4C256004F5DD7 /* Build configuration list for PBXProject "CTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E1FCE931AF4C256004F5DD7 /* Debug */,
+				8E1FCE941AF4C256004F5DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E1FCE951AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E1FCE961AF4C256004F5DD7 /* Debug */,
+				8E1FCE971AF4C256004F5DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E1FCE981AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E1FCE991AF4C256004F5DD7 /* Debug */,
+				8E1FCE9A1AF4C256004F5DD7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E1FCE6A1AF4C256004F5DD7 /* Project object */;
+}

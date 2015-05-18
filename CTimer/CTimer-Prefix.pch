@@ -1,0 +1,19 @@
+//
+//  CTimer-Prefix.pch
+//  CTimer
+//
+//  Created by jian on 5/2/15.
+//  Copyright (c) 2015 Matei. All rights reserved.
+//
+
+#ifndef CTimer_CTimer_Prefix_pch
+#define CTimer_CTimer_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Global.h"
+#import "Timer.h"
+#import "AlarmManager.h"
+
+#endif

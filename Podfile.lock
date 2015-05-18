@@ -1,0 +1,25 @@
+PODS:
+  - CircleProgressBar (0.12)
+  - KKProgressTimer (0.0.1)
+  - XMCircleType (1.1.1)
+
+DEPENDENCIES:
+  - CircleProgressBar (~> 0.2)
+  - KKProgressTimer (from `http://github.com/gin0606/KKProgressTimer.git`)
+  - XMCircleType
+
+EXTERNAL SOURCES:
+  KKProgressTimer:
+    :git: http://github.com/gin0606/KKProgressTimer.git
+
+CHECKOUT OPTIONS:
+  KKProgressTimer:
+    :commit: 575be455a23e22c2646c09726d1219e363f36aa4
+    :git: http://github.com/gin0606/KKProgressTimer.git
+
+SPEC CHECKSUMS:
+  CircleProgressBar: 29a4261cf51502bbf5b40d08f21cf8751e1b704b
+  KKProgressTimer: 6a132f47ed5a24fdc0fa8a4f15dfe2ed5844772a
+  XMCircleType: 5400d1ac7ac308853d240644d538d4fcfd06c808
+
+COCOAPODS: 0.36.4
