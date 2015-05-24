@@ -22,6 +22,7 @@
 @property (weak, nonatomic) IBOutlet UIView                 *viewFill;
 @property (weak, nonatomic) IBOutlet UITableView            *tblView;
 @property (weak, nonatomic) IBOutlet UIButton               *btnStart;
+@property (weak, nonatomic) IBOutlet UIButton               *btnEdit;
 
 @end
 
@@ -32,6 +33,7 @@
 @synthesize viewFill;
 @synthesize tblView;
 @synthesize btnStart;
+@synthesize btnEdit;
 
 //====================================================================================================
 - (void)viewDidLoad
@@ -67,12 +69,14 @@
         bExistTimer = YES;
         viewEmpty.hidden = YES;
         viewFill.hidden = NO;
+        btnEdit.hidden = NO;
     }
     else
     {
         bExistTimer = NO;
         viewEmpty.hidden = NO;
         viewFill.hidden = YES;
+        btnEdit.hidden = YES;
     }
     
     [tblView reloadData];

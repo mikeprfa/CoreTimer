@@ -217,8 +217,9 @@
 {
     int hour = (int)(value / 3600.0f);
     int minute = (int)((value % 3600) / 60.0f);
+    int sec = value % 60;
     
-    NSString* result = [NSString stringWithFormat: @"%02i:%02i", hour, minute];
+    NSString* result = [NSString stringWithFormat: @"%02i:%02i:%02i", hour, minute, sec];
     return result;
 }
 
