@@ -8,13 +8,14 @@
 
 #import "EditViewController.h"
 #import "EditTimerTableViewCell.h"
+#import "HPReorderTableView.h"
 
 @interface EditViewController () <UITextFieldDelegate, UITableViewDataSource, UITableViewDelegate, EditTimerTableViewCellDelegate>
 {
     
 }
 
-@property (weak, nonatomic) IBOutlet UITableView    *tblView;
+@property (weak, nonatomic) IBOutlet HPReorderTableView     *tblView;
 
 @end
 
@@ -100,6 +101,12 @@
     [cell updateTimer: [[AppDelegate getDelegate].alarmManager.arrList objectAtIndex: indexPath.row] view: VIEW_EDIT];
     
     return cell;
+}
+
+//====================================================================================================
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [[AppDelegate getDelegate].alarmManager.arrList exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
 }
 
 //====================================================================================================

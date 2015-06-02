@@ -193,7 +193,6 @@
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     currentTimer = nextTimer;
     [self updateTimerInfo];
-    
 }
 
 #pragma mark Check Timer.
@@ -254,6 +253,7 @@
     [mainCheckTimer invalidate];
     mainCheckTimer = nil;
     
+    [[AppDelegate getDelegate].alarmManager resetTimerList];
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     [super actionBack: sender];
 }

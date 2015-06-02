@@ -37,6 +37,7 @@
 
 - (void) pauseTimer;
 - (void) resumeTimer;
+- (void) resetTimer;
 - (void) setupLocalNotification;
 - (void) rescheduleLocationNotification;
 - (void) setupNextLocalNotification: (float) total_time;

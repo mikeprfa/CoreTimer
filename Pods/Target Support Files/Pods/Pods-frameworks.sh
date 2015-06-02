@@ -49,11 +49,13 @@ code_sign() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'CircleProgressBar.framework'
+  install_framework 'HPReorderTableView.framework'
   install_framework 'KKProgressTimer.framework'
   install_framework 'XMCircleType.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'CircleProgressBar.framework'
+  install_framework 'HPReorderTableView.framework'
   install_framework 'KKProgressTimer.framework'
   install_framework 'XMCircleType.framework'
 fi

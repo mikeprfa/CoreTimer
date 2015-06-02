@@ -196,4 +196,17 @@
 }
 
 //====================================================================================================
+- (void) resetTimerList
+{
+    NSArray* arrWorkingTimers = [self workingTimers];
+    if(arrWorkingTimers != nil)
+    {
+        for(Timer* t in arrWorkingTimers)
+        {
+            [t resetTimer];
+        }
+    }
+}
+
+//====================================================================================================
 @end

@@ -1,10 +1,12 @@
 PODS:
   - CircleProgressBar (0.12)
+  - HPReorderTableView (0.2)
   - KKProgressTimer (0.0.1)
   - XMCircleType (1.1.1)
 
 DEPENDENCIES:
   - CircleProgressBar (~> 0.2)
+  - HPReorderTableView (~> 0.2)
   - KKProgressTimer (from `http://github.com/gin0606/KKProgressTimer.git`)
   - XMCircleType
 
@@ -19,6 +21,7 @@ CHECKOUT OPTIONS:
 
 SPEC CHECKSUMS:
   CircleProgressBar: 29a4261cf51502bbf5b40d08f21cf8751e1b704b
+  HPReorderTableView: fbecadc7f8b2d5a138d976aa5fe6fbb09524022a
   KKProgressTimer: 6a132f47ed5a24fdc0fa8a4f15dfe2ed5844772a
   XMCircleType: 5400d1ac7ac308853d240644d538d4fcfd06c808
 

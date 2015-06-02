@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-HPReorderTableView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-KKProgressTimer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>3EDA69EE1427BF61AE48FDF2</key>
+		<key>196B7575CB9106AE8BCE873A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8CADA59C2F69D5921C88FD20</key>
+		<key>4FC06F1795630DE9CF5FD105</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F946A5D7B1BDEB26CD4DF458</key>
+		<key>9EA3E1DABDCCDC8BFB380EFB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FF87D7F8DF05AF99FE0CE59B</key>
+		<key>CE21E3E18877768ADDCDFCE0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FE9523EAEC7A8FB4663A40E3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

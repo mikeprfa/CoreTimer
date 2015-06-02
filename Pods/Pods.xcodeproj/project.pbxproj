@@ -7,356 +7,426 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		030029C59D99A5C7F3DF3387 /* CircleProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 9708BD96A816D15A2C853394 /* CircleProgressBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		125332BC9185C558AB8F2DB4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A4A3B036BA51CC1F1F47DA /* Foundation.framework */; };
-		19BD7CA8C9D72E53E3DF29B8 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BB7A888989BABFCE9F1049AC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21E82F4F177DC82326ADD677 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28579E4D3E00B85129DB074B /* QuartzCore.framework */; };
-		272E20AA6FCAF4F90771527E /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 63BFEC082B03D62DE8A48DAD /* Pods-dummy.m */; };
-		59DBC29DE1358DBD04AB22C4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A4A3B036BA51CC1F1F47DA /* Foundation.framework */; };
-		63AA92225204DAF0D18A5B45 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A7AF0E77B667A5203DA56AF /* UIKit.framework */; };
-		6B7C73C4D1CC1CDAB254B5CB /* CircleProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F57ED714543C34F12B87EE6 /* CircleProgressBar.m */; };
-		702ED78DC55F64DBC6A3F0A2 /* Pods-CircleProgressBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FD2DE4098B09FA2790FB080 /* Pods-CircleProgressBar-dummy.m */; };
-		77F266F23BB6F7221BE75875 /* Pods-KKProgressTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5872B9714EFEC1C3AFC4B4A /* Pods-KKProgressTimer-dummy.m */; };
-		A740781BCB0131662447C7A3 /* KKProgressTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 7D0737E7568E502324B31247 /* KKProgressTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B144C28B778388A449B07092 /* Pods-XMCircleType-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D017CD72EA1C12E47C0687 /* Pods-XMCircleType-dummy.m */; };
-		C4A545618D32A4373F3ED509 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A4A3B036BA51CC1F1F47DA /* Foundation.framework */; };
-		C7644DD354ADE8B8B92287FC /* XMCircleTypeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96440AF803DF1C663084943C /* XMCircleTypeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9161409CF8180BF7A6D5EA9 /* KKProgressTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBC385422A07D8366A70499 /* KKProgressTimer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		CA712F1994C2E42070C5FE33 /* Pods-CircleProgressBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED8762FC0A1DD672F2919778 /* Pods-CircleProgressBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D353984A90940EFE387ADF6D /* XMCircleTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3643E6525779B8F6B252B58F /* XMCircleTypeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		DCA1F006E9AFEFE97E81C541 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7A4A3B036BA51CC1F1F47DA /* Foundation.framework */; };
-		E498810A2A690B4602AFD905 /* Pods-XMCircleType-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 140622651FBC3FBA832E7D08 /* Pods-XMCircleType-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EAF86B7302DAD9EA277032DF /* Pods-KKProgressTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B76D346FD19C543EA20EE46C /* Pods-KKProgressTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01171E0CF62C17D051411E91 /* Pods-HPReorderTableView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BC9DA24725F108A99194C61A /* Pods-HPReorderTableView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		10F8653EB8CB73CFE6252613 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5392A8D3F600970CBFED9 /* Foundation.framework */; };
+		12D2C50908A484D4D7807A65 /* Pods-CircleProgressBar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E4CE3B997C9C086F79B220F /* Pods-CircleProgressBar-dummy.m */; };
+		13846925B88C439E1C4E150D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D57167C6D623D87BC848418A /* UIKit.framework */; };
+		1C411DBB1E460A4D58F71FD3 /* HPReorderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F9B8B1F43933E567EACEB0 /* HPReorderTableView.m */; };
+		1C841833FAC8A64660394D25 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEC0BC2B7DB8731A10BE47 /* QuartzCore.framework */; };
+		2FF836B6CB9CBEDCC092FA14 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5392A8D3F600970CBFED9 /* Foundation.framework */; };
+		35EA75F4E22301844D7960E2 /* CircleProgressBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CC26B1F6070AE6E8756BF0F /* CircleProgressBar.m */; };
+		3A0BB8B3F800AF8110ED849C /* XMCircleTypeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 316E43280817D96AD98ACCC1 /* XMCircleTypeView.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		43F2F7F58A9F99F924A0A4EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5392A8D3F600970CBFED9 /* Foundation.framework */; };
+		454D2D48962DBB37EE292A04 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5392A8D3F600970CBFED9 /* Foundation.framework */; };
+		585F9210A9B34674400BA997 /* Pods-KKProgressTimer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D05BFCF3246991692CADEC5 /* Pods-KKProgressTimer-dummy.m */; };
+		5876B3284E5EFDBBEBC6BE0B /* KKProgressTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = F1E07E6D129032FA6971F742 /* KKProgressTimer.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		5B3F97E42DB67DF25012F956 /* CircleProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 5F5F1444338CAB5AE41EEDE8 /* CircleProgressBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87697EEC587A79FD7A7AFFAC /* KKProgressTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = 64B05CA3D6E3B2F0B997D07D /* KKProgressTimer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8C70EFA56F9588F1C3371EC7 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 509BF3BD8EEA40CA8514C4D9 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		99E15F6A191A79930FD44510 /* Pods-CircleProgressBar-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C03270D0AD50335319C1CC8F /* Pods-CircleProgressBar-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AA066E70AD7AC3AC54456F70 /* Pods-HPReorderTableView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 50F9B00D6832B97D9872E3E9 /* Pods-HPReorderTableView-dummy.m */; };
+		B7D51437F54ADAF1E9639D2D /* HPReorderTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = 1260FFF625AF31684215D676 /* HPReorderTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C77D0277B8A48180A878E3CB /* XMCircleTypeView.h in Headers */ = {isa = PBXBuildFile; fileRef = FB3DA6E7347AD45A3BF6C947 /* XMCircleTypeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D891F5AC4A118DDCD0AE350F /* Pods-XMCircleType-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B3153F238E4692B3750D55E /* Pods-XMCircleType-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3A741B7522046FA7AF81641 /* Pods-XMCircleType-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AE48DAD5938422812910A261 /* Pods-XMCircleType-dummy.m */; };
+		EBEFE4ED55B03BB6E0E16B4C /* Pods-KKProgressTimer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FA3F96D7A24CA81634732D34 /* Pods-KKProgressTimer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ED0C2B6446B7582C9E528E11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FC5392A8D3F600970CBFED9 /* Foundation.framework */; };
+		F5C18399DA5DAE28114E334F /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B31A17292C4CABDBCB2AD579 /* Pods-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		82FC9000E8CEC56AE9418836 /* PBXContainerItemProxy */ = {
+		0B8441633098AB39BCBBD869 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B3DB483D8AE05E9D34A92C82 /* Project object */;
+			containerPortal = E26CA144DA153D626DD94161 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 3EDA69EE1427BF61AE48FDF2;
+			remoteGlobalIDString = FE9523EAEC7A8FB4663A40E3;
 			remoteInfo = "Pods-KKProgressTimer";
 		};
-		A01E50B8681B7F39C1EF421F /* PBXContainerItemProxy */ = {
+		2FA648A4867CB3A454CA127E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B3DB483D8AE05E9D34A92C82 /* Project object */;
+			containerPortal = E26CA144DA153D626DD94161 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F946A5D7B1BDEB26CD4DF458;
-			remoteInfo = "Pods-CircleProgressBar";
-		};
-		D3CC58299ADB1DED6465CF3E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B3DB483D8AE05E9D34A92C82 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8CADA59C2F69D5921C88FD20;
+			remoteGlobalIDString = 4FC06F1795630DE9CF5FD105;
 			remoteInfo = "Pods-XMCircleType";
+		};
+		4C7F88B39C0D6403818E276E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E26CA144DA153D626DD94161 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE21E3E18877768ADDCDFCE0;
+			remoteInfo = "Pods-HPReorderTableView";
+		};
+		88B1E0FD386C838BC41B3E9A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E26CA144DA153D626DD94161 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EA3E1DABDCCDC8BFB380EFB;
+			remoteInfo = "Pods-CircleProgressBar";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01E4EC2651F84AA837603445 /* Pods-CircleProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CircleProgressBar.modulemap"; sourceTree = "<group>"; };
-		053F154D7192BE030CE1C5B1 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0DBC385422A07D8366A70499 /* KKProgressTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KKProgressTimer.m; path = KKProgressTimer/KKProgressTimer.m; sourceTree = "<group>"; };
-		140622651FBC3FBA832E7D08 /* Pods-XMCircleType-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XMCircleType-umbrella.h"; sourceTree = "<group>"; };
-		28579E4D3E00B85129DB074B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		28D017CD72EA1C12E47C0687 /* Pods-XMCircleType-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMCircleType-dummy.m"; sourceTree = "<group>"; };
-		2FB1AA21AA17E2FD648C23AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3643E6525779B8F6B252B58F /* XMCircleTypeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XMCircleTypeView.m; path = XMCircleType/Views/XMCircleTypeView.m; sourceTree = "<group>"; };
-		3754D122D9EE44661AD46FC5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		3A7C24148D3E694BCD68C0EA /* Pods-CircleProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CircleProgressBar-prefix.pch"; sourceTree = "<group>"; };
-		45F029277B7CFA6A39447F14 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		467AA84762C7256F5B603BB4 /* Pods-KKProgressTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KKProgressTimer.modulemap"; sourceTree = "<group>"; };
-		496F50354EE6ED2300E3FD43 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		58556CF6BC2F890C0B094EC1 /* Pods-XMCircleType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-XMCircleType.modulemap"; sourceTree = "<group>"; };
-		5A71BC5A2898FBAD3D0A209F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		63BFEC082B03D62DE8A48DAD /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		6B77EB87F6359C55626CC674 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		744FA05CDE594A8F2CE9033A /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		7D0737E7568E502324B31247 /* KKProgressTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KKProgressTimer.h; path = KKProgressTimer/KKProgressTimer.h; sourceTree = "<group>"; };
-		83E2DB8710EBFD8BBF3D1F0B /* Pods-XMCircleType.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMCircleType.xcconfig"; sourceTree = "<group>"; };
-		84F55956CFA4433D1E523BD3 /* Pods-KKProgressTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKProgressTimer-prefix.pch"; sourceTree = "<group>"; };
-		86416263D5646B6EBDA06B06 /* Pods-XMCircleType-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMCircleType-Private.xcconfig"; sourceTree = "<group>"; };
-		8FD2DE4098B09FA2790FB080 /* Pods-CircleProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CircleProgressBar-dummy.m"; sourceTree = "<group>"; };
-		96440AF803DF1C663084943C /* XMCircleTypeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XMCircleTypeView.h; path = XMCircleType/Views/XMCircleTypeView.h; sourceTree = "<group>"; };
-		9708BD96A816D15A2C853394 /* CircleProgressBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CircleProgressBar.h; path = CircleProgressBarDemo/CircleProgressBar/CircleProgressBar.h; sourceTree = "<group>"; };
-		99AB1D98F55D07D5E5FBA835 /* Pods-CircleProgressBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CircleProgressBar.xcconfig"; sourceTree = "<group>"; };
-		9A7AF0E77B667A5203DA56AF /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		9F57ED714543C34F12B87EE6 /* CircleProgressBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CircleProgressBar.m; path = CircleProgressBarDemo/CircleProgressBar/CircleProgressBar.m; sourceTree = "<group>"; };
-		A7A4A3B036BA51CC1F1F47DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		AA7A7E9F406704E7034BD532 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		AC94BA2D8D0609AD759B1330 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		B32FE30B3D7147B8C4BE2D28 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		B4E2A9B78AEBB024DE6DC4CC /* Pods-CircleProgressBar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CircleProgressBar-Private.xcconfig"; sourceTree = "<group>"; };
-		B76D346FD19C543EA20EE46C /* Pods-KKProgressTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKProgressTimer-umbrella.h"; sourceTree = "<group>"; };
-		BB7A888989BABFCE9F1049AC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		BB95695AA23A6D118DAC8A81 /* KKProgressTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKProgressTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C5872B9714EFEC1C3AFC4B4A /* Pods-KKProgressTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KKProgressTimer-dummy.m"; sourceTree = "<group>"; };
-		C60BE425884A87CB5F550D81 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C6D78C444BC343A66E802BE7 /* XMCircleType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMCircleType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CC868D22C6F5DEE8D2DE000C /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		D734E76370D1551B29A92BC2 /* Pods-KKProgressTimer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKProgressTimer-Private.xcconfig"; sourceTree = "<group>"; };
-		DAF06EE90C14C892DC0F5480 /* Pods-XMCircleType-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XMCircleType-prefix.pch"; sourceTree = "<group>"; };
-		EABC76CFB8602469C17F185E /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
-		ED8762FC0A1DD672F2919778 /* Pods-CircleProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CircleProgressBar-umbrella.h"; sourceTree = "<group>"; };
-		EDB13740F514DC4B7EFBF5E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FD2257E2F4C4C616CB57A7B5 /* Pods-KKProgressTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKProgressTimer.xcconfig"; sourceTree = "<group>"; };
+		00F9B8B1F43933E567EACEB0 /* HPReorderTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HPReorderTableView.m; path = HPReorderTableView/HPReorderTableView.m; sourceTree = "<group>"; };
+		0EFF8A7B94F2F2ABD72DD6B3 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		1260FFF625AF31684215D676 /* HPReorderTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HPReorderTableView.h; path = HPReorderTableView/HPReorderTableView.h; sourceTree = "<group>"; };
+		13AB1B90CFB0B7FCC50ECE2F /* Pods-KKProgressTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKProgressTimer.xcconfig"; sourceTree = "<group>"; };
+		16BE175F6D873F3AE3A91597 /* Pods-KKProgressTimer-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-KKProgressTimer-Private.xcconfig"; sourceTree = "<group>"; };
+		1A2830EAEAFB6B1D9DD2117B /* Pods-HPReorderTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HPReorderTableView.xcconfig"; sourceTree = "<group>"; };
+		2CCDF5147F11AEFB1E4A967C /* Pods-HPReorderTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-HPReorderTableView.modulemap"; sourceTree = "<group>"; };
+		2FC5392A8D3F600970CBFED9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		316E43280817D96AD98ACCC1 /* XMCircleTypeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XMCircleTypeView.m; path = XMCircleType/Views/XMCircleTypeView.m; sourceTree = "<group>"; };
+		3E4CE3B997C9C086F79B220F /* Pods-CircleProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CircleProgressBar-dummy.m"; sourceTree = "<group>"; };
+		3F8666FCE9D27CA7D49D613D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434E5BEF696EA14A74327D6B /* KKProgressTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKProgressTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		477F686E99DCE83479387235 /* Pods-XMCircleType-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMCircleType-Private.xcconfig"; sourceTree = "<group>"; };
+		489030C037F81BE4AC1A367F /* Pods-CircleProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-CircleProgressBar.modulemap"; sourceTree = "<group>"; };
+		4CAAC72CF7362F25E1BA8291 /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CC26B1F6070AE6E8756BF0F /* CircleProgressBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CircleProgressBar.m; path = CircleProgressBarDemo/CircleProgressBar/CircleProgressBar.m; sourceTree = "<group>"; };
+		509BF3BD8EEA40CA8514C4D9 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		50F9B00D6832B97D9872E3E9 /* Pods-HPReorderTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-HPReorderTableView-dummy.m"; sourceTree = "<group>"; };
+		5591EDEDC43A1CCF6880B549 /* XMCircleType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMCircleType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F5F1444338CAB5AE41EEDE8 /* CircleProgressBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CircleProgressBar.h; path = CircleProgressBarDemo/CircleProgressBar/CircleProgressBar.h; sourceTree = "<group>"; };
+		62E0118822064F4B53A7A012 /* Pods-XMCircleType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-XMCircleType.modulemap"; sourceTree = "<group>"; };
+		64B05CA3D6E3B2F0B997D07D /* KKProgressTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KKProgressTimer.h; path = KKProgressTimer/KKProgressTimer.h; sourceTree = "<group>"; };
+		7014141CC61F353D0D7E0ADB /* Pods-HPReorderTableView-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-HPReorderTableView-Private.xcconfig"; sourceTree = "<group>"; };
+		76A33CBF0885A0ABD6A37900 /* Pods-KKProgressTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-KKProgressTimer.modulemap"; sourceTree = "<group>"; };
+		79FA9A9CFA453606919ED6E8 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B3153F238E4692B3750D55E /* Pods-XMCircleType-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XMCircleType-umbrella.h"; sourceTree = "<group>"; };
+		7DF236E2215736EDE7FD3C8C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		7EF415150F4503028F7C0878 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		8D05BFCF3246991692CADEC5 /* Pods-KKProgressTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-KKProgressTimer-dummy.m"; sourceTree = "<group>"; };
+		8ECEC0BC2B7DB8731A10BE47 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		941E3E450C79E217E6C5D097 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95FA098F225BFE830A7CC8E4 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		9FF9FABBE722A169B6A895ED /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		AE3D5E13DC5957E07B40C428 /* HPReorderTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPReorderTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE48DAD5938422812910A261 /* Pods-XMCircleType-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-XMCircleType-dummy.m"; sourceTree = "<group>"; };
+		B053A951E615BB89672CDF4C /* Pods-CircleProgressBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CircleProgressBar.xcconfig"; sourceTree = "<group>"; };
+		B14441C4369D11A322F5DE8F /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		B31A17292C4CABDBCB2AD579 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		B50744C4682B41672EBDC2BB /* Pods-XMCircleType.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-XMCircleType.xcconfig"; sourceTree = "<group>"; };
+		B5BD34ED4C2400D3D5D23B63 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BAA17598FFD168767FD70A64 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC9DA24725F108A99194C61A /* Pods-HPReorderTableView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HPReorderTableView-umbrella.h"; sourceTree = "<group>"; };
+		BCC53BC93D6BE9A6C002DC65 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		C03270D0AD50335319C1CC8F /* Pods-CircleProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CircleProgressBar-umbrella.h"; sourceTree = "<group>"; };
+		D57167C6D623D87BC848418A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DAA0BC1359C36A757555CE8A /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		DBA6DA3C2126E64AE426F1E5 /* Pods-XMCircleType-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-XMCircleType-prefix.pch"; sourceTree = "<group>"; };
+		DBC92DDD5D4154EC032D16F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E396C87459A868C7BC4C2150 /* Pods-CircleProgressBar-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CircleProgressBar-Private.xcconfig"; sourceTree = "<group>"; };
+		E66DC13FDBACEDE398BE7007 /* Pods-CircleProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CircleProgressBar-prefix.pch"; sourceTree = "<group>"; };
+		EA7ACA45F0D971CE963E05AF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1E07E6D129032FA6971F742 /* KKProgressTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KKProgressTimer.m; path = KKProgressTimer/KKProgressTimer.m; sourceTree = "<group>"; };
+		F6E9B2C3FFD8E78047EC5FD2 /* Pods-HPReorderTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-HPReorderTableView-prefix.pch"; sourceTree = "<group>"; };
+		FA3F96D7A24CA81634732D34 /* Pods-KKProgressTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKProgressTimer-umbrella.h"; sourceTree = "<group>"; };
+		FB3DA6E7347AD45A3BF6C947 /* XMCircleTypeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XMCircleTypeView.h; path = XMCircleType/Views/XMCircleTypeView.h; sourceTree = "<group>"; };
+		FD5928396737828EFD25762B /* Pods-KKProgressTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-KKProgressTimer-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0DA07D72572F9075F7AEF224 /* Frameworks */ = {
+		20393DC798674D0AEBC40439 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DCA1F006E9AFEFE97E81C541 /* Foundation.framework in Frameworks */,
+				10F8653EB8CB73CFE6252613 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4243DE1BA8D28E312B33F241 /* Frameworks */ = {
+		43B14E78FF544581CC1CCA89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				125332BC9185C558AB8F2DB4 /* Foundation.framework in Frameworks */,
-				21E82F4F177DC82326ADD677 /* QuartzCore.framework in Frameworks */,
-				63AA92225204DAF0D18A5B45 /* UIKit.framework in Frameworks */,
+				ED0C2B6446B7582C9E528E11 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9776A1FCE4F7DE91ED37A620 /* Frameworks */ = {
+		696DE859484E8CDC18673156 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				59DBC29DE1358DBD04AB22C4 /* Foundation.framework in Frameworks */,
+				2FF836B6CB9CBEDCC092FA14 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2954F2CF47F91332F593177 /* Frameworks */ = {
+		92E284FFC05E5A64372B08DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C4A545618D32A4373F3ED509 /* Foundation.framework in Frameworks */,
+				454D2D48962DBB37EE292A04 /* Foundation.framework in Frameworks */,
+				1C841833FAC8A64660394D25 /* QuartzCore.framework in Frameworks */,
+				13846925B88C439E1C4E150D /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E859C3C4BEF49F961797EEEB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				43F2F7F58A9F99F924A0A4EE /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10629D155BAB6CA37CD6BAE6 /* Targets Support Files */ = {
+		04AFBF32DF80D8C5DA6108AC /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5B4D6AD37232F5B75BA64644 /* Pods */,
+				A101EEAEF45832276A4DE9C9 /* Pods */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		5B4D6AD37232F5B75BA64644 /* Pods */ = {
+		25B2A852FBAE671D740831C5 /* CircleProgressBar */ = {
 			isa = PBXGroup;
 			children = (
-				45F029277B7CFA6A39447F14 /* Info.plist */,
-				496F50354EE6ED2300E3FD43 /* Pods.modulemap */,
-				053F154D7192BE030CE1C5B1 /* Pods-acknowledgements.markdown */,
-				B32FE30B3D7147B8C4BE2D28 /* Pods-acknowledgements.plist */,
-				63BFEC082B03D62DE8A48DAD /* Pods-dummy.m */,
-				EABC76CFB8602469C17F185E /* Pods-environment.h */,
-				AA7A7E9F406704E7034BD532 /* Pods-frameworks.sh */,
-				CC868D22C6F5DEE8D2DE000C /* Pods-resources.sh */,
-				BB7A888989BABFCE9F1049AC /* Pods-umbrella.h */,
-				AC94BA2D8D0609AD759B1330 /* Pods.debug.xcconfig */,
-				3754D122D9EE44661AD46FC5 /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			path = "Target Support Files/Pods";
-			sourceTree = "<group>";
-		};
-		5E786A9A882750AAEBBD9ADE /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				6B77EB87F6359C55626CC674 /* CircleProgressBar.framework */,
-				BB95695AA23A6D118DAC8A81 /* KKProgressTimer.framework */,
-				C60BE425884A87CB5F550D81 /* Pods.framework */,
-				C6D78C444BC343A66E802BE7 /* XMCircleType.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		6BD347450E663E128C5701F7 /* CircleProgressBar */ = {
-			isa = PBXGroup;
-			children = (
-				9708BD96A816D15A2C853394 /* CircleProgressBar.h */,
-				9F57ED714543C34F12B87EE6 /* CircleProgressBar.m */,
-				E7143D7E34CDE017284FA087 /* Support Files */,
+				5F5F1444338CAB5AE41EEDE8 /* CircleProgressBar.h */,
+				4CC26B1F6070AE6E8756BF0F /* CircleProgressBar.m */,
+				8C36BC894ADF8FC7CB5E50F1 /* Support Files */,
 			);
 			path = CircleProgressBar;
 			sourceTree = "<group>";
 		};
-		6BD8AA5FA47FF3BB106963A9 /* Frameworks */ = {
+		30908475455B44BC71ADC6C6 /* XMCircleType */ = {
 			isa = PBXGroup;
 			children = (
-				C239BD44EDC22A9088C234BA /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		72179187E7AA0464D7C17A00 /* KKProgressTimer */ = {
-			isa = PBXGroup;
-			children = (
-				7D0737E7568E502324B31247 /* KKProgressTimer.h */,
-				0DBC385422A07D8366A70499 /* KKProgressTimer.m */,
-				AF48D990FED69C19C13B8F4C /* Support Files */,
-			);
-			path = KKProgressTimer;
-			sourceTree = "<group>";
-		};
-		7DA40A5F2BD76342242875AF /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6BD347450E663E128C5701F7 /* CircleProgressBar */,
-				72179187E7AA0464D7C17A00 /* KKProgressTimer */,
-				9D1ED191BB4340C5C5E2F99C /* XMCircleType */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8BFCCBA9B4D9C8E180B08EC6 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				EDB13740F514DC4B7EFBF5E2 /* Info.plist */,
-				58556CF6BC2F890C0B094EC1 /* Pods-XMCircleType.modulemap */,
-				83E2DB8710EBFD8BBF3D1F0B /* Pods-XMCircleType.xcconfig */,
-				86416263D5646B6EBDA06B06 /* Pods-XMCircleType-Private.xcconfig */,
-				28D017CD72EA1C12E47C0687 /* Pods-XMCircleType-dummy.m */,
-				DAF06EE90C14C892DC0F5480 /* Pods-XMCircleType-prefix.pch */,
-				140622651FBC3FBA832E7D08 /* Pods-XMCircleType-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-XMCircleType";
-			sourceTree = "<group>";
-		};
-		9D1ED191BB4340C5C5E2F99C /* XMCircleType */ = {
-			isa = PBXGroup;
-			children = (
-				96440AF803DF1C663084943C /* XMCircleTypeView.h */,
-				3643E6525779B8F6B252B58F /* XMCircleTypeView.m */,
-				8BFCCBA9B4D9C8E180B08EC6 /* Support Files */,
+				FB3DA6E7347AD45A3BF6C947 /* XMCircleTypeView.h */,
+				316E43280817D96AD98ACCC1 /* XMCircleTypeView.m */,
+				9E08833D0279956E90C1B1BB /* Support Files */,
 			);
 			path = XMCircleType;
 			sourceTree = "<group>";
 		};
-		AF48D990FED69C19C13B8F4C /* Support Files */ = {
+		3557B9C5264477727247DFC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5A71BC5A2898FBAD3D0A209F /* Info.plist */,
-				467AA84762C7256F5B603BB4 /* Pods-KKProgressTimer.modulemap */,
-				FD2257E2F4C4C616CB57A7B5 /* Pods-KKProgressTimer.xcconfig */,
-				D734E76370D1551B29A92BC2 /* Pods-KKProgressTimer-Private.xcconfig */,
-				C5872B9714EFEC1C3AFC4B4A /* Pods-KKProgressTimer-dummy.m */,
-				84F55956CFA4433D1E523BD3 /* Pods-KKProgressTimer-prefix.pch */,
-				B76D346FD19C543EA20EE46C /* Pods-KKProgressTimer-umbrella.h */,
+				49270D88BABD4D9007DB299A /* iOS */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Pods-KKProgressTimer";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C239BD44EDC22A9088C234BA /* iOS */ = {
+		49270D88BABD4D9007DB299A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				A7A4A3B036BA51CC1F1F47DA /* Foundation.framework */,
-				28579E4D3E00B85129DB074B /* QuartzCore.framework */,
-				9A7AF0E77B667A5203DA56AF /* UIKit.framework */,
+				2FC5392A8D3F600970CBFED9 /* Foundation.framework */,
+				8ECEC0BC2B7DB8731A10BE47 /* QuartzCore.framework */,
+				D57167C6D623D87BC848418A /* UIKit.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		D3A5D31DFF608E05BB4BCA64 = {
+		6C1512706FF81F7E605DE258 /* KKProgressTimer */ = {
 			isa = PBXGroup;
 			children = (
-				744FA05CDE594A8F2CE9033A /* Podfile */,
-				6BD8AA5FA47FF3BB106963A9 /* Frameworks */,
-				7DA40A5F2BD76342242875AF /* Pods */,
-				5E786A9A882750AAEBBD9ADE /* Products */,
-				10629D155BAB6CA37CD6BAE6 /* Targets Support Files */,
+				64B05CA3D6E3B2F0B997D07D /* KKProgressTimer.h */,
+				F1E07E6D129032FA6971F742 /* KKProgressTimer.m */,
+				F65068EE68ABFC7EA3445B00 /* Support Files */,
 			);
+			path = KKProgressTimer;
 			sourceTree = "<group>";
 		};
-		E7143D7E34CDE017284FA087 /* Support Files */ = {
+		8C36BC894ADF8FC7CB5E50F1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2FB1AA21AA17E2FD648C23AF /* Info.plist */,
-				01E4EC2651F84AA837603445 /* Pods-CircleProgressBar.modulemap */,
-				99AB1D98F55D07D5E5FBA835 /* Pods-CircleProgressBar.xcconfig */,
-				B4E2A9B78AEBB024DE6DC4CC /* Pods-CircleProgressBar-Private.xcconfig */,
-				8FD2DE4098B09FA2790FB080 /* Pods-CircleProgressBar-dummy.m */,
-				3A7C24148D3E694BCD68C0EA /* Pods-CircleProgressBar-prefix.pch */,
-				ED8762FC0A1DD672F2919778 /* Pods-CircleProgressBar-umbrella.h */,
+				DBC92DDD5D4154EC032D16F4 /* Info.plist */,
+				489030C037F81BE4AC1A367F /* Pods-CircleProgressBar.modulemap */,
+				B053A951E615BB89672CDF4C /* Pods-CircleProgressBar.xcconfig */,
+				E396C87459A868C7BC4C2150 /* Pods-CircleProgressBar-Private.xcconfig */,
+				3E4CE3B997C9C086F79B220F /* Pods-CircleProgressBar-dummy.m */,
+				E66DC13FDBACEDE398BE7007 /* Pods-CircleProgressBar-prefix.pch */,
+				C03270D0AD50335319C1CC8F /* Pods-CircleProgressBar-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-CircleProgressBar";
 			sourceTree = "<group>";
 		};
+		99341CDD78F51034B2BB0BF3 = {
+			isa = PBXGroup;
+			children = (
+				B5BD34ED4C2400D3D5D23B63 /* Podfile */,
+				3557B9C5264477727247DFC9 /* Frameworks */,
+				BA9570D167DCEB2C24D2DACD /* Pods */,
+				BEA685487D876E04224A0024 /* Products */,
+				04AFBF32DF80D8C5DA6108AC /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9E08833D0279956E90C1B1BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA7ACA45F0D971CE963E05AF /* Info.plist */,
+				62E0118822064F4B53A7A012 /* Pods-XMCircleType.modulemap */,
+				B50744C4682B41672EBDC2BB /* Pods-XMCircleType.xcconfig */,
+				477F686E99DCE83479387235 /* Pods-XMCircleType-Private.xcconfig */,
+				AE48DAD5938422812910A261 /* Pods-XMCircleType-dummy.m */,
+				DBA6DA3C2126E64AE426F1E5 /* Pods-XMCircleType-prefix.pch */,
+				7B3153F238E4692B3750D55E /* Pods-XMCircleType-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-XMCircleType";
+			sourceTree = "<group>";
+		};
+		9E39BAF58D3A46C4C73797A3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BAA17598FFD168767FD70A64 /* Info.plist */,
+				2CCDF5147F11AEFB1E4A967C /* Pods-HPReorderTableView.modulemap */,
+				1A2830EAEAFB6B1D9DD2117B /* Pods-HPReorderTableView.xcconfig */,
+				7014141CC61F353D0D7E0ADB /* Pods-HPReorderTableView-Private.xcconfig */,
+				50F9B00D6832B97D9872E3E9 /* Pods-HPReorderTableView-dummy.m */,
+				F6E9B2C3FFD8E78047EC5FD2 /* Pods-HPReorderTableView-prefix.pch */,
+				BC9DA24725F108A99194C61A /* Pods-HPReorderTableView-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-HPReorderTableView";
+			sourceTree = "<group>";
+		};
+		A101EEAEF45832276A4DE9C9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3F8666FCE9D27CA7D49D613D /* Info.plist */,
+				B14441C4369D11A322F5DE8F /* Pods.modulemap */,
+				DAA0BC1359C36A757555CE8A /* Pods-acknowledgements.markdown */,
+				95FA098F225BFE830A7CC8E4 /* Pods-acknowledgements.plist */,
+				B31A17292C4CABDBCB2AD579 /* Pods-dummy.m */,
+				0EFF8A7B94F2F2ABD72DD6B3 /* Pods-environment.h */,
+				BCC53BC93D6BE9A6C002DC65 /* Pods-frameworks.sh */,
+				7EF415150F4503028F7C0878 /* Pods-resources.sh */,
+				509BF3BD8EEA40CA8514C4D9 /* Pods-umbrella.h */,
+				9FF9FABBE722A169B6A895ED /* Pods.debug.xcconfig */,
+				7DF236E2215736EDE7FD3C8C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		BA9570D167DCEB2C24D2DACD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				25B2A852FBAE671D740831C5 /* CircleProgressBar */,
+				C6B896C5478E3BA575ECEFDD /* HPReorderTableView */,
+				6C1512706FF81F7E605DE258 /* KKProgressTimer */,
+				30908475455B44BC71ADC6C6 /* XMCircleType */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BEA685487D876E04224A0024 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CAAC72CF7362F25E1BA8291 /* CircleProgressBar.framework */,
+				AE3D5E13DC5957E07B40C428 /* HPReorderTableView.framework */,
+				434E5BEF696EA14A74327D6B /* KKProgressTimer.framework */,
+				941E3E450C79E217E6C5D097 /* Pods.framework */,
+				5591EDEDC43A1CCF6880B549 /* XMCircleType.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6B896C5478E3BA575ECEFDD /* HPReorderTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1260FFF625AF31684215D676 /* HPReorderTableView.h */,
+				00F9B8B1F43933E567EACEB0 /* HPReorderTableView.m */,
+				9E39BAF58D3A46C4C73797A3 /* Support Files */,
+			);
+			path = HPReorderTableView;
+			sourceTree = "<group>";
+		};
+		F65068EE68ABFC7EA3445B00 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				79FA9A9CFA453606919ED6E8 /* Info.plist */,
+				76A33CBF0885A0ABD6A37900 /* Pods-KKProgressTimer.modulemap */,
+				13AB1B90CFB0B7FCC50ECE2F /* Pods-KKProgressTimer.xcconfig */,
+				16BE175F6D873F3AE3A91597 /* Pods-KKProgressTimer-Private.xcconfig */,
+				8D05BFCF3246991692CADEC5 /* Pods-KKProgressTimer-dummy.m */,
+				FD5928396737828EFD25762B /* Pods-KKProgressTimer-prefix.pch */,
+				FA3F96D7A24CA81634732D34 /* Pods-KKProgressTimer-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-KKProgressTimer";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		2425B8ACBDE0983AC04BAE50 /* Headers */ = {
+		152CB8FDCD119ECE4C5CE49B /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E498810A2A690B4602AFD905 /* Pods-XMCircleType-umbrella.h in Headers */,
-				C7644DD354ADE8B8B92287FC /* XMCircleTypeView.h in Headers */,
+				8C70EFA56F9588F1C3371EC7 /* Pods-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		87205AF653F8AED5E5E2919C /* Headers */ = {
+		310526FA91F75828229FCA12 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				030029C59D99A5C7F3DF3387 /* CircleProgressBar.h in Headers */,
-				CA712F1994C2E42070C5FE33 /* Pods-CircleProgressBar-umbrella.h in Headers */,
+				87697EEC587A79FD7A7AFFAC /* KKProgressTimer.h in Headers */,
+				EBEFE4ED55B03BB6E0E16B4C /* Pods-KKProgressTimer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		88F6ED7CBC4B665454B620AF /* Headers */ = {
+		6706430907C0BA8A49A62B38 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A740781BCB0131662447C7A3 /* KKProgressTimer.h in Headers */,
-				EAF86B7302DAD9EA277032DF /* Pods-KKProgressTimer-umbrella.h in Headers */,
+				5B3F97E42DB67DF25012F956 /* CircleProgressBar.h in Headers */,
+				99E15F6A191A79930FD44510 /* Pods-CircleProgressBar-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B0B62C257879BF170B7A0F60 /* Headers */ = {
+		761D1A52660EF5EBBEFC59D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				19BD7CA8C9D72E53E3DF29B8 /* Pods-umbrella.h in Headers */,
+				B7D51437F54ADAF1E9639D2D /* HPReorderTableView.h in Headers */,
+				01171E0CF62C17D051411E91 /* Pods-HPReorderTableView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEC49B4AF4EA78EEDD0DFEE9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D891F5AC4A118DDCD0AE350F /* Pods-XMCircleType-umbrella.h in Headers */,
+				C77D0277B8A48180A878E3CB /* XMCircleTypeView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3EDA69EE1427BF61AE48FDF2 /* Pods-KKProgressTimer */ = {
+		196B7575CB9106AE8BCE873A /* Pods */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CC926F1D5DF95073FF3F0877 /* Build configuration list for PBXNativeTarget "Pods-KKProgressTimer" */;
+			buildConfigurationList = 3827E77B43FFCCAEDD3AB4E5 /* Build configuration list for PBXNativeTarget "Pods" */;
 			buildPhases = (
-				355F2CF59AF85BE44CB2155E /* Sources */,
-				0DA07D72572F9075F7AEF224 /* Frameworks */,
-				88F6ED7CBC4B665454B620AF /* Headers */,
+				B3938711AFEA2F2CFC7B3022 /* Sources */,
+				43B14E78FF544581CC1CCA89 /* Frameworks */,
+				152CB8FDCD119ECE4C5CE49B /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				2CD13C9EB49769344493491F /* PBXTargetDependency */,
+				46FB09AF191C01844F6E0D2A /* PBXTargetDependency */,
+				96F1511F8B522691524F02C2 /* PBXTargetDependency */,
+				A2E00DD09506B659280A5225 /* PBXTargetDependency */,
 			);
-			name = "Pods-KKProgressTimer";
-			productName = "Pods-KKProgressTimer";
-			productReference = BB95695AA23A6D118DAC8A81 /* KKProgressTimer.framework */;
+			name = Pods;
+			productName = Pods;
+			productReference = 941E3E450C79E217E6C5D097 /* Pods.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8CADA59C2F69D5921C88FD20 /* Pods-XMCircleType */ = {
+		4FC06F1795630DE9CF5FD105 /* Pods-XMCircleType */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 97B96F09BFB1B5D17E611121 /* Build configuration list for PBXNativeTarget "Pods-XMCircleType" */;
+			buildConfigurationList = E983F3F01EEDF805DBD01A3D /* Build configuration list for PBXNativeTarget "Pods-XMCircleType" */;
 			buildPhases = (
-				94F635B4B9D6BCF4857D67AB /* Sources */,
-				9776A1FCE4F7DE91ED37A620 /* Frameworks */,
-				2425B8ACBDE0983AC04BAE50 /* Headers */,
+				321B010E0A2116EA99AD0791 /* Sources */,
+				20393DC798674D0AEBC40439 /* Frameworks */,
+				AEC49B4AF4EA78EEDD0DFEE9 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -364,16 +434,16 @@
 			);
 			name = "Pods-XMCircleType";
 			productName = "Pods-XMCircleType";
-			productReference = C6D78C444BC343A66E802BE7 /* XMCircleType.framework */;
+			productReference = 5591EDEDC43A1CCF6880B549 /* XMCircleType.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F946A5D7B1BDEB26CD4DF458 /* Pods-CircleProgressBar */ = {
+		9EA3E1DABDCCDC8BFB380EFB /* Pods-CircleProgressBar */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 775D97AE690196A1D86E566A /* Build configuration list for PBXNativeTarget "Pods-CircleProgressBar" */;
+			buildConfigurationList = E0F05650109BE04A93E263A5 /* Build configuration list for PBXNativeTarget "Pods-CircleProgressBar" */;
 			buildPhases = (
-				B38CF78154EE68B09CB6D8DC /* Sources */,
-				4243DE1BA8D28E312B33F241 /* Frameworks */,
-				87205AF653F8AED5E5E2919C /* Headers */,
+				1EBF82D479DB3DFA29E3D824 /* Sources */,
+				92E284FFC05E5A64372B08DA /* Frameworks */,
+				6706430907C0BA8A49A62B38 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -381,120 +451,150 @@
 			);
 			name = "Pods-CircleProgressBar";
 			productName = "Pods-CircleProgressBar";
-			productReference = 6B77EB87F6359C55626CC674 /* CircleProgressBar.framework */;
+			productReference = 4CAAC72CF7362F25E1BA8291 /* CircleProgressBar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		FF87D7F8DF05AF99FE0CE59B /* Pods */ = {
+		CE21E3E18877768ADDCDFCE0 /* Pods-HPReorderTableView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A272C7489267ECEBADDAB5CE /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 9C48C89FFF814884657CE829 /* Build configuration list for PBXNativeTarget "Pods-HPReorderTableView" */;
 			buildPhases = (
-				896B1AE2E242657298B7E373 /* Sources */,
-				C2954F2CF47F91332F593177 /* Frameworks */,
-				B0B62C257879BF170B7A0F60 /* Headers */,
+				BB8F99DF9C82633363803083 /* Sources */,
+				E859C3C4BEF49F961797EEEB /* Frameworks */,
+				761D1A52660EF5EBBEFC59D5 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0C5DF1E4ECD7E335DC3A75A6 /* PBXTargetDependency */,
-				2132345277AE712426D6DD51 /* PBXTargetDependency */,
-				4DE522F5E35F7B77D9C65699 /* PBXTargetDependency */,
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = C60BE425884A87CB5F550D81 /* Pods.framework */;
+			name = "Pods-HPReorderTableView";
+			productName = "Pods-HPReorderTableView";
+			productReference = AE3D5E13DC5957E07B40C428 /* HPReorderTableView.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FE9523EAEC7A8FB4663A40E3 /* Pods-KKProgressTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE5CBA0A5D3B7D6EC118B8F7 /* Build configuration list for PBXNativeTarget "Pods-KKProgressTimer" */;
+			buildPhases = (
+				90DC5E9AC1CA346E04F759B5 /* Sources */,
+				696DE859484E8CDC18673156 /* Frameworks */,
+				310526FA91F75828229FCA12 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-KKProgressTimer";
+			productName = "Pods-KKProgressTimer";
+			productReference = 434E5BEF696EA14A74327D6B /* KKProgressTimer.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B3DB483D8AE05E9D34A92C82 /* Project object */ = {
+		E26CA144DA153D626DD94161 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0510;
 			};
-			buildConfigurationList = 65E138DFE967B0E320F86874 /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 66F270A23421C9599370BCE5 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = D3A5D31DFF608E05BB4BCA64;
-			productRefGroup = 5E786A9A882750AAEBBD9ADE /* Products */;
+			mainGroup = 99341CDD78F51034B2BB0BF3;
+			productRefGroup = BEA685487D876E04224A0024 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				FF87D7F8DF05AF99FE0CE59B /* Pods */,
-				F946A5D7B1BDEB26CD4DF458 /* Pods-CircleProgressBar */,
-				3EDA69EE1427BF61AE48FDF2 /* Pods-KKProgressTimer */,
-				8CADA59C2F69D5921C88FD20 /* Pods-XMCircleType */,
+				196B7575CB9106AE8BCE873A /* Pods */,
+				9EA3E1DABDCCDC8BFB380EFB /* Pods-CircleProgressBar */,
+				CE21E3E18877768ADDCDFCE0 /* Pods-HPReorderTableView */,
+				FE9523EAEC7A8FB4663A40E3 /* Pods-KKProgressTimer */,
+				4FC06F1795630DE9CF5FD105 /* Pods-XMCircleType */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		355F2CF59AF85BE44CB2155E /* Sources */ = {
+		1EBF82D479DB3DFA29E3D824 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9161409CF8180BF7A6D5EA9 /* KKProgressTimer.m in Sources */,
-				77F266F23BB6F7221BE75875 /* Pods-KKProgressTimer-dummy.m in Sources */,
+				35EA75F4E22301844D7960E2 /* CircleProgressBar.m in Sources */,
+				12D2C50908A484D4D7807A65 /* Pods-CircleProgressBar-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		896B1AE2E242657298B7E373 /* Sources */ = {
+		321B010E0A2116EA99AD0791 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				272E20AA6FCAF4F90771527E /* Pods-dummy.m in Sources */,
+				E3A741B7522046FA7AF81641 /* Pods-XMCircleType-dummy.m in Sources */,
+				3A0BB8B3F800AF8110ED849C /* XMCircleTypeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94F635B4B9D6BCF4857D67AB /* Sources */ = {
+		90DC5E9AC1CA346E04F759B5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B144C28B778388A449B07092 /* Pods-XMCircleType-dummy.m in Sources */,
-				D353984A90940EFE387ADF6D /* XMCircleTypeView.m in Sources */,
+				5876B3284E5EFDBBEBC6BE0B /* KKProgressTimer.m in Sources */,
+				585F9210A9B34674400BA997 /* Pods-KKProgressTimer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B38CF78154EE68B09CB6D8DC /* Sources */ = {
+		B3938711AFEA2F2CFC7B3022 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B7C73C4D1CC1CDAB254B5CB /* CircleProgressBar.m in Sources */,
-				702ED78DC55F64DBC6A3F0A2 /* Pods-CircleProgressBar-dummy.m in Sources */,
+				F5C18399DA5DAE28114E334F /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB8F99DF9C82633363803083 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C411DBB1E460A4D58F71FD3 /* HPReorderTableView.m in Sources */,
+				AA066E70AD7AC3AC54456F70 /* Pods-HPReorderTableView-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0C5DF1E4ECD7E335DC3A75A6 /* PBXTargetDependency */ = {
+		2CD13C9EB49769344493491F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-CircleProgressBar";
-			target = F946A5D7B1BDEB26CD4DF458 /* Pods-CircleProgressBar */;
-			targetProxy = A01E50B8681B7F39C1EF421F /* PBXContainerItemProxy */;
+			target = 9EA3E1DABDCCDC8BFB380EFB /* Pods-CircleProgressBar */;
+			targetProxy = 88B1E0FD386C838BC41B3E9A /* PBXContainerItemProxy */;
 		};
-		2132345277AE712426D6DD51 /* PBXTargetDependency */ = {
+		46FB09AF191C01844F6E0D2A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-HPReorderTableView";
+			target = CE21E3E18877768ADDCDFCE0 /* Pods-HPReorderTableView */;
+			targetProxy = 4C7F88B39C0D6403818E276E /* PBXContainerItemProxy */;
+		};
+		96F1511F8B522691524F02C2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-KKProgressTimer";
-			target = 3EDA69EE1427BF61AE48FDF2 /* Pods-KKProgressTimer */;
-			targetProxy = 82FC9000E8CEC56AE9418836 /* PBXContainerItemProxy */;
+			target = FE9523EAEC7A8FB4663A40E3 /* Pods-KKProgressTimer */;
+			targetProxy = 0B8441633098AB39BCBBD869 /* PBXContainerItemProxy */;
 		};
-		4DE522F5E35F7B77D9C65699 /* PBXTargetDependency */ = {
+		A2E00DD09506B659280A5225 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-XMCircleType";
-			target = 8CADA59C2F69D5921C88FD20 /* Pods-XMCircleType */;
-			targetProxy = D3CC58299ADB1DED6465CF3E /* PBXContainerItemProxy */;
+			target = 4FC06F1795630DE9CF5FD105 /* Pods-XMCircleType */;
+			targetProxy = 2FA648A4867CB3A454CA127E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		12168E9D291829ED7B366F6E /* Debug */ = {
+		0C5BE9597BE087C8CA5F7DF3 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC94BA2D8D0609AD759B1330 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 7014141CC61F353D0D7E0ADB /* Pods-HPReorderTableView-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -503,16 +603,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HPReorderTableView/Pods-HPReorderTableView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HPReorderTableView/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-HPReorderTableView/Pods-HPReorderTableView.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
+				PRODUCT_NAME = HPReorderTableView;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -521,9 +619,9 @@
 			};
 			name = Debug;
 		};
-		25A6F541ED18FB7A3FB30CD4 /* Release */ = {
+		1418CEC4C3B7EDB353F98E23 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D734E76370D1551B29A92BC2 /* Pods-KKProgressTimer-Private.xcconfig */;
+			baseConfigurationReference = 16BE175F6D873F3AE3A91597 /* Pods-KKProgressTimer-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -548,9 +646,9 @@
 			};
 			name = Release;
 		};
-		33F0D16BA2A1FBB0F0E4EEFC /* Release */ = {
+		25BBAB88999D8C2B479D21D3 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86416263D5646B6EBDA06B06 /* Pods-XMCircleType-Private.xcconfig */;
+			baseConfigurationReference = 477F686E99DCE83479387235 /* Pods-XMCircleType-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -575,70 +673,9 @@
 			};
 			name = Release;
 		};
-		6D90580FB684A6A567635BDF /* Release */ = {
+		3F5AA6BE6E05E202DE299BAA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		7F81BEEEF4D4F18D7221D73C /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 86416263D5646B6EBDA06B06 /* Pods-XMCircleType-Private.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-XMCircleType/Pods-XMCircleType-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-XMCircleType/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-XMCircleType/Pods-XMCircleType.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = XMCircleType;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8BA08AD169F7AE828F5DBC69 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E2A9B78AEBB024DE6DC4CC /* Pods-CircleProgressBar-Private.xcconfig */;
+			baseConfigurationReference = E396C87459A868C7BC4C2150 /* Pods-CircleProgressBar-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -663,7 +700,7 @@
 			};
 			name = Debug;
 		};
-		AB8B31B6783BBFA09DBE2394 /* Debug */ = {
+		8164482D530102374E4356FC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -702,9 +739,72 @@
 			};
 			name = Debug;
 		};
-		E9864735F022E98202174396 /* Release */ = {
+		9A9D440FB46852EFA4C47559 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4E2A9B78AEBB024DE6DC4CC /* Pods-CircleProgressBar-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A6BE6A3A426638962CA6F150 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9FF9FABBE722A169B6A895ED /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BC0692F7114253CC10485E2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E396C87459A868C7BC4C2150 /* Pods-CircleProgressBar-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -729,9 +829,36 @@
 			};
 			name = Release;
 		};
-		F780153CC3793273A0889B10 /* Release */ = {
+		C1C827F2EEFC2E300B2A490C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3754D122D9EE44661AD46FC5 /* Pods.release.xcconfig */;
+			baseConfigurationReference = 477F686E99DCE83479387235 /* Pods-XMCircleType-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-XMCircleType/Pods-XMCircleType-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-XMCircleType/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-XMCircleType/Pods-XMCircleType.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = XMCircleType;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C8A5EDCF3E054A157B047FE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7DF236E2215736EDE7FD3C8C /* Pods.release.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -758,9 +885,9 @@
 			};
 			name = Release;
 		};
-		FB8BC78F1C9C336A0906E2AC /* Debug */ = {
+		CD063B85D89AEEEAAB289C8F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D734E76370D1551B29A92BC2 /* Pods-KKProgressTimer-Private.xcconfig */;
+			baseConfigurationReference = 16BE175F6D873F3AE3A91597 /* Pods-KKProgressTimer-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -785,55 +912,91 @@
 			};
 			name = Debug;
 		};
+		EA4BE10427B3D9453EAAAB56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7014141CC61F353D0D7E0ADB /* Pods-HPReorderTableView-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-HPReorderTableView/Pods-HPReorderTableView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-HPReorderTableView/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-HPReorderTableView/Pods-HPReorderTableView.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = HPReorderTableView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		65E138DFE967B0E320F86874 /* Build configuration list for PBXProject "Pods" */ = {
+		3827E77B43FFCCAEDD3AB4E5 /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AB8B31B6783BBFA09DBE2394 /* Debug */,
-				6D90580FB684A6A567635BDF /* Release */,
+				A6BE6A3A426638962CA6F150 /* Debug */,
+				C8A5EDCF3E054A157B047FE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		775D97AE690196A1D86E566A /* Build configuration list for PBXNativeTarget "Pods-CircleProgressBar" */ = {
+		66F270A23421C9599370BCE5 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8BA08AD169F7AE828F5DBC69 /* Debug */,
-				E9864735F022E98202174396 /* Release */,
+				8164482D530102374E4356FC /* Debug */,
+				9A9D440FB46852EFA4C47559 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		97B96F09BFB1B5D17E611121 /* Build configuration list for PBXNativeTarget "Pods-XMCircleType" */ = {
+		9C48C89FFF814884657CE829 /* Build configuration list for PBXNativeTarget "Pods-HPReorderTableView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				7F81BEEEF4D4F18D7221D73C /* Debug */,
-				33F0D16BA2A1FBB0F0E4EEFC /* Release */,
+				0C5BE9597BE087C8CA5F7DF3 /* Debug */,
+				EA4BE10427B3D9453EAAAB56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A272C7489267ECEBADDAB5CE /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		BE5CBA0A5D3B7D6EC118B8F7 /* Build configuration list for PBXNativeTarget "Pods-KKProgressTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				12168E9D291829ED7B366F6E /* Debug */,
-				F780153CC3793273A0889B10 /* Release */,
+				CD063B85D89AEEEAAB289C8F /* Debug */,
+				1418CEC4C3B7EDB353F98E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CC926F1D5DF95073FF3F0877 /* Build configuration list for PBXNativeTarget "Pods-KKProgressTimer" */ = {
+		E0F05650109BE04A93E263A5 /* Build configuration list for PBXNativeTarget "Pods-CircleProgressBar" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FB8BC78F1C9C336A0906E2AC /* Debug */,
-				25A6F541ED18FB7A3FB30CD4 /* Release */,
+				3F5AA6BE6E05E202DE299BAA /* Debug */,
+				BC0692F7114253CC10485E2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E983F3F01EEDF805DBD01A3D /* Build configuration list for PBXNativeTarget "Pods-XMCircleType" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1C827F2EEFC2E300B2A490C /* Debug */,
+				25BBAB88999D8C2B479D21D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B3DB483D8AE05E9D34A92C82 /* Project object */;
+	rootObject = E26CA144DA153D626DD94161 /* Project object */;
 }

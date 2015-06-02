@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "3EDA69EE1427BF61AE48FDF2"
+               BlueprintIdentifier = "FE9523EAEC7A8FB4663A40E3"
                BuildableName = "KKProgressTimer.framework"
                BlueprintName = "Pods-KKProgressTimer"
                ReferencedContainer = "container:Pods.xcodeproj">

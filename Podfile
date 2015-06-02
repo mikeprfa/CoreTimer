@@ -5,3 +5,4 @@ use_frameworks!
 pod 'XMCircleType'
 pod 'CircleProgressBar', '~> 0.2'
 pod 'KKProgressTimer', :git => 'http://github.com/gin0606/KKProgressTimer.git'
+pod 'HPReorderTableView', '~> 0.2'

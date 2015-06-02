@@ -26,4 +26,5 @@
 - (int) getFinishedTaskCount;
 
 - (void) saveTimerList;
+- (void) resetTimerList;
 @end
