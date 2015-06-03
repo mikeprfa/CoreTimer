@@ -47,13 +47,13 @@ static const int _wakeUpInterval = 150;
                                                                                  categories:nil];
         [application registerUserNotificationSettings:settings];
         [application registerForRemoteNotifications];
-    } else {
-        // Register for Push Notifications before iOS 8
-        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-                                                         UIRemoteNotificationTypeAlert |
-                                                         UIRemoteNotificationTypeSound)];
     }
-    
+//    else {
+//        // Register for Push Notifications before iOS 8
+//        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
+//                                                         UIRemoteNotificationTypeAlert |
+//                                                         UIRemoteNotificationTypeSound)];
+//    }
 }
 
 //====================================================================================================
