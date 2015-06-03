@@ -72,7 +72,7 @@
 		39A0FF0E0A5A06F3621E1EA0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		56D1A6033C50243A7F54501A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C54C7E0C36AB2394EC24A46 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		8E1FCE721AF4C256004F5DD7 /* CTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1FCE721AF4C256004F5DD7 /* CoreTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1FCE761AF4C256004F5DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1FCE771AF4C256004F5DD7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8E1FCE791AF4C256004F5DD7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,7 +82,7 @@
 		8E1FCE801AF4C256004F5DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E1FCE821AF4C256004F5DD7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8E1FCE851AF4C256004F5DD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		8E1FCE8B1AF4C256004F5DD7 /* CTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E1FCE8B1AF4C256004F5DD7 /* CoreTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E1FCE901AF4C256004F5DD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E1FCE911AF4C256004F5DD7 /* CTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTimerTests.m; sourceTree = "<group>"; };
 		8E1FCE9C1AF4C326004F5DD7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		8E1FCEB81AF4D910004F5DD7 /* AddTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTimerViewController.h; sourceTree = "<group>"; };
 		8E1FCEB91AF4D910004F5DD7 /* AddTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTimerViewController.m; sourceTree = "<group>"; };
 		8E1FCEBB1AF4DA69004F5DD7 /* Global.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Global.h; sourceTree = "<group>"; };
-		8E1FCEBC1AF4DAC1004F5DD7 /* CTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CTimer-Prefix.pch"; sourceTree = "<group>"; };
+		8E1FCEBC1AF4DAC1004F5DD7 /* CoreTimer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CoreTimer-Prefix.pch"; sourceTree = "<group>"; };
 		8E1FCEBD1AF4DE5A004F5DD7 /* music_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = music_icon.png; sourceTree = "<group>"; };
 		8E2DCB481AF9B08500E30F0F /* AlarmManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlarmManager.h; path = CTimer/AlarmManager.h; sourceTree = SOURCE_ROOT; };
 		8E2DCB491AF9B08500E30F0F /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlarmManager.m; path = CTimer/AlarmManager.m; sourceTree = SOURCE_ROOT; };
@@ -194,8 +194,8 @@
 		8E1FCE731AF4C256004F5DD7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8E1FCE721AF4C256004F5DD7 /* CTimer.app */,
-				8E1FCE8B1AF4C256004F5DD7 /* CTimerTests.xctest */,
+				8E1FCE721AF4C256004F5DD7 /* CoreTimer.app */,
+				8E1FCE8B1AF4C256004F5DD7 /* CoreTimerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -229,7 +229,7 @@
 			children = (
 				8E1FCE761AF4C256004F5DD7 /* Info.plist */,
 				8E1FCE771AF4C256004F5DD7 /* main.m */,
-				8E1FCEBC1AF4DAC1004F5DD7 /* CTimer-Prefix.pch */,
+				8E1FCEBC1AF4DAC1004F5DD7 /* CoreTimer-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -372,9 +372,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8E1FCE711AF4C256004F5DD7 /* CTimer */ = {
+		8E1FCE711AF4C256004F5DD7 /* CoreTimer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E1FCE951AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimer" */;
+			buildConfigurationList = 8E1FCE951AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CoreTimer" */;
 			buildPhases = (
 				4B980C7530C7EB1E7F7B3DFA /* Check Pods Manifest.lock */,
 				8E1FCE6E1AF4C256004F5DD7 /* Sources */,
@@ -387,14 +387,14 @@
 			);
 			dependencies = (
 			);
-			name = CTimer;
+			name = CoreTimer;
 			productName = CTimer;
-			productReference = 8E1FCE721AF4C256004F5DD7 /* CTimer.app */;
+			productReference = 8E1FCE721AF4C256004F5DD7 /* CoreTimer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8E1FCE8A1AF4C256004F5DD7 /* CTimerTests */ = {
+		8E1FCE8A1AF4C256004F5DD7 /* CoreTimerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E1FCE981AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimerTests" */;
+			buildConfigurationList = 8E1FCE981AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CoreTimerTests" */;
 			buildPhases = (
 				8E1FCE871AF4C256004F5DD7 /* Sources */,
 				8E1FCE881AF4C256004F5DD7 /* Frameworks */,
@@ -405,9 +405,9 @@
 			dependencies = (
 				8E1FCE8D1AF4C256004F5DD7 /* PBXTargetDependency */,
 			);
-			name = CTimerTests;
+			name = CoreTimerTests;
 			productName = CTimerTests;
-			productReference = 8E1FCE8B1AF4C256004F5DD7 /* CTimerTests.xctest */;
+			productReference = 8E1FCE8B1AF4C256004F5DD7 /* CoreTimerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -433,7 +433,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8E1FCE6D1AF4C256004F5DD7 /* Build configuration list for PBXProject "CTimer" */;
+			buildConfigurationList = 8E1FCE6D1AF4C256004F5DD7 /* Build configuration list for PBXProject "CoreTimer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -446,8 +446,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8E1FCE711AF4C256004F5DD7 /* CTimer */,
-				8E1FCE8A1AF4C256004F5DD7 /* CTimerTests */,
+				8E1FCE711AF4C256004F5DD7 /* CoreTimer */,
+				8E1FCE8A1AF4C256004F5DD7 /* CoreTimerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -584,7 +584,7 @@
 /* Begin PBXTargetDependency section */
 		8E1FCE8D1AF4C256004F5DD7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8E1FCE711AF4C256004F5DD7 /* CTimer */;
+			target = 8E1FCE711AF4C256004F5DD7 /* CoreTimer */;
 			targetProxy = 8E1FCE8C1AF4C256004F5DD7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -695,12 +695,13 @@
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenneth Haller (5F6K9KZGU7)";
-				GCC_PREFIX_HEADER = "CTimer/CTimer-Prefix.pch";
+				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "08db055c-eae1-4d22-b20f-51213e9fd0f7";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -712,12 +713,13 @@
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenneth Haller (5F6K9KZGU7)";
-				GCC_PREFIX_HEADER = "CTimer/CTimer-Prefix.pch";
+				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "08db055c-eae1-4d22-b20f-51213e9fd0f7";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -735,7 +737,7 @@
 				);
 				INFOPLIST_FILE = CTimerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreTimerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CTimer.app/CTimer";
 			};
 			name = Debug;
@@ -750,7 +752,7 @@
 				);
 				INFOPLIST_FILE = CTimerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CoreTimerTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CTimer.app/CTimer";
 			};
 			name = Release;
@@ -758,7 +760,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8E1FCE6D1AF4C256004F5DD7 /* Build configuration list for PBXProject "CTimer" */ = {
+		8E1FCE6D1AF4C256004F5DD7 /* Build configuration list for PBXProject "CoreTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E1FCE931AF4C256004F5DD7 /* Debug */,
@@ -767,7 +769,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E1FCE951AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimer" */ = {
+		8E1FCE951AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CoreTimer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E1FCE961AF4C256004F5DD7 /* Debug */,
@@ -776,7 +778,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E1FCE981AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CTimerTests" */ = {
+		8E1FCE981AF4C256004F5DD7 /* Build configuration list for PBXNativeTarget "CoreTimerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8E1FCE991AF4C256004F5DD7 /* Debug */,
