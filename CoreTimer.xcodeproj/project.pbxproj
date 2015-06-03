@@ -693,14 +693,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenneth Haller (5F6K9KZGU7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: RockFlowers Apps, LLC (6DVEBWALPJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: RockFlowers Apps, LLC (6DVEBWALPJ)";
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoreTimer;
-				PROVISIONING_PROFILE = "08db055c-eae1-4d22-b20f-51213e9fd0f7";
+				PROVISIONING_PROFILE = "dc0d544c-89da-4397-9578-fd443c267464";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -711,14 +711,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kenneth Haller (5F6K9KZGU7)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: RockFlowers Apps, LLC (6DVEBWALPJ)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: RockFlowers Apps, LLC (6DVEBWALPJ)";
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoreTimer;
-				PROVISIONING_PROFILE = "08db055c-eae1-4d22-b20f-51213e9fd0f7";
+				PROVISIONING_PROFILE = "dc0d544c-89da-4397-9578-fd443c267464";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
