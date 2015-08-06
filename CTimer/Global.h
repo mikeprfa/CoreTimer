@@ -2,8 +2,8 @@
 //  Global.h
 //  CTimer
 //
-//  Created by jian on 5/2/15.
-//  Copyright (c) 2015 Matei. All rights reserved.
+//  Created by jian/Matei on 5/2/15.
+//  Copyright (c) 2015 RockFlowers Apps, LLC. All rights reserved.
 //
 
 #ifndef CTimer_Global_h
