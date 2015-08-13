@@ -214,13 +214,14 @@
             
             currentTimer = [[AppDelegate getDelegate].alarmManager getCurrentTimer];
             [[AppDelegate getDelegate].alarmManager saveTimerList];
-            [self updateTimerInfo];
         }
         else
         {
             lblTimeCount.text = [currentTimer getRemainTime];
             lblSecondCount.text = [currentTimer getRemainSecTime];
         }
+        
+        [self updateTimerInfo];
     }
 }
 

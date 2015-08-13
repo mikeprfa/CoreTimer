@@ -25,23 +25,8 @@
 		8E1FCEBE1AF4DE5A004F5DD7 /* music_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEBD1AF4DE5A004F5DD7 /* music_icon.png */; };
 		8E2DCB4A1AF9B08500E30F0F /* AlarmManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E2DCB491AF9B08500E30F0F /* AlarmManager.m */; };
 		8E322ADA1AFCAEF70078517C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E322AD91AFCAEF70078517C /* AudioToolbox.framework */; };
-		8E322AE81AFCB11E0078517C /* Bells.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADB1AFCB11E0078517C /* Bells.caf */; };
-		8E322AE91AFCB11E0078517C /* Classic.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADC1AFCB11E0078517C /* Classic.caf */; };
-		8E322AEA1AFCB11E0078517C /* Digital.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADD1AFCB11E0078517C /* Digital.caf */; };
-		8E322AEB1AFCB11E0078517C /* Paradise.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADE1AFCB11E0078517C /* Paradise.caf */; };
-		8E322AEC1AFCB11E0078517C /* Piano.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322ADF1AFCB11E0078517C /* Piano.caf */; };
-		8E322AED1AFCB11E0078517C /* Radar.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE01AFCB11E0078517C /* Radar.caf */; };
-		8E322AEE1AFCB11E0078517C /* ringtone.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE11AFCB11E0078517C /* ringtone.caf */; };
-		8E322AEF1AFCB11E0078517C /* Silk.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE21AFCB11E0078517C /* Silk.caf */; };
-		8E322AF01AFCB11E0078517C /* Singing_Birds.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE31AFCB11E0078517C /* Singing_Birds.caf */; };
-		8E322AF11AFCB11E0078517C /* Sweet_Day.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE41AFCB11E0078517C /* Sweet_Day.caf */; };
-		8E322AF21AFCB11E0078517C /* Tayde.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE51AFCB11E0078517C /* Tayde.caf */; };
-		8E322AF31AFCB11E0078517C /* Trumpets.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE61AFCB11E0078517C /* Trumpets.caf */; };
-		8E322AF41AFCB11E0078517C /* Workout.caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AE71AFCB11E0078517C /* Workout.caf */; };
-		8E322AF61AFCBD5B0078517C /* Note (default).caf in Resources */ = {isa = PBXBuildFile; fileRef = 8E322AF51AFCBD5B0078517C /* Note (default).caf */; };
 		8E376C1D1AFB6AC300030489 /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E376C1B1AFB6AC300030489 /* pause_button.png */; };
 		8E376C1E1AFB6AC300030489 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E376C1C1AFB6AC300030489 /* play_button.png */; };
-		8E385CC61B0980DA0045D09E /* void.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8E385CC51B0980DA0045D09E /* void.wav */; };
 		8E3B36A81AFA054500ADCF28 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B36A71AFA054500ADCF28 /* EditViewController.m */; };
 		8E3B36AC1AFA060700ADCF28 /* EditTimerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B36AA1AFA060700ADCF28 /* EditTimerTableViewCell.m */; };
 		8E3B36AD1AFA060700ADCF28 /* EditTimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B36AB1AFA060700ADCF28 /* EditTimerTableViewCell.xib */; };
@@ -56,6 +41,24 @@
 		8E3D27061AF8D83A00D01BE5 /* SoundTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D27041AF8D83A00D01BE5 /* SoundTableViewCell.xib */; };
 		8E3D27081AF8D8FB00D01BE5 /* small_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3D27071AF8D8FB00D01BE5 /* small_check.png */; };
 		8E3D344E1B08FF2100C3AAAD /* RunViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3D344D1B08FF2100C3AAAD /* RunViewController.m */; };
+		B6BCFEF31B7A4F1300A97729 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6BCFEF21B7A4F1300A97729 /* AVFoundation.framework */; };
+		B6C04C051B7B49E000A9A166 /* Air Horn.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BF51B7B49E000A9A166 /* Air Horn.caf */; };
+		B6C04C061B7B49E000A9A166 /* Alarm Clock.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BF61B7B49E000A9A166 /* Alarm Clock.caf */; };
+		B6C04C071B7B49E000A9A166 /* Alien Siren.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BF71B7B49E000A9A166 /* Alien Siren.caf */; };
+		B6C04C081B7B49E000A9A166 /* Car Alarm Activating.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BF81B7B49E000A9A166 /* Car Alarm Activating.caf */; };
+		B6C04C091B7B49E000A9A166 /* Church Bells.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BF91B7B49E000A9A166 /* Church Bells.caf */; };
+		B6C04C0A1B7B49E000A9A166 /* Cuckoo.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BFA1B7B49E000A9A166 /* Cuckoo.caf */; };
+		B6C04C0B1B7B49E000A9A166 /* Drum.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BFB1B7B49E000A9A166 /* Drum.caf */; };
+		B6C04C0C1B7B49E000A9A166 /* Gobble.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BFC1B7B49E000A9A166 /* Gobble.caf */; };
+		B6C04C0D1B7B49E000A9A166 /* Midnight.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BFD1B7B49E000A9A166 /* Midnight.caf */; };
+		B6C04C0E1B7B49E000A9A166 /* Morse.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BFE1B7B49E000A9A166 /* Morse.caf */; };
+		B6C04C0F1B7B49E000A9A166 /* Music Box.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04BFF1B7B49E000A9A166 /* Music Box.caf */; };
+		B6C04C101B7B49E000A9A166 /* Pager.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04C001B7B49E000A9A166 /* Pager.caf */; };
+		B6C04C111B7B49E000A9A166 /* Reveille.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04C011B7B49E000A9A166 /* Reveille.caf */; };
+		B6C04C121B7B49E000A9A166 /* Siren.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04C021B7B49E000A9A166 /* Siren.caf */; };
+		B6C04C131B7B49E000A9A166 /* Toy Train.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04C031B7B49E000A9A166 /* Toy Train.caf */; };
+		B6C04C141B7B49E000A9A166 /* Trumpet Voice.caf in Resources */ = {isa = PBXBuildFile; fileRef = B6C04C041B7B49E000A9A166 /* Trumpet Voice.caf */; };
+		B6C04C161B7B4BA200A9A166 /* void.wav in Resources */ = {isa = PBXBuildFile; fileRef = B6C04C151B7B4BA200A9A166 /* void.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,23 +106,8 @@
 		8E2DCB491AF9B08500E30F0F /* AlarmManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlarmManager.m; path = CTimer/AlarmManager.m; sourceTree = SOURCE_ROOT; };
 		8E322AD81AFCAEF70078517C /* CTimer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = CTimer.entitlements; sourceTree = "<group>"; };
 		8E322AD91AFCAEF70078517C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		8E322ADB1AFCB11E0078517C /* Bells.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bells.caf; sourceTree = "<group>"; };
-		8E322ADC1AFCB11E0078517C /* Classic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Classic.caf; sourceTree = "<group>"; };
-		8E322ADD1AFCB11E0078517C /* Digital.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Digital.caf; sourceTree = "<group>"; };
-		8E322ADE1AFCB11E0078517C /* Paradise.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Paradise.caf; sourceTree = "<group>"; };
-		8E322ADF1AFCB11E0078517C /* Piano.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Piano.caf; sourceTree = "<group>"; };
-		8E322AE01AFCB11E0078517C /* Radar.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Radar.caf; sourceTree = "<group>"; };
-		8E322AE11AFCB11E0078517C /* ringtone.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ringtone.caf; sourceTree = "<group>"; };
-		8E322AE21AFCB11E0078517C /* Silk.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Silk.caf; sourceTree = "<group>"; };
-		8E322AE31AFCB11E0078517C /* Singing_Birds.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Singing_Birds.caf; sourceTree = "<group>"; };
-		8E322AE41AFCB11E0078517C /* Sweet_Day.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Sweet_Day.caf; sourceTree = "<group>"; };
-		8E322AE51AFCB11E0078517C /* Tayde.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tayde.caf; sourceTree = "<group>"; };
-		8E322AE61AFCB11E0078517C /* Trumpets.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Trumpets.caf; sourceTree = "<group>"; };
-		8E322AE71AFCB11E0078517C /* Workout.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Workout.caf; sourceTree = "<group>"; };
-		8E322AF51AFCBD5B0078517C /* Note (default).caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Note (default).caf"; sourceTree = "<group>"; };
 		8E376C1B1AFB6AC300030489 /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
 		8E376C1C1AFB6AC300030489 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
-		8E385CC51B0980DA0045D09E /* void.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = void.wav; sourceTree = "<group>"; };
 		8E3B36A61AFA054500ADCF28 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = CTimer/EditViewController.h; sourceTree = SOURCE_ROOT; };
 		8E3B36A71AFA054500ADCF28 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = CTimer/EditViewController.m; sourceTree = SOURCE_ROOT; };
 		8E3B36A91AFA060700ADCF28 /* EditTimerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTimerTableViewCell.h; path = CTimer/EditTimerTableViewCell.h; sourceTree = SOURCE_ROOT; };
@@ -140,6 +128,24 @@
 		8E3D27071AF8D8FB00D01BE5 /* small_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = small_check.png; sourceTree = "<group>"; };
 		8E3D344C1B08FF2100C3AAAD /* RunViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RunViewController.h; sourceTree = "<group>"; };
 		8E3D344D1B08FF2100C3AAAD /* RunViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RunViewController.m; sourceTree = "<group>"; };
+		B6BCFEF21B7A4F1300A97729 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B6C04BF51B7B49E000A9A166 /* Air Horn.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Air Horn.caf"; sourceTree = "<group>"; };
+		B6C04BF61B7B49E000A9A166 /* Alarm Clock.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alarm Clock.caf"; sourceTree = "<group>"; };
+		B6C04BF71B7B49E000A9A166 /* Alien Siren.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Alien Siren.caf"; sourceTree = "<group>"; };
+		B6C04BF81B7B49E000A9A166 /* Car Alarm Activating.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Car Alarm Activating.caf"; sourceTree = "<group>"; };
+		B6C04BF91B7B49E000A9A166 /* Church Bells.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Church Bells.caf"; sourceTree = "<group>"; };
+		B6C04BFA1B7B49E000A9A166 /* Cuckoo.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Cuckoo.caf; sourceTree = "<group>"; };
+		B6C04BFB1B7B49E000A9A166 /* Drum.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Drum.caf; sourceTree = "<group>"; };
+		B6C04BFC1B7B49E000A9A166 /* Gobble.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Gobble.caf; sourceTree = "<group>"; };
+		B6C04BFD1B7B49E000A9A166 /* Midnight.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Midnight.caf; sourceTree = "<group>"; };
+		B6C04BFE1B7B49E000A9A166 /* Morse.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Morse.caf; sourceTree = "<group>"; };
+		B6C04BFF1B7B49E000A9A166 /* Music Box.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Music Box.caf"; sourceTree = "<group>"; };
+		B6C04C001B7B49E000A9A166 /* Pager.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Pager.caf; sourceTree = "<group>"; };
+		B6C04C011B7B49E000A9A166 /* Reveille.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Reveille.caf; sourceTree = "<group>"; };
+		B6C04C021B7B49E000A9A166 /* Siren.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Siren.caf; sourceTree = "<group>"; };
+		B6C04C031B7B49E000A9A166 /* Toy Train.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Toy Train.caf"; sourceTree = "<group>"; };
+		B6C04C041B7B49E000A9A166 /* Trumpet Voice.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trumpet Voice.caf"; sourceTree = "<group>"; };
+		B6C04C151B7B4BA200A9A166 /* void.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = void.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6BCFEF31B7A4F1300A97729 /* AVFoundation.framework in Frameworks */,
 				58DE530DA26D39611B097703 /* Pods.framework in Frameworks */,
 				8E322ADA1AFCAEF70078517C /* AudioToolbox.framework in Frameworks */,
 			);
@@ -174,6 +181,7 @@
 		7E215A16164583549F22A005 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B6BCFEF21B7A4F1300A97729 /* AVFoundation.framework */,
 				8E322AD91AFCAEF70078517C /* AudioToolbox.framework */,
 				56D1A6033C50243A7F54501A /* Pods.framework */,
 			);
@@ -328,21 +336,23 @@
 		8E322ABD1AFCA99F0078517C /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
-				8E385CC51B0980DA0045D09E /* void.wav */,
-				8E322AF51AFCBD5B0078517C /* Note (default).caf */,
-				8E322ADB1AFCB11E0078517C /* Bells.caf */,
-				8E322ADC1AFCB11E0078517C /* Classic.caf */,
-				8E322ADD1AFCB11E0078517C /* Digital.caf */,
-				8E322ADE1AFCB11E0078517C /* Paradise.caf */,
-				8E322ADF1AFCB11E0078517C /* Piano.caf */,
-				8E322AE01AFCB11E0078517C /* Radar.caf */,
-				8E322AE11AFCB11E0078517C /* ringtone.caf */,
-				8E322AE21AFCB11E0078517C /* Silk.caf */,
-				8E322AE31AFCB11E0078517C /* Singing_Birds.caf */,
-				8E322AE41AFCB11E0078517C /* Sweet_Day.caf */,
-				8E322AE51AFCB11E0078517C /* Tayde.caf */,
-				8E322AE61AFCB11E0078517C /* Trumpets.caf */,
-				8E322AE71AFCB11E0078517C /* Workout.caf */,
+				B6C04C151B7B4BA200A9A166 /* void.wav */,
+				B6C04BF51B7B49E000A9A166 /* Air Horn.caf */,
+				B6C04BF61B7B49E000A9A166 /* Alarm Clock.caf */,
+				B6C04BF71B7B49E000A9A166 /* Alien Siren.caf */,
+				B6C04BF81B7B49E000A9A166 /* Car Alarm Activating.caf */,
+				B6C04BF91B7B49E000A9A166 /* Church Bells.caf */,
+				B6C04BFA1B7B49E000A9A166 /* Cuckoo.caf */,
+				B6C04BFB1B7B49E000A9A166 /* Drum.caf */,
+				B6C04BFC1B7B49E000A9A166 /* Gobble.caf */,
+				B6C04BFD1B7B49E000A9A166 /* Midnight.caf */,
+				B6C04BFE1B7B49E000A9A166 /* Morse.caf */,
+				B6C04BFF1B7B49E000A9A166 /* Music Box.caf */,
+				B6C04C001B7B49E000A9A166 /* Pager.caf */,
+				B6C04C011B7B49E000A9A166 /* Reveille.caf */,
+				B6C04C021B7B49E000A9A166 /* Siren.caf */,
+				B6C04C031B7B49E000A9A166 /* Toy Train.caf */,
+				B6C04C041B7B49E000A9A166 /* Trumpet Voice.caf */,
 			);
 			path = Sounds;
 			sourceTree = "<group>";
@@ -421,7 +431,7 @@
 				TargetAttributes = {
 					8E1FCE711AF4C256004F5DD7 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = 6DVEBWALPJ;
+						DevelopmentTeam = JBRW23FCN6;
 						SystemCapabilities = {
 							com.apple.InterAppAudio = {
 								enabled = 1;
@@ -460,36 +470,38 @@
 			files = (
 				8E3D26FB1AF8B5B300D01BE5 /* ColorView.xib in Resources */,
 				8E3B36AD1AFA060700ADCF28 /* EditTimerTableViewCell.xib in Resources */,
-				8E322AEE1AFCB11E0078517C /* ringtone.caf in Resources */,
+				B6C04C161B7B4BA200A9A166 /* void.wav in Resources */,
 				8E1FCEBE1AF4DE5A004F5DD7 /* music_icon.png in Resources */,
 				8E1FCE811AF4C256004F5DD7 /* Main.storyboard in Resources */,
+				B6C04C111B7B49E000A9A166 /* Reveille.caf in Resources */,
 				8E3B36B21AFA06A800ADCF28 /* plus_icon.png in Resources */,
+				B6C04C071B7B49E000A9A166 /* Alien Siren.caf in Resources */,
+				B6C04C0D1B7B49E000A9A166 /* Midnight.caf in Resources */,
+				B6C04C101B7B49E000A9A166 /* Pager.caf in Resources */,
 				8E1FCEB11AF4C8AE004F5DD7 /* settings_icon.png in Resources */,
+				B6C04C121B7B49E000A9A166 /* Siren.caf in Resources */,
 				8E1FCE861AF4C256004F5DD7 /* LaunchScreen.xib in Resources */,
-				8E322AF41AFCB11E0078517C /* Workout.caf in Resources */,
-				8E322AE81AFCB11E0078517C /* Bells.caf in Resources */,
 				8E3D27061AF8D83A00D01BE5 /* SoundTableViewCell.xib in Resources */,
 				8E1FCEB01AF4C8AE004F5DD7 /* back_arrow.png in Resources */,
+				B6C04C051B7B49E000A9A166 /* Air Horn.caf in Resources */,
 				8E3B36B11AFA06A800ADCF28 /* menu_icon.png in Resources */,
+				B6C04C141B7B49E000A9A166 /* Trumpet Voice.caf in Resources */,
 				8E3B36B31AFA06A800ADCF28 /* trash_icon.png in Resources */,
-				8E322AEC1AFCB11E0078517C /* Piano.caf in Resources */,
+				B6C04C061B7B49E000A9A166 /* Alarm Clock.caf in Resources */,
 				8E1FCEAF1AF4C8AE004F5DD7 /* add_timer_icon.png in Resources */,
-				8E322AF61AFCBD5B0078517C /* Note (default).caf in Resources */,
-				8E322AEA1AFCB11E0078517C /* Digital.caf in Resources */,
-				8E322AF11AFCB11E0078517C /* Sweet_Day.caf in Resources */,
-				8E322AE91AFCB11E0078517C /* Classic.caf in Resources */,
 				8E376C1D1AFB6AC300030489 /* pause_button.png in Resources */,
-				8E322AF31AFCB11E0078517C /* Trumpets.caf in Resources */,
-				8E385CC61B0980DA0045D09E /* void.wav in Resources */,
+				B6C04C0B1B7B49E000A9A166 /* Drum.caf in Resources */,
+				B6C04C0E1B7B49E000A9A166 /* Morse.caf in Resources */,
 				8E3D27081AF8D8FB00D01BE5 /* small_check.png in Resources */,
-				8E322AF21AFCB11E0078517C /* Tayde.caf in Resources */,
-				8E322AED1AFCB11E0078517C /* Radar.caf in Resources */,
-				8E322AEB1AFCB11E0078517C /* Paradise.caf in Resources */,
+				B6C04C0C1B7B49E000A9A166 /* Gobble.caf in Resources */,
+				B6C04C081B7B49E000A9A166 /* Car Alarm Activating.caf in Resources */,
 				8E3D26FD1AF8B67200D01BE5 /* check_mark.png in Resources */,
+				B6C04C091B7B49E000A9A166 /* Church Bells.caf in Resources */,
 				8E1FCE831AF4C256004F5DD7 /* Images.xcassets in Resources */,
-				8E322AF01AFCB11E0078517C /* Singing_Birds.caf in Resources */,
+				B6C04C0A1B7B49E000A9A166 /* Cuckoo.caf in Resources */,
 				8E376C1E1AFB6AC300030489 /* play_button.png in Resources */,
-				8E322AEF1AFCB11E0078517C /* Silk.caf in Resources */,
+				B6C04C0F1B7B49E000A9A166 /* Music Box.caf in Resources */,
+				B6C04C131B7B49E000A9A166 /* Toy Train.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -627,7 +639,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Plushie Games OOD (JBRW23FCN6)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -647,6 +659,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "e3ccc6db-0b55-49ef-bd29-614534ebb259";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -669,7 +682,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Plushie Games OOD (JBRW23FCN6)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -682,6 +695,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "e3ccc6db-0b55-49ef-bd29-614534ebb259";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -694,14 +708,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoreTimer;
-				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -712,14 +723,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoreTimer;
-				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

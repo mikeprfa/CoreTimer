@@ -73,7 +73,7 @@
     newTimer = [[Timer alloc] init];
     
     realTime = DEFAULT_TIMER_VALUE;
-    lblTimeMusic.text = @"Note (default)";
+    lblTimeMusic.text = @"Air Horn";
     newTimer.timer_music = lblTimeMusic.text;
 
     lblTimer.text = [NSString stringWithFormat: @"%d sec", realTime];

@@ -27,8 +27,13 @@ static const int _wakeUpInterval = 150;
 //====================================================================================================
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    AVAudioSession *session =[AVAudioSession sharedInstance];
+    [session setCategory: AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error: nil];
+
+    
     alarmManager = [[AlarmManager alloc] init];
+    
 //    [self enablePushNotification];
     
     return YES;

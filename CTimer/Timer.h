@@ -13,6 +13,7 @@
 @interface Timer : NSObject
 {
     AVAudioPlayer*              player;
+    NSTimer*                    soundTimer;
 }
 
 @property(nonatomic, retain) NSString*          timer_id;

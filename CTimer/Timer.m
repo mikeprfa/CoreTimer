@@ -363,18 +363,38 @@
      */
 }
 
+- (void)playAtTime:(NSTimeInterval)time withDuration:(NSTimeInterval)duration {
+    NSTimeInterval shortStartDelay = 0.01;
+    NSTimeInterval now = player.deviceCurrentTime;
+    
+    [player playAtTime:now + shortStartDelay];
+    soundTimer = [NSTimer scheduledTimerWithTimeInterval:shortStartDelay + duration
+                                                      target:self
+                                                    selector:@selector(stopPlaying:)
+                                                    userInfo:nil
+                                                     repeats:NO];
+}
+
+- (void)stopPlaying:(NSTimer *)theTimer {
+    [player pause];
+    [soundTimer invalidate];
+    soundTimer = nil;
+}
+
+
 //====================================================================================================
 - (void) playSound
 {
     NSString* path = [[NSBundle mainBundle] pathForResource: timer_music ofType:@"caf"];
     player = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath: path] error: nil];
-    [player play];
+    [self playAtTime:0 withDuration:7];
 }
 
 //====================================================================================================
 - (void) resetTimer
 {
     remain_timer = timer;
+    status = NO;
 }
 
 //====================================================================================================

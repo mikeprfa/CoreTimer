@@ -112,8 +112,14 @@
 //====================================================================================================
 - (CGFloat) getPercentProgress
 {
-    float progress = [[self finishedTimers] count] / (float)[arrList count];
-    return progress;
+    float totalTime = 0;
+    float remainingTime = 0;
+    for(Timer* timer in arrList) {
+        totalTime+= timer.timer;
+        remainingTime+= timer.remain_timer;
+    }
+    
+    return (totalTime - remainingTime)/totalTime;
 }
 
 //====================================================================================================
@@ -198,10 +204,10 @@
 //====================================================================================================
 - (void) resetTimerList
 {
-    NSArray* arrWorkingTimers = [self workingTimers];
-    if(arrWorkingTimers != nil)
+    NSArray* arrTimers = arrList;
+    if(arrTimers != nil)
     {
-        for(Timer* t in arrWorkingTimers)
+        for(Timer* t in arrTimers)
         {
             [t resetTimer];
         }

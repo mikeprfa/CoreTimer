@@ -46,8 +46,7 @@
     [super initMember];
     
     selectedIndex = 0;
-    arrSounds = @[@"Note (default)", @"Bells", @"Classic", @"Digital", @"Paradise", @"Piano", @"Radar", @"ringtone", @"Silk", @"Singing_Birds", @"Sweet_Day", @"Tayde", @"Trumpets", @"Workout"];
-    
+    arrSounds = @[@"Air Horn", @"Alarm Clock", @"Alien Siren", @"Car Alarm Activating", @"Church Bells", @"Cuckoo", @"Drum", @"Gobble", @"Midnight", @"Morse", @"Music Box", @"Pager", @"Reveille", @"Siren", @"Toy Train", @"Trumpet Voice"];
     
     [tblView registerNib:[UINib nibWithNibName:@"SoundTableViewCell" bundle:nil] forCellReuseIdentifier:@"SoundTableViewCell"];
 }
@@ -101,18 +100,11 @@
 //====================================================================================================
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(indexPath.row == 0)
-    {
-        
-    }
-    else
-    {
 
-        NSString* path = [[NSBundle mainBundle] pathForResource: [arrSounds objectAtIndex: indexPath.row] ofType:@"caf"];
-        player = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath: path] error: nil];
-        [player play];
-    }
-    
+    NSString* path = [[NSBundle mainBundle] pathForResource: [arrSounds objectAtIndex: indexPath.row] ofType:@"caf"];
+    player = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath: path] error: nil];
+    [player play];
+
     selectedIndex = (int)indexPath.row;
     [tblView reloadData];
 }
