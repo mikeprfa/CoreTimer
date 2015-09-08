@@ -80,11 +80,11 @@
     
     selectedColorIndex = 0;
     arrColors = [NSArray arrayWithObjects: [UIColor colorWithRed: 252.0f/255.0f green: 150.0f/255.0f blue: 3.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 0/255.0f green: 246.0f/255.0f blue: 235.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 0.0f/255.0f green: 246.0f/255.0f blue: 235.0f/255.0 alpha: 1.0f],
                  [UIColor colorWithRed: 0.0f/255.0f green: 187.0f/255.0f blue: 226.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 255.0f/255.0f green: 0.0f/255.0f blue: 0.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 0.0f/255.0f green: 255.0f/255.0f blue: 0.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 0.0f/255.0f green: 0.0f/255.0f blue: 255.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 248.0f/255.0f green: 57.0f/255.0f blue: 98.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 188.0f/255.0f green: 216.0f/255.0f blue: 0.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 255.0f/255.0f green: 250.0f/255.0f blue: 240.0f/255.0 alpha: 1.0f],
                  nil];
     arrColorCells = [[NSMutableArray alloc] init];
     
