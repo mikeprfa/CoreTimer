@@ -431,7 +431,7 @@
 				TargetAttributes = {
 					8E1FCE711AF4C256004F5DD7 = {
 						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = JBRW23FCN6;
+						DevelopmentTeam = 6DVEBWALPJ;
 						SystemCapabilities = {
 							com.apple.InterAppAudio = {
 								enabled = 1;
@@ -708,11 +708,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoreTimer;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -723,11 +726,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = CoreTimer;
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
