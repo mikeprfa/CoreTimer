@@ -33,12 +33,6 @@
 }
 
 //====================================================================================================
-- (void) initMember
-{
-    [super initMember];
-}
-
-//====================================================================================================
 - (void) viewWillAppear:(BOOL)animated
 {
 //    swUseDelay.on = [AppDelegate getDelegate].alarmManager.useDelay;

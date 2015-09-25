@@ -18,8 +18,9 @@
     NSMutableArray                  *arrColorCells;
     
     int                             realTime;
+    int                             realTimeTmp;
     
-    int                             selectedColorIndex;
+    NSInteger                       selectedColorIndex;
     int                             timerInputMode;
     
     Timer                           *newTimer;
@@ -28,9 +29,8 @@
 @property (nonatomic, weak) IBOutlet UIView                 *viewTimerName;
 @property (nonatomic, weak) IBOutlet UITextField            *txtTimerName;
 @property (nonatomic, weak) IBOutlet UIScrollView           *scrollColor;
-@property (nonatomic, weak) IBOutlet UIView                 *viewTimer;
-@property (nonatomic, weak) IBOutlet UILabel                *lblTimer;
-@property (nonatomic, weak) IBOutlet UILabel                *lblTimeMusic;
+@property (nonatomic, weak) IBOutlet UIButton               *lblTimer;
+@property (nonatomic, weak) IBOutlet UIButton               *btnTimer;
 
 //Timer Picker;
 @property (nonatomic, weak) IBOutlet UIView                 *viewTimerPicker;
@@ -42,72 +42,74 @@
 @implementation AddTimerViewController
 @synthesize txtTimerName;
 @synthesize viewTimerName;
-@synthesize viewTimer;
 @synthesize scrollColor;
 
 @synthesize viewTimerPicker;
 @synthesize btnTitle;
+@synthesize btnTimer;
 @synthesize picker;
 
-@synthesize lblTimeMusic;
 @synthesize lblTimer;
 
-//====================================================================================================
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-//====================================================================================================
-- (void)didReceiveMemoryWarning
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-//====================================================================================================
-- (void) initMember
-{
-    [super initMember];
+    [super viewWillAppear:animated];
+    CGFloat inset = [self scrollViewInset];
+    CGFloat offset = [self cellOffsetForIndex:0];
     
+    scrollColor.contentInset = UIEdgeInsetsMake(0, inset, 0, inset);
+    scrollColor.contentOffset = CGPointMake(offset, 0);
+}
+
+//====================================================================================================
+- (void) setup
+{
+    [super setup];
+
     newTimer = [[Timer alloc] init];
     
-    realTime = DEFAULT_TIMER_VALUE;
-    lblTimeMusic.text = @"Air Horn";
-    newTimer.timer_music = lblTimeMusic.text;
+    realTime = realTimeTmp = DEFAULT_TIMER_VALUE;
+    NSString *defaultSound = @"Air Horn";
+    [btnTimer setTitle:defaultSound forState:UIControlStateNormal];
+    newTimer.timer_music = defaultSound;
 
-    lblTimer.text = [NSString stringWithFormat: @"%d sec", realTime];
+    NSAttributedString *title = [Timer getTimerValue:0 minute:0 sec: 30];
+    [lblTimer setAttributedTitle:title
+                        forState:UIControlStateNormal];
     
     selectedColorIndex = 0;
     arrColors = [NSArray arrayWithObjects: [UIColor colorWithRed: 252.0f/255.0f green: 150.0f/255.0f blue: 3.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 0/255.0f green: 246.0f/255.0f blue: 235.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 0.0f/255.0f green: 246.0f/255.0f blue: 235.0f/255.0 alpha: 1.0f],
                  [UIColor colorWithRed: 0.0f/255.0f green: 187.0f/255.0f blue: 226.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 255.0f/255.0f green: 0.0f/255.0f blue: 0.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 0.0f/255.0f green: 255.0f/255.0f blue: 0.0f/255.0 alpha: 1.0f],
-                 [UIColor colorWithRed: 0.0f/255.0f green: 0.0f/255.0f blue: 255.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 248.0f/255.0f green: 57.0f/255.0f blue: 98.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 188.0f/255.0f green: 216.0f/255.0f blue: 0.0f/255.0 alpha: 1.0f],
+                 [UIColor colorWithRed: 255.0f/255.0f green: 250.0f/255.0f blue: 240.0f/255.0 alpha: 1.0f],
                  nil];
     arrColorCells = [[NSMutableArray alloc] init];
     
     arrTimer = [[NSMutableArray alloc] init];
     NSMutableArray* arrHours = [[NSMutableArray alloc] init];
+    [arrHours addObject:@"Hours"];
     for(int i = 0; i <= 12; i++)
     {
         [arrHours addObject: [NSString stringWithFormat: @"%d", i]];
     }
 
-    NSMutableArray* arrMinues = [[NSMutableArray alloc] init];
+    NSMutableArray* arrMinutes = [[NSMutableArray alloc] init];
+    [arrMinutes addObject:@"Minutes"];
     for(int i = 0; i <= 59; i++)
     {
-        [arrMinues addObject: [NSString stringWithFormat: @"%02i", i]];
+        [arrMinutes addObject: [NSString stringWithFormat: @"%02i", i]];
     }
     
     NSMutableArray* arrSecs = [[NSMutableArray alloc] init];
+    [arrSecs addObject:@"Seconds"];
     for(int i = 0; i <= 59; i++)
     {
         [arrSecs addObject: [NSString stringWithFormat: @"%02i", i]];
     }
     [arrTimer addObject: arrHours];
-    [arrTimer addObject: arrMinues];
+    [arrTimer addObject: arrMinutes];
     [arrTimer addObject: arrSecs];
     
     viewTimerName.layer.masksToBounds = YES;
@@ -115,8 +117,9 @@
     viewTimerName.layer.borderWidth = 1.0f;
     viewTimerName.layer.borderColor = MAIN_TEXT_COLOR.CGColor;
     
-    viewTimer.layer.masksToBounds = YES;
-    viewTimer.layer.cornerRadius = viewTimer.frame.size.height / 2.0f;
+    [lblTimer setTitleColor:UIColor.whiteColor forState:UIControlStateHighlighted];
+    [lblTimer setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
+    lblTimer.layer.cornerRadius = lblTimer.frame.size.height / 2.0f;
 }
 
 //====================================================================================================
@@ -135,23 +138,21 @@
         [view removeFromSuperview];
     }
     
-    float fx = 12;
-    float fy = 0;
-    float fw = 170.0f;
-    float fh = 170.0f;
-    float fIndentX = 12;
+    CGFloat fx = 0;
+    CGFloat fy = 0;
+    CGFloat fw = self.btnTimer.frame.size.width;
+    CGFloat fh = fw;
+    CGFloat fIndentX = 12;
     
-    for(int i = 0; i < [arrColors count]; i++)
+    for (int i = 0; i < [arrColors count]; i++)
     {
         UIColor* color = [arrColors objectAtIndex: i];
-        ColorView* view = [[ColorView alloc] initWithFrame: CGRectMake(fx, fy, fw, fh)];
+        ColorView* view = [ColorView colorViewWithFrame:CGRectMake(fx, fy, fw, fh)];
         
         if(selectedColorIndex == i)
         {
             [view updateColor: color backgroundColor: self.view.backgroundColor selected: YES];
-        }
-        else
-        {
+        } else {
             [view updateColor: color backgroundColor: self.view.backgroundColor selected: NO];
         }
         view.delegate = self;
@@ -164,11 +165,14 @@
     }
     
     [scrollColor setContentSize: CGSizeMake(fx, scrollColor.contentSize.height)];
+    CGFloat offset = [self cellOffsetForIndex:0];
+    scrollColor.contentOffset = CGPointMake(offset, 0);
 }
 
 //====================================================================================================
-- (void) selectedColor:(int)index
+- (void) selectedColor:(NSInteger) index
 {
+    index = MAX(0, MIN(arrColorCells.count - 1, index));
     selectedColorIndex = index;
     for(ColorView* cellView in arrColorCells)
     {
@@ -177,6 +181,10 @@
             [cellView deselectColor];
         }
     }
+    
+    [scrollColor setContentOffset:CGPointMake([self cellOffsetForIndex:index], 0)
+                         animated:YES];
+   
 }
 
 //====================================================================================================
@@ -187,9 +195,10 @@
     nextView.parentView = self;
     nextView.type = TIMER_REAL;
     
-    if(lblTimeMusic.text != nil && [lblTimeMusic.text length] > 0)
+    NSString *music = [btnTimer titleForState:UIControlStateNormal];
+    if(music != nil && [music length] > 0)
     {
-        nextView.selectedSoundName = lblTimeMusic.text;
+        nextView.selectedSoundName = music;
     }
 
     [self.navigationController pushViewController: nextView animated: YES];
@@ -198,15 +207,15 @@
 //====================================================================================================
 - (void) selectSound: (NSString*) title type: (int) type
 {
-    lblTimeMusic.text = title;
     newTimer.timer_music = title;
+    [btnTimer setTitle:title forState:UIControlStateNormal];
 }
 
 //====================================================================================================
 - (IBAction)actionTimer:(id)sender
 {
     timerInputMode = TIMER_REAL;
-    btnTitle.title = @"Please set timer";
+    btnTitle.title = @"Please set the timer";
     viewTimerPicker.hidden = NO;
     
     [self preselectPicker: realTime];
@@ -221,16 +230,23 @@
 //====================================================================================================
 - (IBAction) actionDoneTimer:(id)sender
 {
+    int sec = realTimeTmp % 60;
+    int minute = (realTimeTmp/60) % 60;
+    int hour = (realTimeTmp / (60 * 60));
+    [lblTimer setAttributedTitle:[Timer getTimerValue: hour minute: minute sec: sec]
+                        forState:UIControlStateNormal];
+    realTime = realTimeTmp;
+    
     viewTimerPicker.hidden = YES;
 }
 
 //====================================================================================================
 - (void) preselectPicker: (int) time
 {
-    int hour = (time / 3600);
-    int minute = (time % 3600) / 60;
-    int sec = time % 60;
-    
+    // The first items in the picker are the labels.
+    int hour = 1 + (time / 3600);
+    int minute = 1 + (time % 3600) / 60;
+    int sec = 1 + time % 60;
     [picker selectRow: hour inComponent: 0 animated: YES];
     [picker selectRow: minute inComponent: 1 animated: YES];
     [picker selectRow: sec inComponent: 2 animated: YES];    
@@ -306,8 +322,10 @@
     int minute = [[[arrTimer objectAtIndex: 1] objectAtIndex: selectedRow2] intValue];
     int sec = [[[arrTimer objectAtIndex: 2] objectAtIndex: selectedRow3] intValue];
     
-    realTime = hour * 3600 + minute * 60 + sec;
-    lblTimer.text = [Timer getTimerValue: hour minute: minute sec: sec];
+    realTimeTmp = hour * 3600 + minute * 60 + sec;
+    if (realTimeTmp == 0) {
+        realTimeTmp = 30;
+    }
 }
 
 //====================================================================================================
@@ -339,4 +357,56 @@
     [self actionBack: nil];
 }
 //====================================================================================================
+
+-(CGFloat) cellWidth {
+    return self.btnTimer.frame.size.width;
+}
+
+- (float) scrollViewInset {
+    return (self.view.frame.size.width - self.cellWidth) / 2.0;
+}
+
+- (float) cellOffsetForIndex:(NSInteger) index {
+    index = MAX(0, MIN(arrColorCells.count - 1, index));
+    CGFloat cellWidth = self.cellWidth;
+    CGFloat fIndentX = 12;
+    CGFloat inset = self.scrollViewInset;
+    return -inset + index * (cellWidth + fIndentX);
+}
+
+-(NSInteger) cellIndexAtOffset:(CGFloat) offset {
+    CGFloat cellWidth = self.cellWidth;
+    offset = offset - self.scrollViewInset;
+    NSInteger cellIndex = floor(MAX(0, offset) / cellWidth);
+    cellIndex = MIN(arrColorCells.count - 1, MAX(0, cellIndex));
+    
+    // Round to the next cell if the scrolling will stop over halfway to the next cell.
+    if ((offset - [self cellOffsetForIndex:cellIndex]) > cellWidth / 2) {
+        ++cellIndex;
+    }
+
+    return cellIndex;
+}
+
+-(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    for (ColorView *colorView in arrColorCells) {
+        colorView.imgCheck.hidden = YES;
+    }
+    
+    NSInteger cellIndex = [self cellIndexAtOffset:scrollView.contentOffset.x];
+    ColorView *colorView = arrColorCells[cellIndex];
+    selectedColorIndex = cellIndex;
+    colorView.imgCheck.hidden = NO;
+}
+
+- (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
+{
+    // Determine which table cell the scrolling will stop on.
+    NSInteger cellIndex = [self cellIndexAtOffset:targetContentOffset->x];
+    
+    // Adjust stopping point to exact beginning of cell.
+    targetContentOffset->x = [self cellOffsetForIndex:cellIndex];
+}
+
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import <UIKit/UIScrollView.h>
 
-@interface AddTimerViewController : BaseViewController
+@interface AddTimerViewController : BaseViewController <UIScrollViewDelegate>
 {
     
 }

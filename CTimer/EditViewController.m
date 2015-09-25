@@ -37,9 +37,9 @@
 }
 
 //====================================================================================================
-- (void) initMember
+- (void) setup
 {
-    [super initMember];
+    [super setup];
     [tblView registerNib:[UINib nibWithNibName:@"EditTimerTableViewCell" bundle:nil] forCellReuseIdentifier:@"EditTimerTableViewCell"];
 }
 

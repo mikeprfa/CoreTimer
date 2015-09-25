@@ -10,7 +10,7 @@
 
 @protocol ColorViewDelegate
 @optional
--(void) selectedColor: (int) index;
+-(void) selectedColor: (NSInteger) index;
 @end
 
 @interface ColorView : UIView
@@ -22,6 +22,8 @@
 @property (nonatomic, weak) IBOutlet UIView             *viewInner;
 @property (nonatomic, retain) id                        delegate;
 
++ (id) colorViewWithFrame:(CGRect)frame;
 - (void) updateColor: (UIColor*) color backgroundColor: (UIColor*) bgColor selected: (BOOL) bSelected;
 - (void) deselectColor;
+
 @end

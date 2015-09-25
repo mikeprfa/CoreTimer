@@ -8,23 +8,13 @@
 
 #import "BaseViewController.h"
 
-@interface BaseViewController ()
-
-@end
-
 @implementation BaseViewController
 
 //====================================================================================================
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self initMember];
-}
-
-//====================================================================================================
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [self setup];
 }
 
 //====================================================================================================
@@ -34,7 +24,7 @@
 }
 
 //====================================================================================================
-- (void) initMember
+- (void) setup
 {
     
 }

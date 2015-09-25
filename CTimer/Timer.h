@@ -27,7 +27,7 @@
 @property(nonatomic, retain) NSDate*            createdAt;
 
 - (id) initWithData: (NSString*) strItem;
-+ (NSString*) getTimerValue: (int) hour minute: (int) minute sec: (int) sec;
++ (NSAttributedString*) getTimerValue: (int) hour minute: (int) minute sec: (int) second;
 + (NSString*) getTimeFormat: (int) sec;
 + (NSString*) getHourMinuteType: (int) value;
 + (NSString*) getSecType: (int) value;

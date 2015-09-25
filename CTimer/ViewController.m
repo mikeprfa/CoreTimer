@@ -36,23 +36,9 @@
 @synthesize btnEdit;
 
 //====================================================================================================
-- (void)viewDidLoad
+- (void) setup
 {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-}
-
-//====================================================================================================
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-//====================================================================================================
-- (void) initMember
-{
-    [super initMember];
+    [super setup];
     
     btnStart.layer.masksToBounds = YES;
     btnStart.layer.cornerRadius = btnStart.frame.size.height / 2.0f;
@@ -60,10 +46,7 @@
     [tblView registerNib:[UINib nibWithNibName:@"EditTimerTableViewCell" bundle:nil] forCellReuseIdentifier:@"EditTimerTableViewCell"];
 }
 
-//====================================================================================================
-- (void) viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear: animated];
+- (void) setupEmptyView {
     if([[AppDelegate getDelegate].alarmManager.arrList count] > 0)
     {
         bExistTimer = YES;
@@ -78,6 +61,16 @@
         viewFill.hidden = YES;
         btnEdit.hidden = YES;
     }
+}
+
+//====================================================================================================
+- (void) viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear: animated];
+    
+    [self setupEmptyView];
+    
+    [tblView setContentInset:UIEdgeInsetsMake(120,0,0,0)];
     
     [tblView reloadData];
 }
@@ -93,11 +86,13 @@
 //====================================================================================================
 - (IBAction) actionEdit:(id)sender
 {
-    if(bExistTimer)
-    {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-        id nextView = [storyboard instantiateViewControllerWithIdentifier: @"EditViewController"];
-        [self.navigationController pushViewController: nextView animated: YES];
+    if (tblView.isEditing) {
+        [tblView setEditing:NO animated:YES];
+    } else {
+        if (bExistTimer)
+        {
+            [tblView setEditing:YES animated:YES];
+        }
     }
 }
 
@@ -130,6 +125,61 @@
     
     return cell;
 }
+
+/*
+- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView
+                  editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewRowAction *test1;
+    UITableViewRowAction *test2;
+    UITableViewRowAction *test3;
+    test1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
+                                              title:@"Test"
+                                            handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                NSLog(@"RowAction Handler: %@ %@", action, indexPath);
+                                            }];
+    test2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
+                                               title:@"Test2"
+                                             handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                 NSLog(@"RowAction Handler: %@ %@", action, indexPath);
+                                             }];
+    test3 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
+                                               title:@"Test3"
+                                             handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
+                                                 NSLog(@"RowAction Handler: %@ %@", action, indexPath);
+                                             }];
+    return @[ test1, test2, test3 ];
+}
+ */
+
+- (void)tableView:(UITableView *)tableView
+  commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
+   forRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    // If row is deleted, remove it from the list.
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [self trashTimer:indexPath.row];
+    }
+    
+    // This method intentionally left blank.
+    // More info: http://pablin.org/2014/09/25/uitableviewrowaction-introduction/
+}
+
+//====================================================================================================
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    [[AppDelegate getDelegate].alarmManager.arrList exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+}
+
+//====================================================================================================
+- (void) trashTimer:(NSInteger)index
+{
+    [[AppDelegate getDelegate].alarmManager.arrList removeObjectAtIndex: index];
+    [[AppDelegate getDelegate].alarmManager saveTimerList];
+    [tblView reloadData];
+    [self setupEmptyView];
+}
+
 
 //====================================================================================================
 @end

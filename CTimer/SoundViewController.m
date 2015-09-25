@@ -16,7 +16,7 @@
 @interface SoundViewController () <UITableViewDataSource, UITableViewDelegate>
 {
     NSArray                     *arrSounds;
-    int                         selectedIndex;
+    NSInteger                   selectedIndex;
     
     AVAudioPlayer               *player;
 }
@@ -41,12 +41,23 @@
 }
 
 //====================================================================================================
-- (void) initMember
+- (void) setup
 {
-    [super initMember];
+    [super setup];
     
     selectedIndex = 0;
     arrSounds = @[@"Air Horn", @"Alarm Clock", @"Alien Siren", @"Car Alarm Activating", @"Church Bells", @"Cuckoo", @"Drum", @"Gobble", @"Midnight", @"Morse", @"Music Box", @"Pager", @"Reveille", @"Siren", @"Toy Train", @"Trumpet Voice"];
+    
+    NSInteger index = 0;
+    if (_selectedSoundName.length > 0) {
+        for (NSString *sound in arrSounds) {
+            if ([sound isEqualToString:_selectedSoundName]) {
+                selectedIndex = index;
+                break;
+            }
+            ++index;
+        }
+    }
     
     [tblView registerNib:[UINib nibWithNibName:@"SoundTableViewCell" bundle:nil] forCellReuseIdentifier:@"SoundTableViewCell"];
 }

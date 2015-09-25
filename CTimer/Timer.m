@@ -177,39 +177,54 @@
 }
 
 //====================================================================================================
-+ (NSString*) getTimerValue: (int) hour minute: (int) minute sec: (int) sec
++ (NSAttributedString*) getTimerValue: (int) hour minute: (int) minute sec: (int) second
 {
-    NSString* result = @"";
+    NSString *strHour = @"";
+    NSString *strMinute = @"";
+    NSString *strSecond = @"";
+    
     if(hour != 0)
     {
-        if(hour == 1)
-        {
-            result = [result stringByAppendingString: [NSString stringWithFormat: @"%d hr ", hour]];
-        }
-        else
-        {
-            result = [result stringByAppendingString: [NSString stringWithFormat: @"%d hrs ", hour]];
-        }
+        strHour = [NSString stringWithFormat:@"%d %@ ", hour, ((hour == 1) ? @"hr" : @"hrs")];
     }
     
     if(minute != 0)
     {
-        if(minute == 1)
-        {
-            result = [result stringByAppendingString: [NSString stringWithFormat: @"%d min ", minute]];
-        }
-        else
-        {
-            result = [result stringByAppendingString: [NSString stringWithFormat: @"%d mins ", minute]];
-        }
+        strMinute = [NSString stringWithFormat:@"%d %@ ", minute, ((minute == 1) ? @"min" : @"mins")];
     }
 
-    if(sec != 0)
+    if(second != 0)
     {
-        result = [result stringByAppendingString: [NSString stringWithFormat: @"%d sec", sec]];
+        strSecond = [NSString stringWithFormat:@"%d sec", second];
     }
     
-    return result;
+    NSString *prefix;
+    if (hour != 0 && minute != 0 && second != 0) {
+        prefix = @"";
+    } else {
+        prefix = @"TIMER: ";
+    }
+    
+    NSString *result = [NSString stringWithFormat:@"%@%@%@%@", prefix, strHour, strMinute, strSecond];
+    NSMutableAttributedString *attrLabel;
+    attrLabel = [[NSMutableAttributedString alloc]
+                 initWithString:result
+                 attributes:@{ NSFontAttributeName: [UIFont systemFontOfSize:15],
+                              NSForegroundColorAttributeName: UIColor.whiteColor }];
+
+    [attrLabel setAttributes:@{ NSFontAttributeName: [UIFont boldSystemFontOfSize:15],
+                                NSForegroundColorAttributeName: UIColor.whiteColor  }
+                       range:[result rangeOfString:prefix]];
+
+    /*
+    [attrLabel beginEditing];
+    [attrLabel addAttribute:NSFontAttributeName
+                      value:[UIFont systemFontOfSize:16]
+                      range:[result rangeOfString:@"TIMER: "]];
+    [attrLabel endEditing];
+    */
+    
+    return attrLabel;
 }
 
 //====================================================================================================

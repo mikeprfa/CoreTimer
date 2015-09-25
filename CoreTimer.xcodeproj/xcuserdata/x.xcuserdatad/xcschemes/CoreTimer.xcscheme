@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FE9523EAEC7A8FB4663A40E3"
-               BuildableName = "KKProgressTimer.framework"
-               BlueprintName = "Pods-KKProgressTimer"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "8E1FCE711AF4C256004F5DD7"
+               BuildableName = "CoreTimer.app"
+               BlueprintName = "CoreTimer"
+               ReferencedContainer = "container:CoreTimer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "8E1FCE8A1AF4C256004F5DD7"
+               BuildableName = "CoreTimerTests.xctest"
+               BlueprintName = "CoreTimerTests"
+               ReferencedContainer = "container:CoreTimer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "8E1FCE711AF4C256004F5DD7"
+            BuildableName = "CoreTimer.app"
+            BlueprintName = "CoreTimer"
+            ReferencedContainer = "container:CoreTimer.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -42,16 +61,22 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE9523EAEC7A8FB4663A40E3"
-            BuildableName = "KKProgressTimer.framework"
-            BlueprintName = "Pods-KKProgressTimer"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "8E1FCE711AF4C256004F5DD7"
+            BuildableName = "CoreTimer.app"
+            BlueprintName = "CoreTimer"
+            ReferencedContainer = "container:CoreTimer.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
       <AdditionalOptions>
+         <AdditionalOption
+            key = "NSZombieEnabled"
+            value = "YES"
+            isEnabled = "YES">
+         </AdditionalOption>
       </AdditionalOptions>
    </LaunchAction>
    <ProfileAction
@@ -60,15 +85,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <MacroExpansion>
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FE9523EAEC7A8FB4663A40E3"
-            BuildableName = "KKProgressTimer.framework"
-            BlueprintName = "Pods-KKProgressTimer"
-            ReferencedContainer = "container:Pods.xcodeproj">
+            BlueprintIdentifier = "8E1FCE711AF4C256004F5DD7"
+            BuildableName = "CoreTimer.app"
+            BlueprintName = "CoreTimer"
+            ReferencedContainer = "container:CoreTimer.xcodeproj">
          </BuildableReference>
-      </MacroExpansion>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

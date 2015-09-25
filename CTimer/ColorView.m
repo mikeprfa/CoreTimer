@@ -12,16 +12,13 @@
 @synthesize delegate;
 
 //====================================================================================================
-- (id)initWithFrame:(CGRect)frame
++ (id)colorViewWithFrame:(CGRect)frame
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-        ColorView* xibView = [[[NSBundle mainBundle] loadNibNamed: @"ColorView" owner:self options:nil] objectAtIndex:0];
-        [xibView setFrame:frame];
-        self = xibView;
-    }
-    return self;
+    // Initialization code
+    ColorView* xibView = [[[NSBundle mainBundle] loadNibNamed: @"ColorView" owner:self options:nil] objectAtIndex:0];
+    [xibView setFrame:frame];
+    [xibView layoutIfNeeded];
+    return xibView;
 }
 
 //====================================================================================================
@@ -46,7 +43,7 @@
     self.imgCheck.hidden = NO;
     if ([(id)delegate respondsToSelector:@selector(selectedColor:)])
     {
-        [delegate selectedColor: (int)self.tag];
+        [delegate selectedColor:(int)self.tag];
     }
 }
 

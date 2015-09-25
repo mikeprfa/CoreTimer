@@ -14,6 +14,6 @@
     
 }
 
-- (void) initMember;
+- (void) setup;
 - (IBAction) actionBack:(id)sender;
 @end

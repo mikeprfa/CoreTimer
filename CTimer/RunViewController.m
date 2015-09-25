@@ -13,10 +13,12 @@
 
 @interface RunViewController () <KKProgressTimerDelegate>
 {
-    NSTimer         *mainCheckTimer;
-    Timer           *currentTimer;
+    NSTimer        *mainCheckTimer;
+    Timer          *currentTimer;
+    NSMutableArray *progressBars;
+    BOOL           shouldAddProgressBar;
     
-    BOOL            bPaused;
+    BOOL           bPaused;
 }
 
 @property (weak, nonatomic) IBOutlet CircleProgressBar      *mainProgress;
@@ -76,10 +78,39 @@
     // Dispose of any resources that can be recreated.
 }
 
-//====================================================================================================
-- (void) initMember
+
+-(void) copyConstraintsFromView:(UIView *)sourceView toView:(UIView *) destView
 {
-    [super initMember];
+    for (NSLayoutConstraint *constraint in sourceView.superview.constraints) {
+        if (constraint.firstItem == sourceView)
+        {
+            [sourceView.superview addConstraint:
+             [NSLayoutConstraint constraintWithItem:destView
+                                          attribute:constraint.firstAttribute
+                                          relatedBy:constraint.relation
+                                             toItem:constraint.secondItem
+                                          attribute:constraint.secondAttribute
+                                         multiplier:constraint.multiplier
+                                           constant:constraint.constant]];
+        }
+        else if (constraint.secondItem == sourceView)
+        {
+            [sourceView.superview addConstraint:
+             [NSLayoutConstraint constraintWithItem:constraint.firstItem
+                                          attribute:constraint.firstAttribute
+                                          relatedBy:constraint.relation
+                                             toItem:destView
+                                          attribute:constraint.secondAttribute
+                                         multiplier:constraint.multiplier
+                                           constant:constraint.constant]];
+        }
+    }
+}
+
+//====================================================================================================
+- (void) setup
+{
+    [super setup];
     
     bPaused = NO;
     
@@ -113,53 +144,74 @@
     circleTimerStatus.hidden = YES;
     
     //Start Timer.
-    currentTimer = [[AppDelegate getDelegate].alarmManager getCurrentTimer];
-    [self updatePauseStatus];
-    [self updateTimerInfo];
+    AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
+    NSInteger numTasks = [alarmManager getRemainTaskCount] + [alarmManager getFinishedTaskCount];
     
-    mainCheckTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0f target: self selector: @selector(checkTimer) userInfo: nil repeats: YES];    
+    // Setup progress bars.
+    progressBars = [NSMutableArray arrayWithCapacity:numTasks];
+    [self.view layoutIfNeeded];
+    for (NSInteger i = 0; i < numTasks; ++i) {
+        CircleProgressBar *progressBar = [[CircleProgressBar alloc] initWithFrame:mainProgress.frame];
+        progressBar.hintHidden = mainProgress.hintHidden;
+        progressBar.startAngle = mainProgress.startAngle;
+        progressBar.progressBarWidth = mainProgress.progressBarWidth;
+        
+        [progressBar setBackgroundColor:UIColor.clearColor];
+        [progressBar setProgressBarTrackColor:UIColor.clearColor];
+        [progressBar setProgressBarProgressColor:UIColor.clearColor];
+        [progressBars addObject:progressBar];
+    }
+    
+    for (NSInteger i = numTasks - 1; i >= 0; --i) {
+        CircleProgressBar *progressBar = progressBars[i];
+        [mainProgress.superview addSubview:progressBar];
+    }
 }
 
 //====================================================================================================
 - (void) updateTimerInfo
 {
+    AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
+    
     //Finished.
-    lblFisinhed.text = [NSString stringWithFormat: @"FINISHED: %@", [[AppDelegate getDelegate].alarmManager getFinishedTaskNames]];
-    float currentProgress = [[AppDelegate getDelegate].alarmManager getPercentProgress];
+    lblFisinhed.text = [NSString stringWithFormat: @"FINISHED: %@", [alarmManager getFinishedTaskNames]];
+    float currentProgress = [alarmManager getPercentProgress];
     [progressFinished startWithBlock:^CGFloat {
         return currentProgress;
     }];
     
     [mainProgress setProgress: currentProgress animated: YES];
     
+    if (shouldAddProgressBar) {
+        mainProgress = progressBars[[alarmManager getFinishedTaskCount]];
+    }
+    
     //Current Task.
     if(currentTimer != nil)
     {
         viewCurrentTask.hidden = NO;
         lblCurrentTaskName.text = currentTimer.name;
-        lblCurrentTaskNumber.text = [NSString stringWithFormat: @"%d", [[AppDelegate getDelegate].alarmManager getOrderIndex: currentTimer]];
+        lblCurrentTaskNumber.text = [NSString stringWithFormat: @"%d", [alarmManager getOrderIndex: currentTimer]];
         mainProgress.progressBarProgressColor = currentTimer.color;
-    }
-    else
-    {
+    } else {
         viewCurrentTask.hidden = YES;
     }
     
     //Next Task.
-    Timer* nextTimer = [[AppDelegate getDelegate].alarmManager getNextTimer];
+    Timer* nextTimer = [alarmManager getNextTimer];
     if(nextTimer != nil)
     {
         viewNextTask.hidden = NO;
         lblNextTaskName.text = nextTimer.name;
-        lblNextTaskNumber.text = [NSString stringWithFormat: @"%d", [[AppDelegate getDelegate].alarmManager getOrderIndex: nextTimer]];
+        lblNextTaskNumber.text = [NSString stringWithFormat: @"%d", [alarmManager getOrderIndex: nextTimer]];
     }
     else
     {
         viewNextTask.hidden = YES;
     }
     
-    int finishedCount = [[AppDelegate getDelegate].alarmManager getFinishedTaskCount];
-    int remainCount = [[AppDelegate getDelegate].alarmManager getRemainTaskCount];
+    int finishedCount = [alarmManager getFinishedTaskCount];
+    int remainCount = [alarmManager getRemainTaskCount];
     
     NSString* strFinishedTask = [NSString stringWithFormat: @"%d FINISHED", finishedCount];
     circleFinishedStatus.text = strFinishedTask;
@@ -184,14 +236,29 @@
     lblSecondCount.text = [currentTimer getRemainSecTime];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    
+    AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
+    for (CircleProgressBar *progressBar in progressBars) {
+        progressBar.frame = mainProgress.frame;
+    }
+    
+    if ([alarmManager getRemainTaskCount] > 0) {
+        mainProgress = progressBars[[alarmManager getFinishedTaskCount]];
+    }
+    currentTimer = [alarmManager getCurrentTimer];
+    [self updatePauseStatus];
+    [self updateTimerInfo];
+    
+    mainCheckTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0f target: self selector: @selector(checkTimer) userInfo: nil repeats: YES];
+}
+
 //====================================================================================================
 - (IBAction)actionSkip:(id)sender
 {
-    currentTimer.status = YES;
-    Timer* nextTimer = [[AppDelegate getDelegate].alarmManager getCurrentTimer];
-    
-    [[AppDelegate getDelegate].alarmManager saveTimerList];
-    currentTimer = nextTimer;
+    [self startNextTask:NO];
     [self updateTimerInfo];
 }
 
@@ -200,29 +267,37 @@
 //====================================================================================================
 - (void) checkTimer
 {
-    if(bPaused) return;
+    if (bPaused) {
+        return;
+    }
     
-    if(currentTimer != nil)
-    {
-        currentTimer.remain_timer --;
+    if (currentTimer != nil) {
+        currentTimer.remain_timer--;
         NSLog(@"currentTimer.remain_timer = %d", currentTimer.remain_timer);
         
-        if(currentTimer.remain_timer <= 0)
+        if (currentTimer.remain_timer <= 0)
         {
-            currentTimer.status = YES;
-            [currentTimer playSound];
-            
-            currentTimer = [[AppDelegate getDelegate].alarmManager getCurrentTimer];
-            [[AppDelegate getDelegate].alarmManager saveTimerList];
-        }
-        else
-        {
+            [self startNextTask:YES];
+        } else {
             lblTimeCount.text = [currentTimer getRemainTime];
             lblSecondCount.text = [currentTimer getRemainSecTime];
         }
         
         [self updateTimerInfo];
     }
+}
+
+-(void) startNextTask:(BOOL)playSound {
+    currentTimer.status = YES;
+    if (playSound) {
+        [currentTimer playSound];
+    }
+    
+    AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
+    currentTimer = [alarmManager getCurrentTimer];
+    [alarmManager saveTimerList];
+    
+    shouldAddProgressBar = [alarmManager getRemainTaskCount] > 0;
 }
 
 //====================================================================================================

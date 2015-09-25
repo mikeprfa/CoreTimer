@@ -114,12 +114,18 @@
 {
     float totalTime = 0;
     float remainingTime = 0;
-    for(Timer* timer in arrList) {
-        totalTime+= timer.timer;
-        remainingTime+= timer.remain_timer;
+
+    for (Timer* timer in [self workingTimers]) {
+        totalTime += timer.timer;
+        remainingTime += timer.remain_timer;
     }
     
-    return (totalTime - remainingTime)/totalTime;
+    for (Timer* timer in [self finishedTimers]) {
+        totalTime += timer.timer;
+        // totalTime += timer.remain_timer;
+    }
+    
+    return (totalTime - remainingTime) / totalTime;
 }
 
 //====================================================================================================
