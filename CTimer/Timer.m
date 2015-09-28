@@ -72,7 +72,10 @@
         }
         status = [[json valueForKey: @"status"] boolValue];
         createdAt = [self convertStringToDate: [json valueForKey: @"createdAt"]];
-        remain_timer = [[json valueForKey: @"remain_timer"] intValue];
+        
+        // remain_timer = [[json valueForKey: @"remain_timer"] intValue];
+        // This fixes an issue where an app is first started an the timer is immediately at the "finished" position.
+        remain_timer = timer;
     }
     
     return self;

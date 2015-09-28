@@ -10,9 +10,6 @@
 #import "AppDelegate.h"
 
 @interface BaseViewController : UIViewController
-{
-    
-}
 
 - (void) setup;
 - (IBAction) actionBack:(id)sender;

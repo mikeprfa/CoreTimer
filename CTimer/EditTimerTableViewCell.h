@@ -14,9 +14,7 @@
 @end
 
 @interface EditTimerTableViewCell : UITableViewCell
-{
-    int                 viewIndex;
-}
+
 @property (weak, nonatomic) IBOutlet UILabel    *lblTitle;
 @property (weak, nonatomic) IBOutlet UIButton   *btnTrash;
 @property (weak, nonatomic) IBOutlet UIImageView *imgMenu;
@@ -24,6 +22,6 @@
 
 @property (nonatomic, retain) id                delegate;
 
-- (void) updateTimer: (Timer*) timer view: (int) viewIndex;
+- (void) updateTimer: (Timer*) timer;
 
 @end

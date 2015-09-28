@@ -17,6 +17,7 @@
     Timer          *currentTimer;
     NSMutableArray *progressBars;
     BOOL           shouldAddProgressBar;
+    CircleProgressBar *mainProgressOriginal;
     
     BOOL           bPaused;
 }
@@ -65,49 +66,6 @@
 @synthesize lblSecondCount;
 
 //====================================================================================================
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
-
-//====================================================================================================
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
--(void) copyConstraintsFromView:(UIView *)sourceView toView:(UIView *) destView
-{
-    for (NSLayoutConstraint *constraint in sourceView.superview.constraints) {
-        if (constraint.firstItem == sourceView)
-        {
-            [sourceView.superview addConstraint:
-             [NSLayoutConstraint constraintWithItem:destView
-                                          attribute:constraint.firstAttribute
-                                          relatedBy:constraint.relation
-                                             toItem:constraint.secondItem
-                                          attribute:constraint.secondAttribute
-                                         multiplier:constraint.multiplier
-                                           constant:constraint.constant]];
-        }
-        else if (constraint.secondItem == sourceView)
-        {
-            [sourceView.superview addConstraint:
-             [NSLayoutConstraint constraintWithItem:constraint.firstItem
-                                          attribute:constraint.firstAttribute
-                                          relatedBy:constraint.relation
-                                             toItem:destView
-                                          attribute:constraint.secondAttribute
-                                         multiplier:constraint.multiplier
-                                           constant:constraint.constant]];
-        }
-    }
-}
-
-//====================================================================================================
 - (void) setup
 {
     [super setup];
@@ -149,12 +107,15 @@
     
     // Setup progress bars.
     progressBars = [NSMutableArray arrayWithCapacity:numTasks];
+    mainProgressOriginal = mainProgress;
     [self.view layoutIfNeeded];
     for (NSInteger i = 0; i < numTasks; ++i) {
         CircleProgressBar *progressBar = [[CircleProgressBar alloc] initWithFrame:mainProgress.frame];
         progressBar.hintHidden = mainProgress.hintHidden;
         progressBar.startAngle = mainProgress.startAngle;
         progressBar.progressBarWidth = mainProgress.progressBarWidth;
+        progressBar.userInteractionEnabled = NO;
+        progressBar.frame = mainProgress.frame;
         
         [progressBar setBackgroundColor:UIColor.clearColor];
         [progressBar setProgressBarTrackColor:UIColor.clearColor];
@@ -180,7 +141,7 @@
         return currentProgress;
     }];
     
-    [mainProgress setProgress: currentProgress animated: YES];
+    [mainProgress setProgress:currentProgress animated:YES];
     
     if (shouldAddProgressBar) {
         mainProgress = progressBars[[alarmManager getFinishedTaskCount]];
@@ -236,15 +197,11 @@
     lblSecondCount.text = [currentTimer getRemainSecTime];
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
+    [super viewWillAppear:animated];
     
     AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
-    for (CircleProgressBar *progressBar in progressBars) {
-        progressBar.frame = mainProgress.frame;
-    }
-    
     if ([alarmManager getRemainTaskCount] > 0) {
         mainProgress = progressBars[[alarmManager getFinishedTaskCount]];
     }
@@ -252,7 +209,19 @@
     [self updatePauseStatus];
     [self updateTimerInfo];
     
-    mainCheckTimer = [NSTimer scheduledTimerWithTimeInterval: 1.0f target: self selector: @selector(checkTimer) userInfo: nil repeats: YES];
+    mainCheckTimer = [NSTimer scheduledTimerWithTimeInterval:1.0f
+                                                      target:self
+                                                    selector:@selector(checkTimer)
+                                                    userInfo:nil
+                                                     repeats:YES];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    for (CircleProgressBar *progressBar in progressBars) {
+        progressBar.frame = mainProgressOriginal.frame;
+    }
 }
 
 //====================================================================================================

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E5K-zh-7DW">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="E5K-zh-7DW">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -122,7 +123,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="NTh-Kj-BY3" kind="show" id="Hqu-3p-tJS"/>
+                                            <action selector="actionStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qjf-1h-aRJ"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iD1-ky-76i">
@@ -164,6 +165,7 @@
                     <navigationItem key="navigationItem" id="xXB-QI-WA4"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="btnAddTimer" destination="MzZ-83-dfD" id="jcy-nB-DDS"/>
                         <outlet property="btnEdit" destination="edQ-Wu-wmK" id="m2e-ch-BrG"/>
                         <outlet property="btnStart" destination="5Ss-b2-23C" id="75M-6g-fvR"/>
                         <outlet property="imgEmptyTimer" destination="j4x-op-vcd" id="iLz-ne-5gA"/>
@@ -180,7 +182,7 @@
         <!--Run View Controller-->
         <scene sceneID="Z94-DY-Cds">
             <objects>
-                <viewController id="NTh-Kj-BY3" customClass="RunViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RunViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NTh-Kj-BY3" customClass="RunViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ccq-rb-tTH"/>
                         <viewControllerLayoutGuide type="bottom" id="5CR-GK-tY6"/>
@@ -368,20 +370,6 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XXh-Tc-1ZL" userLabel="View - Status Control">
                                 <rect key="frame" x="65" y="141" width="245" height="170"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajL-ED-zlM">
-                                        <rect key="frame" x="92" y="92" width="60" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="70D-20-fkP"/>
-                                            <constraint firstAttribute="width" constant="60" id="8Q1-QY-31s"/>
-                                        </constraints>
-                                        <state key="normal" image="pause_button.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="actionPause:" destination="NTh-Kj-BY3" eventType="touchUpInside" id="ajN-GQ-Cj3"/>
-                                            <action selector="actionPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOD-St-AMg"/>
-                                        </connections>
-                                    </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qcf-Yn-Tle">
                                         <rect key="frame" x="38" y="16" width="168" height="76"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -400,16 +388,30 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ajL-ED-zlM">
+                                        <rect key="frame" x="105" y="93" width="35" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="70D-20-fkP"/>
+                                            <constraint firstAttribute="width" constant="35" id="8Q1-QY-31s"/>
+                                        </constraints>
+                                        <state key="normal" image="pause_button.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="actionPause:" destination="NTh-Kj-BY3" eventType="touchUpInside" id="ajN-GQ-Cj3"/>
+                                            <action selector="actionPause:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOD-St-AMg"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="wIo-wN-4sh" firstAttribute="leading" secondItem="Qcf-Yn-Tle" secondAttribute="trailing" constant="2" id="7he-kB-ngu"/>
                                     <constraint firstItem="Qcf-Yn-Tle" firstAttribute="leading" secondItem="XXh-Tc-1ZL" secondAttribute="leading" constant="38" id="8qU-qZ-cvl"/>
-                                    <constraint firstAttribute="bottom" secondItem="ajL-ED-zlM" secondAttribute="bottom" constant="18" id="A5a-Hl-6va"/>
+                                    <constraint firstAttribute="bottom" secondItem="ajL-ED-zlM" secondAttribute="bottom" constant="37" id="A5a-Hl-6va"/>
                                     <constraint firstItem="wIo-wN-4sh" firstAttribute="bottom" secondItem="Qcf-Yn-Tle" secondAttribute="bottom" id="MI2-ql-juF"/>
-                                    <constraint firstItem="ajL-ED-zlM" firstAttribute="top" secondItem="Qcf-Yn-Tle" secondAttribute="bottom" id="VyM-xb-VkI"/>
+                                    <constraint firstItem="ajL-ED-zlM" firstAttribute="top" secondItem="Qcf-Yn-Tle" secondAttribute="bottom" constant="1" id="VyM-xb-VkI"/>
                                     <constraint firstAttribute="width" secondItem="XXh-Tc-1ZL" secondAttribute="height" multiplier="49:34" id="WiX-eW-j0h"/>
                                     <constraint firstAttribute="centerX" secondItem="ajL-ED-zlM" secondAttribute="centerX" id="bc5-pM-M9Y"/>
-                                    <constraint firstItem="Qcf-Yn-Tle" firstAttribute="bottom" secondItem="ajL-ED-zlM" secondAttribute="bottom" constant="-60" id="lxd-qa-eea"/>
+                                    <constraint firstItem="Qcf-Yn-Tle" firstAttribute="bottom" secondItem="ajL-ED-zlM" secondAttribute="bottom" constant="-41" id="lxd-qa-eea"/>
                                     <constraint firstAttribute="trailing" secondItem="Qcf-Yn-Tle" secondAttribute="trailing" constant="39" id="pqC-Hw-Q2k"/>
                                 </constraints>
                             </view>
@@ -828,7 +830,7 @@
         <image name="add_timer_icon.png" width="567" height="572"/>
         <image name="back_arrow.png" width="24" height="41"/>
         <image name="music_icon.png" width="45" height="45"/>
-        <image name="pause_button.png" width="120" height="120"/>
+        <image name="pause_button.png" width="50" height="80"/>
         <image name="settings_icon.png" width="70" height="70"/>
     </resources>
 </document>

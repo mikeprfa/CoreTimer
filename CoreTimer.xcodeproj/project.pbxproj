@@ -27,7 +27,6 @@
 		8E322ADA1AFCAEF70078517C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E322AD91AFCAEF70078517C /* AudioToolbox.framework */; };
 		8E376C1D1AFB6AC300030489 /* pause_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E376C1B1AFB6AC300030489 /* pause_button.png */; };
 		8E376C1E1AFB6AC300030489 /* play_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E376C1C1AFB6AC300030489 /* play_button.png */; };
-		8E3B36A81AFA054500ADCF28 /* EditViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B36A71AFA054500ADCF28 /* EditViewController.m */; };
 		8E3B36AC1AFA060700ADCF28 /* EditTimerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E3B36AA1AFA060700ADCF28 /* EditTimerTableViewCell.m */; };
 		8E3B36AD1AFA060700ADCF28 /* EditTimerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B36AB1AFA060700ADCF28 /* EditTimerTableViewCell.xib */; };
 		8E3B36B11AFA06A800ADCF28 /* menu_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E3B36AE1AFA06A800ADCF28 /* menu_icon.png */; };
@@ -108,8 +107,6 @@
 		8E322AD91AFCAEF70078517C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		8E376C1B1AFB6AC300030489 /* pause_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pause_button.png; sourceTree = "<group>"; };
 		8E376C1C1AFB6AC300030489 /* play_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play_button.png; sourceTree = "<group>"; };
-		8E3B36A61AFA054500ADCF28 /* EditViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditViewController.h; path = CTimer/EditViewController.h; sourceTree = SOURCE_ROOT; };
-		8E3B36A71AFA054500ADCF28 /* EditViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditViewController.m; path = CTimer/EditViewController.m; sourceTree = SOURCE_ROOT; };
 		8E3B36A91AFA060700ADCF28 /* EditTimerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EditTimerTableViewCell.h; path = CTimer/EditTimerTableViewCell.h; sourceTree = SOURCE_ROOT; };
 		8E3B36AA1AFA060700ADCF28 /* EditTimerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EditTimerTableViewCell.m; path = CTimer/EditTimerTableViewCell.m; sourceTree = SOURCE_ROOT; };
 		8E3B36AB1AFA060700ADCF28 /* EditTimerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EditTimerTableViewCell.xib; path = CTimer/EditTimerTableViewCell.xib; sourceTree = SOURCE_ROOT; };
@@ -360,8 +357,6 @@
 		8E3B36A51AFA052900ADCF28 /* EditTimer */ = {
 			isa = PBXGroup;
 			children = (
-				8E3B36A61AFA054500ADCF28 /* EditViewController.h */,
-				8E3B36A71AFA054500ADCF28 /* EditViewController.m */,
 				8E3B36A91AFA060700ADCF28 /* EditTimerTableViewCell.h */,
 				8E3B36AA1AFA060700ADCF28 /* EditTimerTableViewCell.m */,
 				8E3B36AB1AFA060700ADCF28 /* EditTimerTableViewCell.xib */,
@@ -426,7 +421,7 @@
 		8E1FCE6A1AF4C256004F5DD7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = Matei;
 				TargetAttributes = {
 					8E1FCE711AF4C256004F5DD7 = {
@@ -573,7 +568,6 @@
 				8E1FCE7E1AF4C256004F5DD7 /* ViewController.m in Sources */,
 				8E3B36AC1AFA060700ADCF28 /* EditTimerTableViewCell.m in Sources */,
 				8E3D27051AF8D83A00D01BE5 /* SoundTableViewCell.m in Sources */,
-				8E3B36A81AFA054500ADCF28 /* EditViewController.m in Sources */,
 				8E1FCE9E1AF4C326004F5DD7 /* BaseViewController.m in Sources */,
 				8E1FCEBA1AF4D910004F5DD7 /* AddTimerViewController.m in Sources */,
 				8E1FCEA91AF4C782004F5DD7 /* SettingsViewController.m in Sources */,
@@ -643,6 +637,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Plushie Games OOD (JBRW23FCN6)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -715,6 +710,7 @@
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -733,6 +729,7 @@
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

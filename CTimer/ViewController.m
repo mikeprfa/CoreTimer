@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "EditViewController.h"
 #import "AddTimerViewController.h"
 #import "EditTimerTableViewCell.h"
 
@@ -23,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITableView            *tblView;
 @property (weak, nonatomic) IBOutlet UIButton               *btnStart;
 @property (weak, nonatomic) IBOutlet UIButton               *btnEdit;
+@property (weak, nonatomic) IBOutlet UIButton *btnAddTimer;
+- (IBAction)actionStart:(id)sender;
 
 @end
 
@@ -78,9 +79,13 @@
 //====================================================================================================
 - (IBAction) actionAddTimer:(id)sender
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    id nextView = [storyboard instantiateViewControllerWithIdentifier: @"AddTimerViewController"];
-    [self.navigationController pushViewController: nextView animated: YES];
+    if (tblView.isEditing) {
+        [self actionEdit:sender];
+    } else {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        id nextView = [storyboard instantiateViewControllerWithIdentifier: @"AddTimerViewController"];
+        [self.navigationController pushViewController: nextView animated: YES];
+    }
 }
 
 //====================================================================================================
@@ -88,9 +93,14 @@
 {
     if (tblView.isEditing) {
         [tblView setEditing:NO animated:YES];
+        [self.btnAddTimer setTitle:@"" forState:UIControlStateNormal];
+        [self.btnAddTimer setTitle:NSLocalizedString(@"Add timer", nil)
+                          forState:UIControlStateNormal];
     } else {
         if (bExistTimer)
         {
+            [self.btnAddTimer setTitle:NSLocalizedString(@"Done", nil)
+                              forState:UIControlStateNormal];
             [tblView setEditing:YES animated:YES];
         }
     }
@@ -121,36 +131,13 @@
     EditTimerTableViewCell *cell = (EditTimerTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"EditTimerTableViewCell"];
     cell.tag = indexPath.row;
     cell.delegate = self;
-    [cell updateTimer: [[AppDelegate getDelegate].alarmManager.arrList objectAtIndex: indexPath.row] view: VIEW_MAIN];
+    
+    AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
+    Timer *timer = [alarmManager.arrList objectAtIndex: indexPath.row];
+    [cell updateTimer:timer];
     
     return cell;
 }
-
-/*
-- (NSArray<UITableViewRowAction *> *)tableView:(UITableView *)tableView
-                  editActionsForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewRowAction *test1;
-    UITableViewRowAction *test2;
-    UITableViewRowAction *test3;
-    test1 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleNormal
-                                              title:@"Test"
-                                            handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-                                                NSLog(@"RowAction Handler: %@ %@", action, indexPath);
-                                            }];
-    test2 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDefault
-                                               title:@"Test2"
-                                             handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-                                                 NSLog(@"RowAction Handler: %@ %@", action, indexPath);
-                                             }];
-    test3 = [UITableViewRowAction rowActionWithStyle:UITableViewRowActionStyleDestructive
-                                               title:@"Test3"
-                                             handler:^(UITableViewRowAction * _Nonnull action, NSIndexPath * _Nonnull indexPath) {
-                                                 NSLog(@"RowAction Handler: %@ %@", action, indexPath);
-                                             }];
-    return @[ test1, test2, test3 ];
-}
- */
 
 - (void)tableView:(UITableView *)tableView
   commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
@@ -166,9 +153,19 @@
 }
 
 //====================================================================================================
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
-{
-    [[AppDelegate getDelegate].alarmManager.arrList exchangeObjectAtIndex:sourceIndexPath.row withObjectAtIndex:destinationIndexPath.row];
+- (void)tableView:(UITableView *)tableView
+moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
+      toIndexPath:(NSIndexPath *)destinationIndexPath {
+    AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
+    NSMutableArray *timers = alarmManager.arrList;
+    NSUInteger from = sourceIndexPath.row;
+    NSUInteger to = destinationIndexPath.row;
+    
+    Timer *timerFrom = [timers objectAtIndex:from];
+    [timers removeObjectAtIndex:from];
+    [timers insertObject:timerFrom atIndex:to];
+
+    [tableView reloadData];
 }
 
 //====================================================================================================
@@ -182,4 +179,17 @@
 
 
 //====================================================================================================
+- (IBAction)actionStart:(id)sender {
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSString *storyboardName = [bundle.infoDictionary objectForKey:@"UIMainStoryboardFile"];
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName
+                                                         bundle:bundle];
+
+    UIViewController *vc = [storyboard
+        instantiateViewControllerWithIdentifier:@"RunViewController"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
+}
+
 @end

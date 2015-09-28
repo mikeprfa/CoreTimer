@@ -24,6 +24,7 @@
     int                             timerInputMode;
     
     Timer                           *newTimer;
+    BOOL                            colorBarInitialized;
 }
 
 @property (nonatomic, weak) IBOutlet UIView                 *viewTimerName;
@@ -132,6 +133,11 @@
 //====================================================================================================
 - (void) initColorBar
 {
+    if (colorBarInitialized) {
+        return;
+    }
+    colorBarInitialized = YES;
+
     [arrColorCells removeAllObjects];
     for(UIView* view in scrollColor.subviews)
     {
@@ -184,7 +190,6 @@
     
     [scrollColor setContentOffset:CGPointMake([self cellOffsetForIndex:index], 0)
                          animated:YES];
-   
 }
 
 //====================================================================================================

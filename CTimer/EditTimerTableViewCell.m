@@ -31,9 +31,8 @@
 }
 
 //====================================================================================================
-- (void) updateTimer: (Timer*) timer view: (int) index
+- (void) updateTimer: (Timer*) timer
 {
-    viewIndex = index;
     NSString* real_time = [NSString stringWithFormat: @"%@", [Timer getTimeFormat: timer.timer]];
     NSString* title = [NSString stringWithFormat: @"%@ %@", real_time, timer.name];
     UIFont *boldFont = [UIFont fontWithName:@"HelveticaNeue-Medium" size:16.0];
@@ -42,20 +41,18 @@
     NSMutableAttributedString * attriString = [[NSMutableAttributedString alloc] initWithString: title];
     [attriString addAttribute:NSFontAttributeName value: boldFont range:(NSMakeRange(0, [real_time length]))];
     lblTitle.attributedText = attriString;
-    
-    if(index == VIEW_MAIN)
-    {
-        btnTrash.hidden = YES;
-        imgMenu.hidden = YES;
-        lblNumber.hidden = NO;
-        lblNumber.text = [NSString stringWithFormat: @"%d", (int)self.tag + 1];
+
+    btnTrash.hidden = YES;
+    imgMenu.hidden = YES;
+    lblNumber.hidden = NO;
+}
+
+-(void)setTag:(NSInteger)tag
+{
+    if (tag != self.tag || [lblNumber.text isEqualToString:@""]) {
+        lblNumber.text = [NSString stringWithFormat: @"%d", (int)tag + 1];
     }
-    else
-    {
-        btnTrash.hidden = NO;
-        imgMenu.hidden = NO;
-        lblNumber.hidden = YES;
-    }
+    [super setTag:tag];
 }
 
 //====================================================================================================
