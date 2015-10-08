@@ -152,6 +152,28 @@
     // More info: http://pablin.org/2014/09/25/uitableviewrowaction-introduction/
 }
 
+-(NSArray *)tableView:(UITableView *)tableView
+editActionsForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewRowAction *button1 =
+    [UITableViewRowAction
+     rowActionWithStyle:UITableViewRowActionStyleDestructive
+     title:@"Delete"
+     handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        [self trashTimer:indexPath.row];
+     }];
+    
+    UITableViewRowAction *button2 =
+    [UITableViewRowAction
+     rowActionWithStyle:UITableViewRowActionStyleDefault
+     title:@"Edit"
+     handler:^(UITableViewRowAction *action, NSIndexPath *indexPath) {
+        [self editTimer:indexPath.row];
+     }];
+    button2.backgroundColor = UIColor.orangeColor;
+    
+    return @[button1, button2];
+}
+
 //====================================================================================================
 - (void)tableView:(UITableView *)tableView
 moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
@@ -168,15 +190,24 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     [tableView reloadData];
 }
 
-//====================================================================================================
-- (void) trashTimer:(NSInteger)index
+- (void) editTimer:(NSInteger)index
 {
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    AddTimerViewController *nextView = (AddTimerViewController *)[storyboard
+      instantiateViewControllerWithIdentifier: @"AddTimerViewController"];
+    
+    Timer *timer = [[AppDelegate getDelegate]
+                    .alarmManager.arrList objectAtIndex:index];
+    nextView.timer = timer;
+    [self.navigationController pushViewController: nextView animated: YES];
+}
+
+- (void) trashTimer:(NSInteger) index {
     [[AppDelegate getDelegate].alarmManager.arrList removeObjectAtIndex: index];
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     [tblView reloadData];
     [self setupEmptyView];
 }
-
 
 //====================================================================================================
 - (IBAction)actionStart:(id)sender {

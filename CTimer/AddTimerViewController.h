@@ -10,9 +10,7 @@
 #import <UIKit/UIScrollView.h>
 
 @interface AddTimerViewController : BaseViewController <UIScrollViewDelegate>
-{
-    
-}
 
+@property (nonatomic, strong) Timer *timer;
 - (void) selectSound: (NSString*) title type: (int) type;
 @end

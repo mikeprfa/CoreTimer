@@ -23,8 +23,9 @@
     NSInteger                       selectedColorIndex;
     int                             timerInputMode;
     
-    Timer                           *newTimer;
     BOOL                            colorBarInitialized;
+    BOOL                            scrollWheelInitialized;
+    BOOL                            isEditingExistingTimer;
 }
 
 @property (nonatomic, weak) IBOutlet UIView                 *viewTimerName;
@@ -44,6 +45,7 @@
 @synthesize txtTimerName;
 @synthesize viewTimerName;
 @synthesize scrollColor;
+@synthesize timer = timer;
 
 @synthesize viewTimerPicker;
 @synthesize btnTitle;
@@ -55,11 +57,28 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    CGFloat inset = [self scrollViewInset];
-    CGFloat offset = [self cellOffsetForIndex:0];
-    
-    scrollColor.contentInset = UIEdgeInsetsMake(0, inset, 0, inset);
-    scrollColor.contentOffset = CGPointMake(offset, 0);
+    [self setupScrollView];
+}
+
+- (void) setupScrollView {
+    if (!scrollWheelInitialized) {
+        CGFloat inset = [self scrollViewInset];
+        CGFloat offset = [self cellOffsetForIndex:0];
+        scrollColor.contentInset = UIEdgeInsetsMake(0, inset, 0, inset);
+        scrollColor.contentOffset = CGPointMake(offset, 0);
+        scrollWheelInitialized = YES;
+    }
+}
+
+- (BOOL) color:(UIColor *)color1 isEqualTo:(UIColor *)color2 {
+    const CGFloat *components1 = CGColorGetComponents(color1.CGColor);
+    const CGFloat *components2 = CGColorGetComponents(color2.CGColor);
+    for (int i = 0; i < CGColorGetNumberOfComponents(color1.CGColor); ++i) {
+        if (fabs(components1[i] - components2[i]) > 1e-3) {
+            return NO;
+        }
+    }
+    return YES;
 }
 
 //====================================================================================================
@@ -67,18 +86,33 @@
 {
     [super setup];
 
-    newTimer = [[Timer alloc] init];
+    if (!timer) {
+        timer = [[Timer alloc] init];
+        isEditingExistingTimer = NO;
+    } else {
+        isEditingExistingTimer = YES;
+    }
     
-    realTime = realTimeTmp = DEFAULT_TIMER_VALUE;
-    NSString *defaultSound = @"Air Horn";
-    [btnTimer setTitle:defaultSound forState:UIControlStateNormal];
-    newTimer.timer_music = defaultSound;
+    if (!isEditingExistingTimer) {
+        realTime = realTimeTmp = DEFAULT_TIMER_VALUE;
+        NSString *defaultSound = @"Air Horn";
+        timer.timer_music = defaultSound;
+    } else {
+        realTime = realTimeTmp = timer.timer;
+        txtTimerName.text = timer.name;
+    }
+    [btnTimer setTitle:timer.timer_music forState:UIControlStateNormal];
+    
+    int seconds = realTime % 60;
+    int minutes = (realTime/60) % 60;
+    int hours = realTime/(60*60);
 
-    NSAttributedString *title = [Timer getTimerValue:0 minute:0 sec: 30];
+    NSAttributedString *title = [Timer getTimerValue:hours
+                                              minute:minutes
+                                                 sec:seconds];
     [lblTimer setAttributedTitle:title
                         forState:UIControlStateNormal];
-    
-    selectedColorIndex = 0;
+
     arrColors = [NSArray arrayWithObjects: [UIColor colorWithRed: 252.0f/255.0f green: 150.0f/255.0f blue: 3.0f/255.0 alpha: 1.0f],
                  [UIColor colorWithRed: 0.0f/255.0f green: 246.0f/255.0f blue: 235.0f/255.0 alpha: 1.0f],
                  [UIColor colorWithRed: 0.0f/255.0f green: 187.0f/255.0f blue: 226.0f/255.0 alpha: 1.0f],
@@ -87,6 +121,15 @@
                  [UIColor colorWithRed: 255.0f/255.0f green: 250.0f/255.0f blue: 240.0f/255.0 alpha: 1.0f],
                  nil];
     arrColorCells = [[NSMutableArray alloc] init];
+    selectedColorIndex = 0;
+    for (NSInteger i = 0; i < arrColors.count; ++i) {
+        if ([self color:timer.color isEqualTo:arrColors[i]]) {
+            selectedColorIndex = i;
+            scrollWheelInitialized = NO;
+            break;
+        }
+    }
+    [self setupScrollView];
     
     arrTimer = [[NSMutableArray alloc] init];
     NSMutableArray* arrHours = [[NSMutableArray alloc] init];
@@ -171,7 +214,7 @@
     }
     
     [scrollColor setContentSize: CGSizeMake(fx, scrollColor.contentSize.height)];
-    CGFloat offset = [self cellOffsetForIndex:0];
+    CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
     scrollColor.contentOffset = CGPointMake(offset, 0);
 }
 
@@ -188,7 +231,8 @@
         }
     }
     
-    [scrollColor setContentOffset:CGPointMake([self cellOffsetForIndex:index], 0)
+    CGPoint contentOffset = CGPointMake([self cellOffsetForIndex:index], 0);
+    [scrollColor setContentOffset:contentOffset
                          animated:YES];
 }
 
@@ -212,7 +256,7 @@
 //====================================================================================================
 - (void) selectSound: (NSString*) title type: (int) type
 {
-    newTimer.timer_music = title;
+    timer.timer_music = title;
     [btnTimer setTitle:title forState:UIControlStateNormal];
 }
 
@@ -349,14 +393,17 @@
         return;
     }
     
-    newTimer.name = name;
-    newTimer.color = [arrColors objectAtIndex: selectedColorIndex];
-    newTimer.timer = realTime;
-    newTimer.remain_timer = realTime;    
-    newTimer.status = NO;
-    newTimer.createdAt = [NSDate date];
+    timer.name = name;
+    timer.color = [arrColors objectAtIndex: selectedColorIndex];
+    timer.timer = realTime;
+    timer.remain_timer = realTime;
+    timer.status = NO;
+    timer.createdAt = [NSDate date];
 
-    [[AppDelegate getDelegate].alarmManager addTimer: newTimer];
+    if (!isEditingExistingTimer) {
+        // We are not editing - we are creating a timer.
+        [[AppDelegate getDelegate].alarmManager addTimer: timer];
+    }
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     
     [self actionBack: nil];
