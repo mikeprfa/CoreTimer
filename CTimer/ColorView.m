@@ -27,14 +27,21 @@
     mainColor = color;
     
     self.imgCheck.hidden = !bSelected;
-    
+    self.backgroundColor = color;
+    self.viewInner.backgroundColor = bgColor;
+}
+
+-(void)layoutIfNeeded {
+    [super layoutIfNeeded];
+    [self updateBorders];
+}
+
+- (void) updateBorders
+{
     self.layer.masksToBounds = YES;
     self.layer.cornerRadius = self.frame.size.width / 2.0f;
-    self.backgroundColor = color;
-    
     self.viewInner.layer.masksToBounds = YES;
     self.viewInner.layer.cornerRadius = self.viewInner.frame.size.width / 2.0f;
-    self.viewInner.backgroundColor = bgColor;
 }
 
 //====================================================================================================

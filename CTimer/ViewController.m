@@ -15,14 +15,14 @@
     BOOL            bExistTimer;
 }
 
-@property (weak, nonatomic) IBOutlet UIView                 *viewEmpty;
-@property (weak, nonatomic) IBOutlet UILabel                *lblEmptyTimer;
-@property (weak, nonatomic) IBOutlet UIImageView            *imgEmptyTimer;
-@property (weak, nonatomic) IBOutlet UIView                 *viewFill;
-@property (weak, nonatomic) IBOutlet UITableView            *tblView;
-@property (weak, nonatomic) IBOutlet UIButton               *btnStart;
-@property (weak, nonatomic) IBOutlet UIButton               *btnEdit;
-@property (weak, nonatomic) IBOutlet UIButton *btnAddTimer;
+@property (weak, nonatomic) IBOutlet UIView      *viewEmpty;
+@property (weak, nonatomic) IBOutlet UILabel     *lblEmptyTimer;
+@property (weak, nonatomic) IBOutlet UIImageView *imgEmptyTimer;
+@property (weak, nonatomic) IBOutlet UIView      *viewFill;
+@property (weak, nonatomic) IBOutlet UITableView *tblView;
+@property (weak, nonatomic) IBOutlet UIButton    *btnStart;
+@property (weak, nonatomic) IBOutlet UIButton    *btnEdit;
+@property (weak, nonatomic) IBOutlet UIButton    *btnAddTimer;
 - (IBAction)actionStart:(id)sender;
 
 @end
@@ -79,9 +79,7 @@
 //====================================================================================================
 - (IBAction) actionAddTimer:(id)sender
 {
-    if (tblView.isEditing) {
-        [self actionEdit:sender];
-    } else {
+    if (!tblView.isEditing) {
         UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         id nextView = [storyboard instantiateViewControllerWithIdentifier: @"AddTimerViewController"];
         [self.navigationController pushViewController: nextView animated: YES];
@@ -93,16 +91,37 @@
 {
     if (tblView.isEditing) {
         [tblView setEditing:NO animated:YES];
-        [self.btnAddTimer setTitle:@"" forState:UIControlStateNormal];
-        [self.btnAddTimer setTitle:NSLocalizedString(@"Add timer", nil)
-                          forState:UIControlStateNormal];
     } else {
         if (bExistTimer)
         {
-            [self.btnAddTimer setTitle:NSLocalizedString(@"Done", nil)
-                              forState:UIControlStateNormal];
             [tblView setEditing:YES animated:YES];
         }
+    }
+    [self updateButtons];
+}
+
+-(void) updateButtons {
+    if (!bExistTimer && tblView.isEditing) {
+        [tblView setEditing:NO animated:NO];
+    }
+    
+    if (tblView.isEditing) {
+        [self.btnEdit setTitle:NSLocalizedString(@"Done", nil)
+                      forState:UIControlStateNormal];
+        self.btnEdit.hidden = NO;
+        self.btnAddTimer.hidden = YES;
+        self.btnStart.hidden = YES;
+    } else {
+        [self.btnEdit setTitle:NSLocalizedString(@"Edit", nil)
+                      forState:UIControlStateNormal];
+        self.btnAddTimer.hidden = NO;
+        self.btnStart.hidden = NO;
+    }
+    
+    if (bExistTimer) {
+        self.btnEdit.hidden = NO;
+    } else {
+        self.btnEdit.hidden = YES;
     }
 }
 
@@ -207,6 +226,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     [tblView reloadData];
     [self setupEmptyView];
+    [self updateButtons];
 }
 
 //====================================================================================================

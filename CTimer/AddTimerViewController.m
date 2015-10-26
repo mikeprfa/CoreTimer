@@ -16,23 +16,23 @@
     NSMutableArray                  *arrTimer;
     NSArray                         *arrColors;
     NSMutableArray                  *arrColorCells;
-    
+
     int                             realTime;
     int                             realTimeTmp;
-    
+
     NSInteger                       selectedColorIndex;
     int                             timerInputMode;
-    
+
     BOOL                            colorBarInitialized;
     BOOL                            scrollWheelInitialized;
     BOOL                            isEditingExistingTimer;
 }
 
-@property (nonatomic, weak) IBOutlet UIView                 *viewTimerName;
-@property (nonatomic, weak) IBOutlet UITextField            *txtTimerName;
-@property (nonatomic, weak) IBOutlet UIScrollView           *scrollColor;
-@property (nonatomic, weak) IBOutlet UIButton               *lblTimer;
-@property (nonatomic, weak) IBOutlet UIButton               *btnTimer;
+@property (nonatomic, weak) IBOutlet                                                            UIView            *viewTimerName;
+@property (nonatomic, weak) IBOutlet                                                            UITextField       *txtTimerName;
+@property (nonatomic, weak) IBOutlet                                                            UIScrollView      *scrollColor;
+@property (nonatomic, weak) IBOutlet                                                            UIButton          *lblTimer;
+@property (nonatomic, weak) IBOutlet                                                            UIButton          *btnTimer;
 
 //Timer Picker;
 @property (nonatomic, weak) IBOutlet UIView                 *viewTimerPicker;
@@ -62,11 +62,11 @@
 
 - (void) setupScrollView {
     if (!scrollWheelInitialized) {
-        CGFloat inset = [self scrollViewInset];
-        CGFloat offset = [self cellOffsetForIndex:0];
-        scrollColor.contentInset = UIEdgeInsetsMake(0, inset, 0, inset);
+        CGFloat inset             = [self scrollViewInset];
+        CGFloat offset            = [self cellOffsetForIndex:0];
+        scrollColor.contentInset  = UIEdgeInsetsMake(0, inset, 0, inset);
         scrollColor.contentOffset = CGPointMake(offset, 0);
-        scrollWheelInitialized = YES;
+        scrollWheelInitialized    = YES;
     }
 }
 
@@ -157,65 +157,82 @@
     [arrTimer addObject: arrSecs];
     
     viewTimerName.layer.masksToBounds = YES;
-    viewTimerName.layer.cornerRadius = viewTimerName.frame.size.height / 2.0f;
     viewTimerName.layer.borderWidth = 1.0f;
     viewTimerName.layer.borderColor = MAIN_TEXT_COLOR.CGColor;
     
     [lblTimer setTitleColor:UIColor.whiteColor forState:UIControlStateHighlighted];
     [lblTimer setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
-    lblTimer.layer.cornerRadius = lblTimer.frame.size.height / 2.0f;
 }
 
 //====================================================================================================
 - (void) viewWillLayoutSubviews
 {
     [self initColorBar];
+    for (ColorView *view in scrollColor.subviews) {
+        CGRect frame = view.frame;
+        CGPoint origin = frame.origin;
+        CGSize size = frame.size;
+        if (size.width != size.height) {
+            view.frame = CGRectMake(origin.x, origin.y,
+                                         size.width, size.width);
+        }
+        [view layoutIfNeeded];
+        CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
+        scrollColor.contentOffset = CGPointMake(offset, 0);
+    }
 }
 
 #pragma mark - Color.
 //====================================================================================================
 - (void) initColorBar
 {
-    if (colorBarInitialized) {
-        return;
-    }
-    colorBarInitialized = YES;
-
-    [arrColorCells removeAllObjects];
-    for(UIView* view in scrollColor.subviews)
-    {
-        [view removeFromSuperview];
-    }
-    
     CGFloat fx = 0;
     CGFloat fy = 0;
     CGFloat fw = self.btnTimer.frame.size.width;
     CGFloat fh = fw;
     CGFloat fIndentX = 12;
     
-    for (int i = 0; i < [arrColors count]; i++)
-    {
-        UIColor* color = [arrColors objectAtIndex: i];
-        ColorView* view = [ColorView colorViewWithFrame:CGRectMake(fx, fy, fw, fh)];
-        
-        if(selectedColorIndex == i)
+    if (!colorBarInitialized) {
+        [arrColorCells removeAllObjects];
+        for(UIView* view in scrollColor.subviews)
         {
-            [view updateColor: color backgroundColor: self.view.backgroundColor selected: YES];
-        } else {
-            [view updateColor: color backgroundColor: self.view.backgroundColor selected: NO];
+            [view removeFromSuperview];
         }
-        view.delegate = self;
-        view.tag = i;
-       
-        [scrollColor addSubview: view];
-        [arrColorCells addObject: view];
         
+        for (int i = 0; i < arrColors.count; i++)
+        {
+            UIColor* color = [arrColors objectAtIndex: i];
+            CGRect frame = CGRectMake(0, 0, fw, fh);
+            ColorView* view = [ColorView colorViewWithFrame:frame];
+            
+            if(selectedColorIndex == i)
+            {
+                [view updateColor: color backgroundColor: self.view.backgroundColor selected: YES];
+            } else {
+                [view updateColor: color backgroundColor: self.view.backgroundColor selected: NO];
+            }
+            view.delegate = self;
+            view.tag = i;
+           
+            [scrollColor addSubview:view];
+            [arrColorCells addObject:view];
+        }
+    }
+    
+    for (int i = 0; i < arrColors.count; i++)
+    {
+        ColorView *view = arrColorCells[i];
+        CGRect frame = CGRectMake(fx, fy, fw, fh);
+        view.frame = frame;
         fx += (fw + fIndentX);
     }
     
-    [scrollColor setContentSize: CGSizeMake(fx, scrollColor.contentSize.height)];
-    CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
-    scrollColor.contentOffset = CGPointMake(offset, 0);
+    if (!colorBarInitialized) {
+        [scrollColor setContentSize: CGSizeMake(fx, scrollColor.contentSize.height)];
+        CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
+        scrollColor.contentOffset = CGPointMake(offset, 0);
+        colorBarInitialized = YES;
+    }
 }
 
 //====================================================================================================
