@@ -10,6 +10,7 @@
 #import "CircleProgressBar.h"
 #import "KKProgressTimer.h"
 #import "XMCircleTypeView.h"
+#import "Google/Analytics.h"
 
 @interface RunViewController () <KKProgressTimerDelegate>
 {
@@ -101,7 +102,7 @@
     circleTimerStatus.text = @"TIMER PAUSED";
     circleTimerStatus.hidden = YES;
     
-    //Start Timer.
+    // Start Timer.
     AlarmManager *alarmManager = [AppDelegate getDelegate].alarmManager;
     NSInteger numTasks = [alarmManager getRemainTaskCount] + [alarmManager getFinishedTaskCount];
     
@@ -155,7 +156,9 @@
         lblCurrentTaskNumber.text = [NSString stringWithFormat: @"%d", [alarmManager getOrderIndex: currentTimer]];
         mainProgress.progressBarProgressColor = currentTimer.color;
     } else {
+        // Hide skip, playbutton, and current task if all tasks are finished
         viewCurrentTask.hidden = YES;
+        btnPlay.hidden = YES;
     }
     
     //Next Task.
@@ -172,16 +175,16 @@
     }
     
     int finishedCount = [alarmManager getFinishedTaskCount];
-    int remainCount = [alarmManager getRemainTaskCount];
+    int remainCount = [alarmManager getRemainTaskCount] - 1;
     
     NSString* strFinishedTask = [NSString stringWithFormat: @"%d FINISHED", finishedCount];
     circleFinishedStatus.text = strFinishedTask;
     
     if(remainCount == 0)
     {
-        circleTimerStatus.hidden = YES;
+        //circleTimerStatus.hidden = YES;
         circleAHeadStatus.hidden = YES;
-        viewStatus.hidden = YES;
+        //viewStatus.hidden = YES;
     }
     else
     {
@@ -242,7 +245,7 @@
     
     if (currentTimer != nil) {
         currentTimer.remain_timer--;
-        NSLog(@"currentTimer.remain_timer = %d", currentTimer.remain_timer);
+        //NSLog(@"currentTimer.remain_timer = %d", currentTimer.remain_timer); // remove before release
         
         if (currentTimer.remain_timer <= 0)
         {
@@ -297,6 +300,15 @@
 {
     [mainCheckTimer invalidate];
     mainCheckTimer = nil;
+    
+    // Identify stopped timer or timer ended
+    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    [tracker set:kGAIScreenName value:@"runningTimerScreen"];
+    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UX"
+                                                          action:@"touch"
+                                                           label:@"backButton"
+                                                           value:nil] build]];
+    [tracker set:kGAIScreenName value:nil];
     
     [[AppDelegate getDelegate].alarmManager resetTimerList];
     [[AppDelegate getDelegate].alarmManager saveTimerList];

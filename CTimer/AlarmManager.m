@@ -122,7 +122,6 @@
     
     for (Timer* timer in [self finishedTimers]) {
         totalTime += timer.timer;
-        // totalTime += timer.remain_timer;
     }
     
     return (totalTime - remainingTime) / totalTime;

@@ -74,7 +74,7 @@
         createdAt = [self convertStringToDate: [json valueForKey: @"createdAt"]];
         
         // remain_timer = [[json valueForKey: @"remain_timer"] intValue];
-        // This fixes an issue where an app is first started an the timer is immediately at the "finished" position.
+        // This fixes an issue where app is first started andf the timer is immediately at the "finished" position.
         remain_timer = timer;
     }
     
@@ -218,14 +218,6 @@
     [attrLabel setAttributes:@{ NSFontAttributeName: [UIFont boldSystemFontOfSize:15],
                                 NSForegroundColorAttributeName: UIColor.whiteColor  }
                        range:[result rangeOfString:prefix]];
-
-    /*
-    [attrLabel beginEditing];
-    [attrLabel addAttribute:NSFontAttributeName
-                      value:[UIFont systemFontOfSize:16]
-                      range:[result rangeOfString:@"TIMER: "]];
-    [attrLabel endEditing];
-    */
     
     return attrLabel;
 }
@@ -405,7 +397,7 @@
 {
     NSString* path = [[NSBundle mainBundle] pathForResource: timer_music ofType:@"caf"];
     player = [[AVAudioPlayer alloc] initWithContentsOfURL: [NSURL fileURLWithPath: path] error: nil];
-    [self playAtTime:0 withDuration:7];
+    [self playAtTime:0 withDuration:5];
 }
 
 //====================================================================================================

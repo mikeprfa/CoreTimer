@@ -4,55 +4,55 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-CircleProgressBar.xcscheme</key>
+		<key>CircleProgressBar.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-HPReorderTableView.xcscheme</key>
+		<key>HPReorderTableView.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>3</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
-		<key>Pods-KKProgressTimer.xcscheme</key>
+		<key>KKProgressTimer.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>4</integer>
-		</dict>
-		<key>Pods-XMCircleType.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>5</integer>
+			<key>isShown</key>
+			<false/>
 		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>XMCircleType.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>196B7575CB9106AE8BCE873A</key>
+		<key>40E722B029C95BC6103DC76FF1D59D35</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4FC06F1795630DE9CF5FD105</key>
+		<key>6FE3191E414B076A7FF57E338BB7A153</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EA3E1DABDCCDC8BFB380EFB</key>
+		<key>A8DE46F8B8E524EACE7536E5207D8E0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE21E3E18877768ADDCDFCE0</key>
+		<key>D8BAF96960D7948327153E918A6C1C77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FE9523EAEC7A8FB4663A40E3</key>
+		<key>F194304CFC17C4F3C6CB20896F68B0D9</key>
 		<dict>
 			<key>primary</key>
 			<true/>

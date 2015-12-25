@@ -16,7 +16,7 @@
 #define IS_IPHONE_6_PLUS (fabs((double)[[UIScreen mainScreen]bounds].size.height - (double)736) < DBL_EPSILON)
 
 #define MAIN_FILE_NAME                    @"CTimer"
-#define DEFAULT_TIMER_VALUE               30
+#define DEFAULT_TIMER_VALUE               1
 
 //********************************* Color Constants. ****************************************
 
@@ -41,7 +41,7 @@ typedef enum
 } VIEW_INDEX;
 
 // ******************************* Messages. **************************************************
-#define MSG_INVALID_TIMER_NAME              @"Please input valid timer name."
-#define MSG_INVALID_TIMER_INTERVAL          @"Please input valid timer."
+#define MSG_INVALID_TIMER_NAME              @"Please enter a timer name."
+#define MSG_INVALID_TIMER_INTERVAL          @"Please enter a time."
 
 #endif

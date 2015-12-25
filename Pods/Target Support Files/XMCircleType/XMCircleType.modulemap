@@ -1,0 +1,6 @@
+framework module XMCircleType {
+  umbrella header "XMCircleType-umbrella.h"
+
+  export *
+  module * { export * }
+}

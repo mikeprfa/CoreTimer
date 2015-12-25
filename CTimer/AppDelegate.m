@@ -34,7 +34,19 @@ static const int _wakeUpInterval = 150;
     
     alarmManager = [[AlarmManager alloc] init];
     
-//    [self enablePushNotification];
+    // Configure tracker from GoogleService-Info.plist.
+    NSError *configureError;
+    [[GGLContext sharedInstance] configureWithError:&configureError];
+    NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
+    [[GAI sharedInstance] trackerWithTrackingId:@"UA-71740806-2"];
+    
+    // Optional: configure GAI options.
+    GAI *gai = [GAI sharedInstance];
+    gai.dispatchInterval = 20;
+    gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
+    
+    // =====
+    //gai.logger.logLevel = kGAILogLevelVerbose;  // remove before release
     
     return YES;
 }
@@ -53,12 +65,6 @@ static const int _wakeUpInterval = 150;
         [application registerUserNotificationSettings:settings];
         [application registerForRemoteNotifications];
     }
-//    else {
-//        // Register for Push Notifications before iOS 8
-//        [application registerForRemoteNotificationTypes:(UIRemoteNotificationTypeBadge |
-//                                                         UIRemoteNotificationTypeAlert |
-//                                                         UIRemoteNotificationTypeSound)];
-//    }
 }
 
 //====================================================================================================
