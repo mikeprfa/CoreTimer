@@ -724,7 +724,7 @@
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -744,7 +744,7 @@
 				CODE_SIGN_ENTITLEMENTS = CTimer/CTimer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
