@@ -601,10 +601,10 @@
                                     <action selector="actionTimer:" destination="dnF-OF-VQv" eventType="touchUpInside" id="Qq1-9m-2Yh"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N3-54-py4">
-                                <rect key="frame" x="74" y="607" width="227" height="30"/>
+                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N3-54-py4">
+                                <rect key="frame" x="69" y="592" width="237" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8s5-1F-YMZ"/>
+                                    <constraint firstAttribute="height" constant="45" id="8s5-1F-YMZ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="5" maxX="199" maxY="1"/>
@@ -695,12 +695,12 @@
                         <constraints>
                             <constraint firstItem="Hnb-I9-Qtr" firstAttribute="leading" secondItem="p4A-rN-naO" secondAttribute="leadingMargin" constant="-20" id="0ta-uW-Kxg"/>
                             <constraint firstItem="Hnb-I9-Qtr" firstAttribute="top" secondItem="O7g-jx-ckq" secondAttribute="bottom" constant="24" id="6dT-uV-9Jd"/>
-                            <constraint firstItem="7N3-54-py4" firstAttribute="width" secondItem="Haz-3X-tFk" secondAttribute="width" id="8Hw-4G-Ymx"/>
+                            <constraint firstItem="7N3-54-py4" firstAttribute="width" secondItem="Haz-3X-tFk" secondAttribute="width" constant="10" id="8Hw-4G-Ymx"/>
                             <constraint firstItem="Haz-3X-tFk" firstAttribute="leading" secondItem="7N3-54-py4" secondAttribute="leading" id="8N0-UH-LYL"/>
                             <constraint firstItem="Haz-3X-tFk" firstAttribute="width" secondItem="7N3-54-py4" secondAttribute="width" id="EPu-YX-geU"/>
                             <constraint firstItem="7N3-54-py4" firstAttribute="leading" secondItem="p4A-rN-naO" secondAttribute="leadingMargin" constant="54" id="ImP-EQ-hgR"/>
                             <constraint firstItem="Haz-3X-tFk" firstAttribute="width" secondItem="O7g-jx-ckq" secondAttribute="width" id="Pzd-Lj-FEP"/>
-                            <constraint firstItem="7N3-54-py4" firstAttribute="top" secondItem="Haz-3X-tFk" secondAttribute="bottom" constant="23" id="RzK-Nj-4iB"/>
+                            <constraint firstItem="7N3-54-py4" firstAttribute="top" secondItem="Haz-3X-tFk" secondAttribute="bottom" constant="8" id="RzK-Nj-4iB"/>
                             <constraint firstItem="O7g-jx-ckq" firstAttribute="leading" secondItem="p4A-rN-naO" secondAttribute="leadingMargin" constant="58" id="To0-4r-8s0"/>
                             <constraint firstItem="Haz-3X-tFk" firstAttribute="height" secondItem="O7g-jx-ckq" secondAttribute="height" id="Ufj-Ik-FBx"/>
                             <constraint firstItem="lxz-mQ-Ewr" firstAttribute="top" secondItem="7N3-54-py4" secondAttribute="bottom" constant="30" id="Xad-c6-uaB"/>
@@ -713,7 +713,7 @@
                             <constraint firstItem="lxz-mQ-Ewr" firstAttribute="top" secondItem="SSs-IO-uUF" secondAttribute="bottom" id="nML-cr-Ynj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Hnb-I9-Qtr" secondAttribute="trailing" constant="-20" id="nR0-dJ-nBa"/>
                             <constraint firstItem="Haz-3X-tFk" firstAttribute="leading" secondItem="O7g-jx-ckq" secondAttribute="leading" id="oPC-iD-W9c"/>
-                            <constraint firstItem="7N3-54-py4" firstAttribute="leading" secondItem="Haz-3X-tFk" secondAttribute="leading" id="oQF-NV-hKU"/>
+                            <constraint firstItem="7N3-54-py4" firstAttribute="leading" secondItem="Haz-3X-tFk" secondAttribute="leading" constant="-5" id="oQF-NV-hKU"/>
                             <constraint firstItem="Haz-3X-tFk" firstAttribute="width" secondItem="O7g-jx-ckq" secondAttribute="width" id="pWS-Cu-a1h"/>
                             <constraint firstItem="SSs-IO-uUF" firstAttribute="leading" secondItem="p4A-rN-naO" secondAttribute="leadingMargin" constant="-16" id="q4N-Ya-pOP"/>
                             <constraint firstItem="Haz-3X-tFk" firstAttribute="trailing" secondItem="O7g-jx-ckq" secondAttribute="trailing" id="tKc-ig-w6w"/>

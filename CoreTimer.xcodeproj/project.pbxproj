@@ -436,12 +436,15 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0700;
-				ORGANIZATIONNAME = Matei;
+				ORGANIZATIONNAME = RockFlowersApps;
 				TargetAttributes = {
 					8E1FCE711AF4C256004F5DD7 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 6DVEBWALPJ;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 0;
+							};
 							com.apple.InterAppAudio = {
 								enabled = 1;
 							};
@@ -732,7 +735,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -752,7 +755,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

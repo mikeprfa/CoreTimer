@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
@@ -12,11 +12,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1V3-xz-xNg">
-                        <rect key="frame" x="47" y="1" width="304" height="57"/>
+                        <rect key="frame" x="62" y="1" width="289" height="57"/>
                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                         <color key="textColor" red="0.45098039215686275" green="0.44705882352941173" blue="0.47058823529411764" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
@@ -42,7 +42,7 @@
                     <constraint firstAttribute="bottomMargin" secondItem="1V3-xz-xNg" secondAttribute="bottom" constant="-10" id="BIe-YT-fps"/>
                     <constraint firstAttribute="bottomMargin" secondItem="VgN-Ul-mvj" secondAttribute="bottom" constant="-9" id="Fqv-Ct-ctq"/>
                     <constraint firstAttribute="trailingMargin" secondItem="VgN-Ul-mvj" secondAttribute="trailing" constant="-8" id="His-Bx-cUl"/>
-                    <constraint firstItem="1V3-xz-xNg" firstAttribute="leading" secondItem="2H8-56-psx" secondAttribute="trailing" constant="6" id="QMO-Tl-sHk"/>
+                    <constraint firstItem="1V3-xz-xNg" firstAttribute="leading" secondItem="2H8-56-psx" secondAttribute="trailing" constant="21" id="QMO-Tl-sHk"/>
                     <constraint firstItem="2H8-56-psx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="14" id="bdW-AO-6fs"/>
                     <constraint firstItem="VgN-Ul-mvj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="hTq-an-2PS"/>
                     <constraint firstAttribute="trailingMargin" secondItem="1V3-xz-xNg" secondAttribute="trailing" constant="16" id="ier-sR-99v"/>
