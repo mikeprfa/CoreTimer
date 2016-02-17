@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-#import <Google/Analytics.h>
+//#import <Google/Analytics.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, AVAudioPlayerDelegate>
 

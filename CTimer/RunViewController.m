@@ -10,7 +10,7 @@
 #import "CircleProgressBar.h"
 #import "KKProgressTimer.h"
 #import "XMCircleTypeView.h"
-#import "Google/Analytics.h"
+//#import "Google/Analytics.h"
 
 @interface RunViewController () <KKProgressTimerDelegate>
 {
@@ -302,6 +302,7 @@
     mainCheckTimer = nil;
     
     // Identify stopped timer or timer ended
+    /*
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     [tracker set:kGAIScreenName value:@"runningTimerScreen"];
     [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UX"
@@ -309,7 +310,8 @@
                                                            label:@"backButton"
                                                            value:nil] build]];
     [tracker set:kGAIScreenName value:nil];
-    
+    */
+     
     [[AppDelegate getDelegate].alarmManager resetTimerList];
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     [super actionBack: sender];

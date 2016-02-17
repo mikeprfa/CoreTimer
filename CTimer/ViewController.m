@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "AddTimerViewController.h"
 #import "EditTimerTableViewCell.h"
-#import "Google/Analytics.h"
+//#import "Google/Analytics.h"
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate>
 {
@@ -75,10 +75,11 @@
     
     [tblView setContentInset:UIEdgeInsetsMake(120,0,0,0)];
     
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
+    /*id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     [tracker set:kGAIScreenName value:@"viewControllerAppeared"];
     [tracker send:[[GAIDictionaryBuilder createScreenView] build]];
-    
+    */
+     
     [tblView reloadData];
 }
 
@@ -103,6 +104,7 @@
             [tblView setEditing:YES animated:YES];
             
             // Report editing timer
+            /*
             id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
             [tracker set:kGAIScreenName value:@"editingTimerScreen"];
             [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UX"
@@ -110,6 +112,7 @@
                                                                    label:@"editButton"
                                                                    value:nil] build]];
             [tracker set:kGAIScreenName value:nil];
+             */
         }
     }
     [self updateButtons];
@@ -247,6 +250,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 //====================================================================================================
 - (IBAction)actionStart:(id)sender {
     // Use GA to find when timer starts
+    /*
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     [tracker set:kGAIScreenName value:@"startingTimer"];
     [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UX"
@@ -254,7 +258,8 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
                                                            label:@"startButton"
                                                            value:nil] build]];
     [tracker set:kGAIScreenName value:nil];
-    
+    */
+     
     NSBundle *bundle = [NSBundle mainBundle];
     NSString *storyboardName = [bundle.infoDictionary objectForKey:@"UIMainStoryboardFile"];
     

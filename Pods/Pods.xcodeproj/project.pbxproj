@@ -68,82 +68,41 @@
 /* Begin PBXFileReference section */
 		0190FD8145BDF7D5A9B970848EA0E6CB /* XMCircleType.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = XMCircleType.xcconfig; sourceTree = "<group>"; };
 		04B5F80499596B5B10C19F5599B1AC3D /* CircleProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CircleProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06192CD7A2A1EC803E37463CCDD2C0AD /* libGTM_core.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_core.a; path = Libraries/libGTM_core.a; sourceTree = "<group>"; };
 		09EC04B2F73B345A429A822FB0990510 /* HPReorderTableView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HPReorderTableView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1328E12532483A90D3DF6A5B0C553890 /* CircleProgressBar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressBar-umbrella.h"; sourceTree = "<group>"; };
 		153E5A4AB294C17B5C8F2F8950E47BF8 /* CircleProgressBar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CircleProgressBar-dummy.m"; sourceTree = "<group>"; };
 		16E168568823A23173545DC806BC4CBE /* XMCircleTypeView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = XMCircleTypeView.m; path = XMCircleType/Views/XMCircleTypeView.m; sourceTree = "<group>"; };
 		1C8DD819296D1D6C1D24E5B989A3E537 /* KKProgressTimer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KKProgressTimer-umbrella.h"; sourceTree = "<group>"; };
-		1D74C5ADF8127E4E53AB1FA1056088BD /* GAIEcommercePromotion.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommercePromotion.h; path = Headers/Public/GAIEcommercePromotion.h; sourceTree = "<group>"; };
 		248CC12B37C8F0BAC80EB5D5B1E5A163 /* KKProgressTimer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KKProgressTimer.xcconfig; sourceTree = "<group>"; };
 		248E6D8E0996F62078D946874136F463 /* KKProgressTimer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KKProgressTimer.m; path = KKProgressTimer/KKProgressTimer.m; sourceTree = "<group>"; };
-		24AB4F1A5EFB79C306AEEE5520EA6CF8 /* libGTM_GTMURLBuilder.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_GTMURLBuilder.a; path = Libraries/libGTM_GTMURLBuilder.a; sourceTree = "<group>"; };
 		266CC654518D21A658C2ED6E8D179829 /* XMCircleType.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = XMCircleType.modulemap; sourceTree = "<group>"; };
-		27BF999EC7473870E084EFAC54FAC1B7 /* GAIEcommerceFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceFields.h; path = Headers/Public/GAIEcommerceFields.h; sourceTree = "<group>"; };
-		2916B1A0D7B7E3A7C832976B855113F7 /* GGLContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGLContext.h; path = Headers/GGLCore/Public/GGLContext.h; sourceTree = "<group>"; };
 		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
 		2D49EACEEDA4F26BBEEF4601A3B8EA34 /* KKProgressTimer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KKProgressTimer.h; path = KKProgressTimer/KKProgressTimer.h; sourceTree = "<group>"; };
-		2DFC6463D2B8B7CFA2DA65F0E091ACC5 /* libGTM_RoundedRectPath.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_RoundedRectPath.a; path = Libraries/libGTM_RoundedRectPath.a; sourceTree = "<group>"; };
-		30572958218F9C7698110439EEAEB6B2 /* AdMob-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AdMob-Module.h"; path = "Headers/ModuleHeaders/AdMob-Module.h"; sourceTree = "<group>"; };
 		32A404E2494C40238E2D63F7C0D6052F /* XMCircleTypeView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = XMCircleTypeView.h; path = XMCircleType/Views/XMCircleTypeView.h; sourceTree = "<group>"; };
-		358409B9508F252FFF2AB9773365FC7B /* CloudMessaging-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CloudMessaging-Module.h"; path = "Headers/ModuleHeaders/CloudMessaging-Module.h"; sourceTree = "<group>"; };
-		36529B7084BEA217CD4E3DFB0A272285 /* AppInvite-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "AppInvite-Module.h"; path = "Headers/ModuleHeaders/AppInvite-Module.h"; sourceTree = "<group>"; };
 		37CDCD986A3D013A8C751BA24252B27E /* KKProgressTimer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = KKProgressTimer.modulemap; sourceTree = "<group>"; };
-		3DD85566A5497160DBBA74C654EF3F06 /* GAI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAI.h; path = Headers/Public/GAI.h; sourceTree = "<group>"; };
-		416AC7E4C2CE47D056290CFB52340AC4 /* GGLConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGLConfiguration.h; path = Headers/GGLCore/Public/GGLConfiguration.h; sourceTree = "<group>"; };
 		4291E58FED4FA8AA560D43250B31061C /* XMCircleType-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMCircleType-prefix.pch"; sourceTree = "<group>"; };
-		44E2A3F33873A58A027BDE9DD0F45075 /* libGSDK_Overload.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGSDK_Overload.a; path = Libraries/libGSDK_Overload.a; sourceTree = "<group>"; };
-		460FEBCF80FA68CF73980EBA3495225B /* libGTM_KVO.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_KVO.a; path = Libraries/libGTM_KVO.a; sourceTree = "<group>"; };
-		48FDBF6479B8857B437E3D124700BF73 /* libGTM_iPhone.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_iPhone.a; path = Libraries/libGTM_iPhone.a; sourceTree = "<group>"; };
-		4A174585C92539896444ECEA0D938156 /* libGTM_Regex.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_Regex.a; path = Libraries/libGTM_Regex.a; sourceTree = "<group>"; };
-		4D15FDA98DAF703588BA1DE7AA9C64F1 /* GAITrackedViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITrackedViewController.h; path = Headers/Public/GAITrackedViewController.h; sourceTree = "<group>"; };
-		51FB89911DC02BBDD71F559ABC050823 /* libGTMSessionFetcher_core.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTMSessionFetcher_core.a; path = Libraries/libGTMSessionFetcher_core.a; sourceTree = "<group>"; };
 		53936689B963731EA204FCA279C0B8CA /* KKProgressTimer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KKProgressTimer-prefix.pch"; sourceTree = "<group>"; };
-		54254E577418B63FB3A75305D828015D /* libGTM_NSData+zlib.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libGTM_NSData+zlib.a"; path = "Libraries/libGTM_NSData+zlib.a"; sourceTree = "<group>"; };
 		5C899AC5B01FAC58DF274BB778810D91 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D6564BEDD20DBD4B3D05675250395F4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60813EF31589D47020D8519D167E1D32 /* HPReorderTableView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HPReorderTableView-dummy.m"; sourceTree = "<group>"; };
-		619319E7400A4FDC10872D29F0FDAC61 /* libProtocolBuffers.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libProtocolBuffers.a; path = Libraries/libProtocolBuffers.a; sourceTree = "<group>"; };
-		62A7D02DA5626E8994476AD0C1BDCFD2 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIDictionaryBuilder.h; path = Headers/Public/GAIDictionaryBuilder.h; sourceTree = "<group>"; };
 		64EDC43E28F5EF41718C422F50766462 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		660CEDB6F9CD8470ED7B3DFB4F8AFCC0 /* GAITracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAITracker.h; path = Headers/Public/GAITracker.h; sourceTree = "<group>"; };
-		6AE0612B1E70BB41C8B5CB63B1ECB003 /* libGTMStackTrace.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTMStackTrace.a; path = Libraries/libGTMStackTrace.a; sourceTree = "<group>"; };
-		72F2FC8A20D60A79F240D54498C61C36 /* libGTM_AddressBook.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_AddressBook.a; path = Libraries/libGTM_AddressBook.a; sourceTree = "<group>"; };
-		740FC0B9A8C48E0A2796ED3935E3D4F3 /* libGGLAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGGLAnalytics.a; path = Libraries/libGGLAnalytics.a; sourceTree = "<group>"; };
-		746D378F3B1ECC18B50027B429264EE0 /* GGLContext+Analytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GGLContext+Analytics.h"; path = "Headers/GGLAnalytics/Public/GGLContext+Analytics.h"; sourceTree = "<group>"; };
-		784AF343A9286CD6444A51F96EFD94CE /* Analytics-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Analytics-Module.h"; path = "Headers/ModuleHeaders/Analytics-Module.h"; sourceTree = "<group>"; };
 		788B58EB144FDA6EA35B83047487560B /* HPReorderTableView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = HPReorderTableView.modulemap; sourceTree = "<group>"; };
 		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		807AFEB6642DB608E35F18A1B52C4E76 /* GAILogger.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAILogger.h; path = Headers/Public/GAILogger.h; sourceTree = "<group>"; };
 		81609E58FB13DA65E3943C8408565C75 /* HPReorderTableView.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HPReorderTableView.xcconfig; sourceTree = "<group>"; };
-		846BE8D2D09E48B91BB384CC15FF6C69 /* GMRConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GMRConfiguration.h; path = Headers/GGLCore/Public/GMRConfiguration.h; sourceTree = "<group>"; };
 		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
 		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		8AF339E894D69CD3783E57E73538B63B /* GGLErrorCode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GGLErrorCode.h; path = Headers/GGLCore/Public/GGLErrorCode.h; sourceTree = "<group>"; };
-		8B18B05C58C57136A42011D3FE8C9272 /* libGTM_DebugUtils.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_DebugUtils.a; path = Libraries/libGTM_DebugUtils.a; sourceTree = "<group>"; };
-		8F7A1BB56F7F6262812550A501E4F887 /* libGTM_NSDictionary+URLArguments.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libGTM_NSDictionary+URLArguments.a"; path = "Libraries/libGTM_NSDictionary+URLArguments.a"; sourceTree = "<group>"; };
-		902BE1A249DFB0158A04A370A0D30757 /* libGTMSessionFetcher_full.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTMSessionFetcher_full.a; path = Libraries/libGTMSessionFetcher_full.a; sourceTree = "<group>"; };
 		91413329813FA6FE5A78842159E69621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		930A1448034F4D2842C486534BE8252F /* XMCircleType.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = XMCircleType.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9404A88CF72BD7DC978A281D26105143 /* HPReorderTableView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = HPReorderTableView.m; path = HPReorderTableView/HPReorderTableView.m; sourceTree = "<group>"; };
-		9741AC0A541DD231F05AA8C2D551676A /* Core-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "Core-Module.h"; path = "Headers/ModuleHeaders/Core-Module.h"; sourceTree = "<group>"; };
 		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		98AF73746916EBF550B785A3541705C0 /* libGTM_NSStringXML.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_NSStringXML.a; path = Libraries/libGTM_NSStringXML.a; sourceTree = "<group>"; };
-		9F9130C94305E1F15CED1D486C486889 /* libGTM_SystemVersion.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_SystemVersion.a; path = Libraries/libGTM_SystemVersion.a; sourceTree = "<group>"; };
 		A44CAB7317B82E8659303D53515A050A /* CircleProgressBar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CircleProgressBar.xcconfig; sourceTree = "<group>"; };
-		A9D8D5F88DD38C08039A9DDF995ACD46 /* SignIn-Module.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SignIn-Module.h"; path = "Headers/ModuleHeaders/SignIn-Module.h"; sourceTree = "<group>"; };
-		ABA8C68077CA352881C6D3DBFFEF761E /* libGGLCore.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGGLCore.a; path = Libraries/libGGLCore.a; sourceTree = "<group>"; };
-		AE15D88464FF2D9E056B23F06B1B7C93 /* GAIFields.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIFields.h; path = Headers/Public/GAIFields.h; sourceTree = "<group>"; };
 		B0CAACDB544041F924DDDC6A365B9ACD /* HPReorderTableView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HPReorderTableView-prefix.pch"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		BB53E85294B9FBAD7FC14756D87C1194 /* CircleProgressBar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CircleProgressBar.m; path = CircleProgressBarDemo/CircleProgressBar/CircleProgressBar.m; sourceTree = "<group>"; };
 		BDEC927CE0175EACB49546EECEB4E41C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0F6D000C16CD636FC691ACBD354D2C5 /* XMCircleType-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "XMCircleType-dummy.m"; sourceTree = "<group>"; };
-		C237D126D914510026F7C0B98C93AE90 /* Core.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Core.h; path = Headers/GGLCore/Public/Core.h; sourceTree = "<group>"; };
 		C7CF1F8D4665C35AFEC88DA7D9A28C33 /* XMCircleType-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "XMCircleType-umbrella.h"; sourceTree = "<group>"; };
 		C9F6A2C5C2059BB80EDC8CAAC9371DEF /* KKProgressTimer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KKProgressTimer-dummy.m"; sourceTree = "<group>"; };
-		CB675838CF8FA6026419737DBDD7C904 /* GAIEcommerceProduct.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProduct.h; path = Headers/Public/GAIEcommerceProduct.h; sourceTree = "<group>"; };
-		CBB0EA91DBD1A892C3BB0F3FDD22AF23 /* Analytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Analytics.h; path = Headers/GGLAnalytics/Public/Analytics.h; sourceTree = "<group>"; };
 		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
 		D01694E3F7252ED7C26E97EEF2E332D3 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -151,19 +110,13 @@
 		D88973B04633967D253CC439E6532A64 /* CircleProgressBar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CircleProgressBar-prefix.pch"; sourceTree = "<group>"; };
 		D9DE615671731BF3AEFB3CB1F984FA8F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		DB702174F02709978DEDE269612F3C26 /* libGTM_NSScannerJSON.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_NSScannerJSON.a; path = Libraries/libGTM_NSScannerJSON.a; sourceTree = "<group>"; };
 		DF112F785DE922C2CFDDC6302189D652 /* KKProgressTimer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = KKProgressTimer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1106FA198F4F081D1D10C4D67EB4875 /* CircleProgressBar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CircleProgressBar.h; path = CircleProgressBarDemo/CircleProgressBar/CircleProgressBar.h; sourceTree = "<group>"; };
-		E4F83539327A46CAA78B25DB40FB8B14 /* libGTM_StringEncoding.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_StringEncoding.a; path = Libraries/libGTM_StringEncoding.a; sourceTree = "<group>"; };
 		E642B1A057ADA2ABEF90BE2417F349C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
 		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E99D20A7E132661DDF282B99D04B4833 /* libGTM_UIFont+LineHeight.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = "libGTM_UIFont+LineHeight.a"; path = "Libraries/libGTM_UIFont+LineHeight.a"; sourceTree = "<group>"; };
 		F042FB868554FB47D0DE41D15EF8D2CE /* CircleProgressBar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = CircleProgressBar.modulemap; sourceTree = "<group>"; };
-		F2740E4FB551735522BE8F34EB135A23 /* libGoogleAnalytics.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGoogleAnalytics.a; path = Libraries/libGoogleAnalytics.a; sourceTree = "<group>"; };
-		F525E4C5BBA7B0CC03310A5585523579 /* libGTM_NSStringHTML.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libGTM_NSStringHTML.a; path = Libraries/libGTM_NSStringHTML.a; sourceTree = "<group>"; };
 		F70D85526DB8C5351F3BA3693254FD42 /* HPReorderTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HPReorderTableView.h; path = HPReorderTableView/HPReorderTableView.h; sourceTree = "<group>"; };
-		FA995C9D9034866EA61F936556FF9506 /* GAIEcommerceProductAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = GAIEcommerceProductAction.h; path = Headers/Public/GAIEcommerceProductAction.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -266,74 +219,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		46097A9AF1E29ABE9159E72F0F240273 /* Analytics */ = {
-			isa = PBXGroup;
-			children = (
-				CBB0EA91DBD1A892C3BB0F3FDD22AF23 /* Analytics.h */,
-				746D378F3B1ECC18B50027B429264EE0 /* GGLContext+Analytics.h */,
-				FF12206ACCD5167361D05A4301E4A0E5 /* Frameworks */,
-			);
-			name = Analytics;
-			sourceTree = "<group>";
-		};
-		5536113E6FE71500795FB0FEDAD445ED /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				F2740E4FB551735522BE8F34EB135A23 /* libGoogleAnalytics.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		57A2AFFD69441DA8649044DA0523DC4D /* GoogleUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				58F2648847E9643DB071C7A0C7ED6AB2 /* Frameworks */,
-			);
-			path = GoogleUtilities;
-			sourceTree = "<group>";
-		};
-		58F2648847E9643DB071C7A0C7ED6AB2 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				72F2FC8A20D60A79F240D54498C61C36 /* libGTM_AddressBook.a */,
-				06192CD7A2A1EC803E37463CCDD2C0AD /* libGTM_core.a */,
-				8B18B05C58C57136A42011D3FE8C9272 /* libGTM_DebugUtils.a */,
-				24AB4F1A5EFB79C306AEEE5520EA6CF8 /* libGTM_GTMURLBuilder.a */,
-				48FDBF6479B8857B437E3D124700BF73 /* libGTM_iPhone.a */,
-				460FEBCF80FA68CF73980EBA3495225B /* libGTM_KVO.a */,
-				54254E577418B63FB3A75305D828015D /* libGTM_NSData+zlib.a */,
-				8F7A1BB56F7F6262812550A501E4F887 /* libGTM_NSDictionary+URLArguments.a */,
-				DB702174F02709978DEDE269612F3C26 /* libGTM_NSScannerJSON.a */,
-				F525E4C5BBA7B0CC03310A5585523579 /* libGTM_NSStringHTML.a */,
-				98AF73746916EBF550B785A3541705C0 /* libGTM_NSStringXML.a */,
-				4A174585C92539896444ECEA0D938156 /* libGTM_Regex.a */,
-				2DFC6463D2B8B7CFA2DA65F0E091ACC5 /* libGTM_RoundedRectPath.a */,
-				E4F83539327A46CAA78B25DB40FB8B14 /* libGTM_StringEncoding.a */,
-				9F9130C94305E1F15CED1D486C486889 /* libGTM_SystemVersion.a */,
-				E99D20A7E132661DDF282B99D04B4833 /* libGTM_UIFont+LineHeight.a */,
-				6AE0612B1E70BB41C8B5CB63B1ECB003 /* libGTMStackTrace.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		70933546DFF4CAA7787690D4D18C0761 /* GoogleAnalytics */ = {
-			isa = PBXGroup;
-			children = (
-				3DD85566A5497160DBBA74C654EF3F06 /* GAI.h */,
-				62A7D02DA5626E8994476AD0C1BDCFD2 /* GAIDictionaryBuilder.h */,
-				27BF999EC7473870E084EFAC54FAC1B7 /* GAIEcommerceFields.h */,
-				CB675838CF8FA6026419737DBDD7C904 /* GAIEcommerceProduct.h */,
-				FA995C9D9034866EA61F936556FF9506 /* GAIEcommerceProductAction.h */,
-				1D74C5ADF8127E4E53AB1FA1056088BD /* GAIEcommercePromotion.h */,
-				AE15D88464FF2D9E056B23F06B1B7C93 /* GAIFields.h */,
-				807AFEB6642DB608E35F18A1B52C4E76 /* GAILogger.h */,
-				4D15FDA98DAF703588BA1DE7AA9C64F1 /* GAITrackedViewController.h */,
-				660CEDB6F9CD8470ED7B3DFB4F8AFCC0 /* GAITracker.h */,
-				5536113E6FE71500795FB0FEDAD445ED /* Frameworks */,
-			);
-			path = GoogleAnalytics;
-			sourceTree = "<group>";
-		};
 		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,15 +235,6 @@
 			);
 			name = Pods;
 			path = "Target Support Files/Pods";
-			sourceTree = "<group>";
-		};
-		772D9936581A59CEB0104FE8D6101314 /* Google */ = {
-			isa = PBXGroup;
-			children = (
-				46097A9AF1E29ABE9159E72F0F240273 /* Analytics */,
-				87441EC945343501ADE0DFEAA29511E7 /* Core */,
-			);
-			path = Google;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -382,25 +258,6 @@
 			path = XMCircleType;
 			sourceTree = "<group>";
 		};
-		87441EC945343501ADE0DFEAA29511E7 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				30572958218F9C7698110439EEAEB6B2 /* AdMob-Module.h */,
-				784AF343A9286CD6444A51F96EFD94CE /* Analytics-Module.h */,
-				36529B7084BEA217CD4E3DFB0A272285 /* AppInvite-Module.h */,
-				358409B9508F252FFF2AB9773365FC7B /* CloudMessaging-Module.h */,
-				C237D126D914510026F7C0B98C93AE90 /* Core.h */,
-				9741AC0A541DD231F05AA8C2D551676A /* Core-Module.h */,
-				416AC7E4C2CE47D056290CFB52340AC4 /* GGLConfiguration.h */,
-				2916B1A0D7B7E3A7C832976B855113F7 /* GGLContext.h */,
-				8AF339E894D69CD3783E57E73538B63B /* GGLErrorCode.h */,
-				846BE8D2D09E48B91BB384CC15FF6C69 /* GMRConfiguration.h */,
-				A9D8D5F88DD38C08039A9DDF995ACD46 /* SignIn-Module.h */,
-				B2B8662CFD20C52550A3BEF992E718FB /* Frameworks */,
-			);
-			name = Core;
-			sourceTree = "<group>";
-		};
 		991113498C5C6BDB8514417D2BFCAD54 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -413,30 +270,6 @@
 			);
 			name = "Support Files";
 			path = "../Target Support Files/KKProgressTimer";
-			sourceTree = "<group>";
-		};
-		9AC9017A56C50B863457C3E40B9FA9EE /* GoogleNetworkingUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				DD7385F9DDBA4DB7EE6B28348A09A0B1 /* Frameworks */,
-			);
-			path = GoogleNetworkingUtilities;
-			sourceTree = "<group>";
-		};
-		A4802155268BA9967E1C5146F5EB90CD /* GoogleInterchangeUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				E8414F9EDC6399BC20EB1B800F24925F /* Frameworks */,
-			);
-			path = GoogleInterchangeUtilities;
-			sourceTree = "<group>";
-		};
-		B2B8662CFD20C52550A3BEF992E718FB /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ABA8C68077CA352881C6D3DBFFEF761E /* libGGLCore.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B619FE091CF8F26FD88D080FF43A4685 /* CircleProgressBar */ = {
@@ -489,12 +322,6 @@
 			isa = PBXGroup;
 			children = (
 				B619FE091CF8F26FD88D080FF43A4685 /* CircleProgressBar */,
-				772D9936581A59CEB0104FE8D6101314 /* Google */,
-				70933546DFF4CAA7787690D4D18C0761 /* GoogleAnalytics */,
-				A4802155268BA9967E1C5146F5EB90CD /* GoogleInterchangeUtilities */,
-				9AC9017A56C50B863457C3E40B9FA9EE /* GoogleNetworkingUtilities */,
-				DD6644B7E77DE95978FE53C4079EC96F /* GoogleSymbolUtilities */,
-				57A2AFFD69441DA8649044DA0523DC4D /* GoogleUtilities */,
 				0E267B6FEDC520586293F2F52EC972F2 /* HPReorderTableView */,
 				0E68E52E8CCDEF955A9202D7901E80EB /* KKProgressTimer */,
 				81498919E9B58CC28857AF72EC98642D /* XMCircleType */,
@@ -510,47 +337,6 @@
 				D9DE615671731BF3AEFB3CB1F984FA8F /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		DB4FE3AE65A1D2C83FE0CFEE5840251E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				44E2A3F33873A58A027BDE9DD0F45075 /* libGSDK_Overload.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		DD6644B7E77DE95978FE53C4079EC96F /* GoogleSymbolUtilities */ = {
-			isa = PBXGroup;
-			children = (
-				DB4FE3AE65A1D2C83FE0CFEE5840251E /* Frameworks */,
-			);
-			path = GoogleSymbolUtilities;
-			sourceTree = "<group>";
-		};
-		DD7385F9DDBA4DB7EE6B28348A09A0B1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				51FB89911DC02BBDD71F559ABC050823 /* libGTMSessionFetcher_core.a */,
-				902BE1A249DFB0158A04A370A0D30757 /* libGTMSessionFetcher_full.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		E8414F9EDC6399BC20EB1B800F24925F /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				619319E7400A4FDC10872D29F0FDAC61 /* libProtocolBuffers.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FF12206ACCD5167361D05A4301E4A0E5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				740FC0B9A8C48E0A2796ED3935E3D4F3 /* libGGLAnalytics.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

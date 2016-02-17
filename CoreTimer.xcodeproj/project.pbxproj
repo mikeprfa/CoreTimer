@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		58DE530DA26D39611B097703 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56D1A6033C50243A7F54501A /* Pods.framework */; };
-		85BBD6141C2C82AC0012DB59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85BBD6131C2C82AC0012DB59 /* GoogleService-Info.plist */; };
-		85BBD6151C2C82AC0012DB59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 85BBD6131C2C82AC0012DB59 /* GoogleService-Info.plist */; };
 		85BBD6171C2CACAD0012DB59 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BBD6161C2CACAD0012DB59 /* CoreData.framework */; };
 		85BBD6191C2CACE60012DB59 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BBD6181C2CACE60012DB59 /* SystemConfiguration.framework */; };
 		8E1FCE781AF4C256004F5DD7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE771AF4C256004F5DD7 /* main.m */; };
@@ -77,7 +75,6 @@
 /* Begin PBXFileReference section */
 		39A0FF0E0A5A06F3621E1EA0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		56D1A6033C50243A7F54501A /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		85BBD6131C2C82AC0012DB59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		85BBD6161C2CACAD0012DB59 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		85BBD6181C2CACE60012DB59 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		85BBD61A1C2CAD100012DB59 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -201,7 +198,6 @@
 		8E1FCE691AF4C256004F5DD7 = {
 			isa = PBXGroup;
 			children = (
-				85BBD6131C2C82AC0012DB59 /* GoogleService-Info.plist */,
 				8E1FCE741AF4C256004F5DD7 /* CTimer */,
 				8E1FCE8E1AF4C256004F5DD7 /* CTimerTests */,
 				8E1FCE731AF4C256004F5DD7 /* Products */,
@@ -508,7 +504,6 @@
 				8E3D27081AF8D8FB00D01BE5 /* small_check.png in Resources */,
 				B6C04C0C1B7B49E000A9A166 /* Gobble.caf in Resources */,
 				B6C04C081B7B49E000A9A166 /* Car Alarm Activating.caf in Resources */,
-				85BBD6141C2C82AC0012DB59 /* GoogleService-Info.plist in Resources */,
 				8E3D26FD1AF8B67200D01BE5 /* check_mark.png in Resources */,
 				B6C04C091B7B49E000A9A166 /* Church Bells.caf in Resources */,
 				8E1FCE831AF4C256004F5DD7 /* Images.xcassets in Resources */,
@@ -523,7 +518,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85BBD6151C2C82AC0012DB59 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,7 +649,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Plushie Games OOD (JBRW23FCN6)";
 				COPY_PHASE_STRIP = NO;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -672,7 +666,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PROVISIONING_PROFILE = "e3ccc6db-0b55-49ef-bd29-614534ebb259";
@@ -700,7 +694,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Plushie Games OOD (JBRW23FCN6)";
 				COPY_PHASE_STRIP = YES;
-				ENABLE_BITCODE = NO;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -710,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PROVISIONING_PROFILE = "e3ccc6db-0b55-49ef-bd29-614534ebb259";
 				SDKROOT = iphoneos;
@@ -729,9 +723,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
@@ -749,9 +745,11 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				ENABLE_BITCODE = YES;
 				GCC_PREFIX_HEADER = "CTimer/CoreTimer-Prefix.pch";
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = CTimer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
