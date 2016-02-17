@@ -1,6 +1,6 @@
 //
 //  AppDelegate.h
-//  CTimer
+//  CoreTimer
 //
 //  Created by jian/Matei on 5/2/15.
 //  Copyright (c) 2015 RockFlowers Apps, LLC. All rights reserved.
@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
-//#import <Google/Analytics.h>
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, AVAudioPlayerDelegate>
 

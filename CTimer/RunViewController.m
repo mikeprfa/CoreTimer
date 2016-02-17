@@ -1,6 +1,6 @@
 //
 //  RunViewController.m
-//  CTimer
+//  CoreTimer
 //
 //  Created by jian/Matei on 5/2/15.
 //  Copyright (c) 2015 RockFlowers Apps, LLC. All rights reserved.
@@ -301,17 +301,6 @@
     [mainCheckTimer invalidate];
     mainCheckTimer = nil;
     
-    // Identify stopped timer or timer ended
-    /*
-    id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
-    [tracker set:kGAIScreenName value:@"runningTimerScreen"];
-    [tracker send:[[GAIDictionaryBuilder createEventWithCategory:@"UX"
-                                                          action:@"touch"
-                                                           label:@"backButton"
-                                                           value:nil] build]];
-    [tracker set:kGAIScreenName value:nil];
-    */
-     
     [[AppDelegate getDelegate].alarmManager resetTimerList];
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     [super actionBack: sender];

@@ -1,6 +1,6 @@
 //
 //  AppDelegate.m
-//  CTimer
+//  CoreTimer
 //
 //  Created by jian/Matei on 5/2/15.
 //  Copyright (c) 2015 RockFlowers Apps, LLC. All rights reserved.
@@ -33,21 +33,6 @@ static const int _wakeUpInterval = 150;
 
     
     alarmManager = [[AlarmManager alloc] init];
-    
-    //==============GoogleAnalytics disabled because bitcode still isn't supported. Need bitcode for Apple Watch
-    // Configure tracker from GoogleService-Info.plist.
-    //NSError *configureError;
-    //[[GGLContext sharedInstance] configureWithError:&configureError];
-    //NSAssert(!configureError, @"Error configuring Google services: %@", configureError);
-    //[[GAI sharedInstance] trackerWithTrackingId:@"UA-71740806-2"];
-    
-    // Optional: configure GAI options.
-    //GAI *gai = [GAI sharedInstance];
-    //gai.dispatchInterval = 20;
-    //gai.trackUncaughtExceptions = YES;  // report uncaught exceptions
-    
-    // =====
-    //gai.logger.logLevel = kGAILogLevelVerbose;  // remove before release
     
     return YES;
 }
@@ -224,6 +209,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification
         NSLog(@"Wake Up\n");
     }
     
+    // Turn off logging functions for deployment
     //    NSLog(@"%d\t", i);
     //    NSTimeInterval timeLeft = [UIApplication sharedApplication].backgroundTimeRemaining;
     //    NSLog(@"remaining: %f seconds (%d mins)", timeLeft, (int)(timeLeft / 60));
@@ -232,7 +218,7 @@ didReceiveLocalNotification:(UILocalNotification *)notification
 //====================================================================================================
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    // Disable to access multimedia.
+    // Disable access to multimedia.
     [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
     [alarmManager saveTimerList];
 }
