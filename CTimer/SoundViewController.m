@@ -1,9 +1,9 @@
 //
 //  SonudViewController.m
-//  CoreTimer
+//  CTimer
 //
 //  Created by jian on 5/5/15.
-//  Copyright (c) 2015 RockFLowers Apps, LLC. All rights reserved.
+//  Copyright (c) 2015 Matei. All rights reserved.
 //
 
 #import "SoundViewController.h"
@@ -96,6 +96,9 @@
 {
     SoundTableViewCell *cell = (SoundTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"SoundTableViewCell"];
     cell.tag = indexPath.row;
+    cell.contentView.backgroundColor = [UIColor clearColor];
+    cell.backgroundColor = [UIColor clearColor];
+    
     if(indexPath.row == selectedIndex)
     {
         [cell updateSound: [arrSounds objectAtIndex: indexPath.row] selected: YES];

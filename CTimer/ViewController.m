@@ -81,7 +81,11 @@
 - (IBAction) actionAddTimer:(id)sender
 {
     if (!tblView.isEditing) {
-        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        UIStoryboard *storyboard = nil;;
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+            storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+        else
+            storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
         id nextView = [storyboard instantiateViewControllerWithIdentifier: @"AddTimerViewController"];
         [self.navigationController pushViewController: nextView animated: YES];
     }
@@ -212,7 +216,11 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 - (void) editTimer:(NSInteger)index
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *storyboard = nil;;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+    else
+        storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     AddTimerViewController *nextView = (AddTimerViewController *)[storyboard
       instantiateViewControllerWithIdentifier: @"AddTimerViewController"];
     
@@ -232,12 +240,11 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 
 //====================================================================================================
 - (IBAction)actionStart:(id)sender {
-     
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSString *storyboardName = [bundle.infoDictionary objectForKey:@"UIMainStoryboardFile"];
-    
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:storyboardName
-                                                         bundle:bundle];
+    UIStoryboard *storyboard = nil;;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+    else
+        storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
 
     UIViewController *vc = [storyboard
         instantiateViewControllerWithIdentifier:@"RunViewController"];

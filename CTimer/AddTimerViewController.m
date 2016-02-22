@@ -1,6 +1,6 @@
 //
 //  AddTimerViewController.m
-//  CoreTimer
+//  CTimer
 //
 //  Created by jian on 5/2/15.
 //  Copyright (c) 2015 Matei. All rights reserved.
@@ -64,8 +64,17 @@
     if (!scrollWheelInitialized) {
         CGFloat inset             = [self scrollViewInset];
         CGFloat offset            = [self cellOffsetForIndex:0];
-        scrollColor.contentInset  = UIEdgeInsetsMake(0, inset, 0, inset);
-        scrollColor.contentOffset = CGPointMake(offset, 0);
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            scrollColor.contentInset  = UIEdgeInsetsMake(inset, 0, inset, 0);
+            scrollColor.contentOffset = CGPointMake(0, offset);
+        }
+        else
+        {
+            scrollColor.contentInset  = UIEdgeInsetsMake(0, inset, 0, inset);
+            scrollColor.contentOffset = CGPointMake(offset, 0);
+        }
+        
         scrollWheelInitialized    = YES;
     }
 }
@@ -157,9 +166,12 @@
     [arrTimer addObject: arrMinutes];
     [arrTimer addObject: arrSecs];
     
-    viewTimerName.layer.masksToBounds = YES;
-    viewTimerName.layer.borderWidth = 1.0f;
-    viewTimerName.layer.borderColor = MAIN_TEXT_COLOR.CGColor;
+    if (UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad)
+    {
+        viewTimerName.layer.masksToBounds = YES;
+        viewTimerName.layer.borderWidth = 1.0f;
+        viewTimerName.layer.borderColor = MAIN_TEXT_COLOR.CGColor;
+    }
     
     [lblTimer setTitleColor:UIColor.whiteColor forState:UIControlStateHighlighted];
     [lblTimer setTitleColor:UIColor.whiteColor forState:UIControlStateNormal];
@@ -179,7 +191,10 @@
         }
         [view layoutIfNeeded];
         CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
-        scrollColor.contentOffset = CGPointMake(offset, 0);
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+            scrollColor.contentOffset = CGPointMake(0, offset);
+        else
+            scrollColor.contentOffset = CGPointMake(offset, 0);
     }
 }
 
@@ -225,13 +240,26 @@
         ColorView *view = arrColorCells[i];
         CGRect frame = CGRectMake(fx, fy, fw, fh);
         view.frame = frame;
-        fx += (fw + fIndentX);
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+            fy += (fh + fIndentX);
+        else
+            fx += (fw + fIndentX);
     }
     
     if (!colorBarInitialized) {
-        [scrollColor setContentSize: CGSizeMake(fx, scrollColor.contentSize.height)];
-        CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
-        scrollColor.contentOffset = CGPointMake(offset, 0);
+        if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        {
+            [scrollColor setContentSize: CGSizeMake(scrollColor.contentSize.width, fy)];
+            CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
+            scrollColor.contentOffset = CGPointMake(0, offset);
+        }
+        else
+        {
+            [scrollColor setContentSize: CGSizeMake(fx, scrollColor.contentSize.height)];
+            CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
+            scrollColor.contentOffset = CGPointMake(offset, 0);
+        }
+        
         colorBarInitialized = YES;
     }
 }
@@ -249,15 +277,28 @@
         }
     }
     
-    CGPoint contentOffset = CGPointMake([self cellOffsetForIndex:index], 0);
-    [scrollColor setContentOffset:contentOffset
-                         animated:YES];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        CGPoint contentOffset = CGPointMake(0, [self cellOffsetForIndex:index]);
+        [scrollColor setContentOffset:contentOffset
+                             animated:YES];
+    }
+    else
+    {
+        CGPoint contentOffset = CGPointMake([self cellOffsetForIndex:index], 0);
+        [scrollColor setContentOffset:contentOffset
+                             animated:YES];
+    }
 }
 
 //====================================================================================================
 - (IBAction)actionTimerMusic:(id)sender
 {
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    UIStoryboard *storyboard = nil;;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
+    else
+        storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     SoundViewController* nextView = (SoundViewController*)[storyboard instantiateViewControllerWithIdentifier: @"SoundViewController"];
     nextView.parentView = self;
     nextView.type = TIMER_REAL;
@@ -411,6 +452,13 @@
         return;
     }
     
+    int sec = realTimeTmp % 60;
+    int minute = (realTimeTmp/60) % 60;
+    int hour = (realTimeTmp / (60 * 60));
+    [lblTimer setAttributedTitle:[Timer getTimerValue: hour minute: minute sec: sec]
+                        forState:UIControlStateNormal];
+    realTime = realTimeTmp;
+    
     timer.name = name;
     timer.color = [arrColors objectAtIndex: selectedColorIndex];
     timer.timer = realTime;
@@ -433,7 +481,10 @@
 }
 
 - (float) scrollViewInset {
-    return (self.view.frame.size.width - self.cellWidth) / 2.0;
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        return (self.view.frame.size.height - self.cellWidth) / 2.0;
+    else
+        return (self.view.frame.size.width - self.cellWidth) / 2.0;
 }
 
 - (float) cellOffsetForIndex:(NSInteger) index {
@@ -465,6 +516,9 @@
     }
     
     NSInteger cellIndex = [self cellIndexAtOffset:scrollView.contentOffset.x];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+        cellIndex = [self cellIndexAtOffset:scrollView.contentOffset.y];
+    
     ColorView *colorView = arrColorCells[cellIndex];
     selectedColorIndex = cellIndex;
     colorView.imgCheck.hidden = NO;
@@ -472,11 +526,22 @@
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset
 {
-    // Determine which table cell the scrolling will stop on.
-    NSInteger cellIndex = [self cellIndexAtOffset:targetContentOffset->x];
-    
-    // Adjust stopping point to exact beginning of cell.
-    targetContentOffset->x = [self cellOffsetForIndex:cellIndex];
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
+        // Determine which table cell the scrolling will stop on.
+        NSInteger cellIndex = [self cellIndexAtOffset:targetContentOffset->y];
+        
+        // Adjust stopping point to exact beginning of cell.
+        targetContentOffset->y = [self cellOffsetForIndex:cellIndex];
+    }
+    else
+    {
+        // Determine which table cell the scrolling will stop on.
+        NSInteger cellIndex = [self cellIndexAtOffset:targetContentOffset->x];
+        
+        // Adjust stopping point to exact beginning of cell.
+        targetContentOffset->x = [self cellOffsetForIndex:cellIndex];
+    }
 }
 
 @end
