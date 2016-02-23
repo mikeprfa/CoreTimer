@@ -249,7 +249,7 @@
     if (!colorBarInitialized) {
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         {
-            [scrollColor setContentSize: CGSizeMake(scrollColor.contentSize.width, fy + (fh + fIndentX) * 2)];
+            [scrollColor setContentSize: CGSizeMake(scrollColor.contentSize.width, fy + (fh + fIndentX) * 4)];
             CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
             scrollColor.contentOffset = CGPointMake(0, offset);
         }
