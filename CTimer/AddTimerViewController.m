@@ -249,7 +249,7 @@
     if (!colorBarInitialized) {
         if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         {
-            [scrollColor setContentSize: CGSizeMake(scrollColor.contentSize.width, fy)];
+            [scrollColor setContentSize: CGSizeMake(scrollColor.contentSize.width, fy + (fh + fIndentX) * 2)];
             CGFloat offset = [self cellOffsetForIndex:selectedColorIndex];
             scrollColor.contentOffset = CGPointMake(0, offset);
         }
@@ -500,8 +500,7 @@
     offset = offset - self.scrollViewInset;
     NSInteger cellIndex = floor(MAX(0, offset) / cellWidth);
     cellIndex = MIN(arrColorCells.count - 1, MAX(0, cellIndex));
-    
-    // Round to the next cell if the scrolling will stop over halfway to the next cell.
+
     if ((offset - [self cellOffsetForIndex:cellIndex]) > cellWidth / 2) {
         ++cellIndex;
     }
@@ -517,7 +516,14 @@
     
     NSInteger cellIndex = [self cellIndexAtOffset:scrollView.contentOffset.x];
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+    {
         cellIndex = [self cellIndexAtOffset:scrollView.contentOffset.y];
+        
+        if (scrollView.scrollsToTop)
+            cellIndex ++;
+        else
+            cellIndex --;
+    }
     
     ColorView *colorView = arrColorCells[cellIndex];
     selectedColorIndex = cellIndex;
@@ -530,6 +536,11 @@
     {
         // Determine which table cell the scrolling will stop on.
         NSInteger cellIndex = [self cellIndexAtOffset:targetContentOffset->y];
+        
+        if (scrollView.scrollsToTop)
+            cellIndex ++;
+        else
+            cellIndex --;
         
         // Adjust stopping point to exact beginning of cell.
         targetContentOffset->y = [self cellOffsetForIndex:cellIndex];
