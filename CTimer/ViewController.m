@@ -37,6 +37,10 @@
 @synthesize btnEdit;
 
 //====================================================================================================
+
+- (void) viewDidLoad{
+    [super viewDidLoad];
+}
 - (void) setup
 {
     [super setup];
@@ -71,10 +75,13 @@
     [super viewWillAppear: animated];
     
     [self setupEmptyView];
-    
-    [tblView setContentInset:UIEdgeInsetsMake(120,0,0,0)];
+
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+        [tblView setContentInset:UIEdgeInsetsMake(120,0,0,0)];
     
     [tblView reloadData];
+    
+    
 }
 
 //====================================================================================================

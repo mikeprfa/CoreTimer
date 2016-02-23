@@ -519,10 +519,13 @@
     {
         cellIndex = [self cellIndexAtOffset:scrollView.contentOffset.y];
         
-        if (scrollView.scrollsToTop)
-            cellIndex ++;
-        else
-            cellIndex --;
+        if (cellIndex != 0)
+        {
+            if (scrollView.scrollsToTop)
+                cellIndex ++;
+            else
+                cellIndex --;
+        }
     }
     
     ColorView *colorView = arrColorCells[cellIndex];
@@ -537,10 +540,13 @@
         // Determine which table cell the scrolling will stop on.
         NSInteger cellIndex = [self cellIndexAtOffset:targetContentOffset->y];
         
-        if (scrollView.scrollsToTop)
-            cellIndex ++;
-        else
-            cellIndex --;
+        if (cellIndex != 0)
+        {
+            if (scrollView.scrollsToTop)
+                cellIndex ++;
+            else
+                cellIndex --;
+        }
         
         // Adjust stopping point to exact beginning of cell.
         targetContentOffset->y = [self cellOffsetForIndex:cellIndex];

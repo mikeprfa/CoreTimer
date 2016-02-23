@@ -97,23 +97,18 @@
                                                 <rect key="frame" x="438" y="0.0" width="330" height="1024"/>
                                                 <subviews>
                                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="eW9-yB-FDM">
-                                                        <rect key="frame" x="0.0" y="412" width="320" height="200"/>
+                                                        <rect key="frame" x="0.0" y="396" width="320" height="232"/>
                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="200" id="kWL-ds-7sM"/>
+                                                            <constraint firstAttribute="width" secondItem="eW9-yB-FDM" secondAttribute="height" multiplier="11:8" id="CGW-qt-V9b"/>
                                                         </constraints>
-                                                        <variation key="heightClass=regular-widthClass=regular">
-                                                            <mask key="constraints">
-                                                                <include reference="kWL-ds-7sM"/>
-                                                            </mask>
-                                                        </variation>
                                                         <connections>
                                                             <outlet property="dataSource" destination="KHS-17-PIk" id="Qxp-Jk-qTZ"/>
                                                             <outlet property="delegate" destination="KHS-17-PIk" id="vm6-0d-fu5"/>
                                                         </connections>
                                                     </tableView>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYV-2A-UJ6" userLabel="Button - Start">
-                                                        <rect key="frame" x="92" y="667" width="146" height="40"/>
+                                                        <rect key="frame" x="92" y="683" width="146" height="40"/>
                                                         <state key="normal" image="start_ipad.png"/>
                                                         <connections>
                                                             <action selector="actionStart:" destination="KHS-17-PIk" eventType="touchUpInside" id="PAq-Aq-Sl6"/>
