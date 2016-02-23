@@ -815,7 +815,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -837,7 +837,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rockflowersapps.CoreTimer;
 				PRODUCT_NAME = CoreTimer;
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
