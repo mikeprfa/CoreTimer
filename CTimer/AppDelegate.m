@@ -208,11 +208,6 @@ didReceiveLocalNotification:(UILocalNotification *)notification
         [self playSound];
         NSLog(@"Wake Up\n");
     }
-    
-    // Turn off logging functions for deployment
-    //    NSLog(@"%d\t", i);
-    //    NSTimeInterval timeLeft = [UIApplication sharedApplication].backgroundTimeRemaining;
-    //    NSLog(@"remaining: %f seconds (%d mins)", timeLeft, (int)(timeLeft / 60));
 }
 
 //====================================================================================================

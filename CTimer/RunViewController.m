@@ -10,7 +10,6 @@
 #import "CircleProgressBar.h"
 #import "KKProgressTimer.h"
 #import "XMCircleTypeView.h"
-//#import "Google/Analytics.h"
 
 @interface RunViewController () <KKProgressTimerDelegate>
 {
@@ -72,6 +71,10 @@
     [super setup];
     
     bPaused = NO;
+    
+    // Turn off sleep only while timers are running. Turn back on when
+    // user ends timers or timers finish.
+    [UIApplication sharedApplication].idleTimerDisabled = YES;
     
     //Init UI.
     btnSkip.layer.masksToBounds = YES;
@@ -159,6 +162,9 @@
         // Hide skip, playbutton, and current task if all tasks are finished
         viewCurrentTask.hidden = YES;
         btnPlay.hidden = YES;
+        
+        // Turn sleep back on if all timers are finished
+        [UIApplication sharedApplication].idleTimerDisabled = NO;
     }
     
     //Next Task.
@@ -182,9 +188,7 @@
     
     if(remainCount == 0)
     {
-        //circleTimerStatus.hidden = YES;
         circleAHeadStatus.hidden = YES;
-        //viewStatus.hidden = YES;
     }
     else
     {
@@ -245,8 +249,6 @@
     
     if (currentTimer != nil) {
         currentTimer.remain_timer--;
-        //NSLog(@"currentTimer.remain_timer = %d", currentTimer.remain_timer); // remove before release
-        
         if (currentTimer.remain_timer <= 0)
         {
             [self startNextTask:YES];
@@ -301,6 +303,10 @@
     [mainCheckTimer invalidate];
     mainCheckTimer = nil;
     
+    // Turn sleep back on when user cancels out of timer
+    [UIApplication sharedApplication].idleTimerDisabled = NO;
+    
+    // Save and reset the timers for future use
     [[AppDelegate getDelegate].alarmManager resetTimerList];
     [[AppDelegate getDelegate].alarmManager saveTimerList];
     [super actionBack: sender];

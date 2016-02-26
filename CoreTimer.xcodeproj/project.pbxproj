@@ -37,7 +37,6 @@
 		8E1FCE861AF4C256004F5DD7 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCE841AF4C256004F5DD7 /* LaunchScreen.xib */; };
 		8E1FCE921AF4C256004F5DD7 /* CTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE911AF4C256004F5DD7 /* CTimerTests.m */; };
 		8E1FCE9E1AF4C326004F5DD7 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCE9D1AF4C326004F5DD7 /* BaseViewController.m */; };
-		8E1FCEA91AF4C782004F5DD7 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E1FCEA81AF4C782004F5DD7 /* SettingsViewController.m */; };
 		8E1FCEAF1AF4C8AE004F5DD7 /* add_timer_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEAC1AF4C8AE004F5DD7 /* add_timer_icon.png */; };
 		8E1FCEB01AF4C8AE004F5DD7 /* back_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEAD1AF4C8AE004F5DD7 /* back_arrow.png */; };
 		8E1FCEB11AF4C8AE004F5DD7 /* settings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8E1FCEAE1AF4C8AE004F5DD7 /* settings_icon.png */; };
@@ -132,8 +131,6 @@
 		8E1FCE911AF4C256004F5DD7 /* CTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTimerTests.m; sourceTree = "<group>"; };
 		8E1FCE9C1AF4C326004F5DD7 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		8E1FCE9D1AF4C326004F5DD7 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		8E1FCEA71AF4C782004F5DD7 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
-		8E1FCEA81AF4C782004F5DD7 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
 		8E1FCEAC1AF4C8AE004F5DD7 /* add_timer_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = add_timer_icon.png; sourceTree = "<group>"; };
 		8E1FCEAD1AF4C8AE004F5DD7 /* back_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_arrow.png; sourceTree = "<group>"; };
 		8E1FCEAE1AF4C8AE004F5DD7 /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_icon.png; sourceTree = "<group>"; };
@@ -261,7 +258,7 @@
 		8E1FCE691AF4C256004F5DD7 = {
 			isa = PBXGroup;
 			children = (
-				8E1FCE741AF4C256004F5DD7 /* CTimer */,
+				8E1FCE741AF4C256004F5DD7 /* CoreTimer */,
 				8E1FCE8E1AF4C256004F5DD7 /* CTimerTests */,
 				8E1FCE731AF4C256004F5DD7 /* Products */,
 				30420FA57D6D3628CCAB296B /* Pods */,
@@ -278,7 +275,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8E1FCE741AF4C256004F5DD7 /* CTimer */ = {
+		8E1FCE741AF4C256004F5DD7 /* CoreTimer */ = {
 			isa = PBXGroup;
 			children = (
 				8E322AD81AFCAEF70078517C /* CTimer.entitlements */,
@@ -293,13 +290,13 @@
 				8E3D344B1B08FF0900C3AAAD /* Run */,
 				8E3B36A51AFA052900ADCF28 /* EditTimer */,
 				8E1FCEB71AF4D8FA004F5DD7 /* AddTimer */,
-				8E1FCEA61AF4C76F004F5DD7 /* Settings */,
 				8E1FCE7F1AF4C256004F5DD7 /* Main.storyboard */,
 				84C4BF0C1C7B2A2E00D4593D /* Main_iPad.Storyboard */,
 				8E1FCE821AF4C256004F5DD7 /* Images.xcassets */,
 				8E1FCE841AF4C256004F5DD7 /* LaunchScreen.xib */,
 				8E1FCE751AF4C256004F5DD7 /* Supporting Files */,
 			);
+			name = CoreTimer;
 			path = CTimer;
 			sourceTree = "<group>";
 		};
@@ -337,15 +334,6 @@
 				8E1FCE9D1AF4C326004F5DD7 /* BaseViewController.m */,
 			);
 			name = Base;
-			sourceTree = "<group>";
-		};
-		8E1FCEA61AF4C76F004F5DD7 /* Settings */ = {
-			isa = PBXGroup;
-			children = (
-				8E1FCEA71AF4C782004F5DD7 /* SettingsViewController.h */,
-				8E1FCEA81AF4C782004F5DD7 /* SettingsViewController.m */,
-			);
-			name = Settings;
 			sourceTree = "<group>";
 		};
 		8E1FCEAA1AF4C8AE004F5DD7 /* Resources */ = {
@@ -667,7 +655,6 @@
 				8E3D27051AF8D83A00D01BE5 /* SoundTableViewCell.m in Sources */,
 				8E1FCE9E1AF4C326004F5DD7 /* BaseViewController.m in Sources */,
 				8E1FCEBA1AF4D910004F5DD7 /* AddTimerViewController.m in Sources */,
-				8E1FCEA91AF4C782004F5DD7 /* SettingsViewController.m in Sources */,
 				8E1FCEB51AF4D09E004F5DD7 /* Timer.m in Sources */,
 				8E1FCE7B1AF4C256004F5DD7 /* AppDelegate.m in Sources */,
 				8E1FCE781AF4C256004F5DD7 /* main.m in Sources */,

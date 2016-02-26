@@ -178,9 +178,7 @@
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         [self trashTimer:indexPath.row];
     }
-    
     // This method intentionally left blank.
-    // More info: http://pablin.org/2014/09/25/uitableviewrowaction-introduction/
 }
 
 -(NSArray *)tableView:(UITableView *)tableView
@@ -248,6 +246,7 @@ moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath
 //====================================================================================================
 - (IBAction)actionStart:(id)sender {
     UIStoryboard *storyboard = nil;;
+    
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         storyboard = [UIStoryboard storyboardWithName:@"Main_iPad" bundle:nil];
     else

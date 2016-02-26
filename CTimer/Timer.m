@@ -60,7 +60,6 @@
     {
         NSData *data = [strItem dataUsingEncoding:NSUTF8StringEncoding];
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        NSLog(@"json = %@", json);
         
         timer_id = [json valueForKey: @"timer_id"];
         name = [json valueForKey: @"name"];
@@ -72,8 +71,7 @@
         }
         status = [[json valueForKey: @"status"] boolValue];
         createdAt = [self convertStringToDate: [json valueForKey: @"createdAt"]];
-        
-        // remain_timer = [[json valueForKey: @"remain_timer"] intValue];
+
         // This fixes an issue where app is first started andf the timer is immediately at the "finished" position.
         remain_timer = timer;
     }
@@ -264,42 +262,19 @@
 //====================================================================================================
 - (BOOL) isEndedTimer
 {
-    /*
-    if(isRunning)
-    {
-        int time_duration = real_timer;
-        
-        int total_duration = time_duration;
-        NSDate* now = [NSDate date];
-        int interval = [now timeIntervalSinceDate: realCreatedAt];
-        if(interval >= total_duration)
-        {
-            status = YES;
-            isCurrent = NO;
-            return YES;
-        }
-    }
-    */
     return NO;
 }
 
 //====================================================================================================
 - (void) pauseTimer
 {
-    /*
-    NSDate* now = [NSDate date];
-    int interval = [now timeIntervalSinceDate: realCreatedAt];
-    real_timer -= interval;
-    realCreatedAt = now;
-     */
+
 }
 
 //====================================================================================================
 - (void) resumeTimer
 {
-    /*
-    realCreatedAt = [NSDate date];
-     */
+    
 }
 
 #pragma mark Notification.
@@ -307,70 +282,25 @@
 //====================================================================================================
 - (void) setupLocalNotification
 {
-    /*
-    int total = 0;
-    total += real_timer;
-    NSDate* realFireDate = [realCreatedAt dateByAddingTimeInterval: total];
-    [self scheduleNotification: realFireDate name: name soundURL: timer_music timer_id: timer_id title: @"Timer"];
-     */
+    
 }
 
 //====================================================================================================
 - (void) rescheduleLocationNotification
 {
-    /*
-    NSDate* now = [NSDate date];
-    int interval = [now timeIntervalSinceDate: realCreatedAt];
-    real_timer -= interval;
-    realCreatedAt = now;
-    [self setupLocalNotification];
-     */
+    
 }
 
 //====================================================================================================
 - (void) setupNextLocalNotification: (float) total_time
 {
-    /*
-    int total = total_time;
-    total += real_timer;
-    NSDate* realFireDate = [realCreatedAt dateByAddingTimeInterval: total];
-    [self scheduleNotification: realFireDate name: name soundURL: timer_music timer_id: timer_id title: @"Timer"];
-     */
+    
 }
 
 //====================================================================================================
 - (void) scheduleNotification: (NSDate*) fireDate name: (NSString*) alertBody soundURL: (NSString*) soundName timer_id: (NSString*) timerID title: (NSString*) title
 {
-    /*
-    NSLog(@"realCreatedAt = %@", realCreatedAt);
-    NSLog(@"fire date = %@", fireDate);
-    
-    UILocalNotification *localNotif = [[UILocalNotification alloc] init];
-    if (localNotif == nil)
-        return;
-    
-    localNotif.fireDate = fireDate;
-    localNotif.timeZone = [NSTimeZone defaultTimeZone];
-    localNotif.alertBody = alertBody;
-    localNotif.alertAction = @"View Detail";
-    localNotif.soundName = UILocalNotificationDefaultSoundName;
-
-    if(soundName != nil)
-    {
-        if([soundName isEqualToString: @"Default"])
-        {
-            localNotif.soundName = UILocalNotificationDefaultSoundName;
-        }
-        else
-        {
-            localNotif.soundName = [NSString stringWithFormat: @"%@.caf", soundName];
-        }
-    }
-    
-    NSDictionary *infoDict = [NSDictionary dictionaryWithObject: timerID forKey: @"timer_id"];
-    localNotif.userInfo = infoDict;
-    [[UIApplication sharedApplication] scheduleLocalNotification:localNotif];
-     */
+   
 }
 
 - (void)playAtTime:(NSTimeInterval)time withDuration:(NSTimeInterval)duration {
