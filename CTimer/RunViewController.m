@@ -79,6 +79,7 @@
     //Init UI.
     btnSkip.layer.masksToBounds = YES;
     btnSkip.layer.cornerRadius = btnSkip.frame.size.height / 2.0f;
+    btnSkip.backgroundColor = currentTimer.color;
     
     progressFinished.progressBackgroundColor = COLOR_SEPARATOR;
     progressFinished.progressColor = COLOR_DISABLE_TEXT_COLOR;
@@ -158,6 +159,8 @@
         lblCurrentTaskName.text = currentTimer.name;
         lblCurrentTaskNumber.text = [NSString stringWithFormat: @"%d", [alarmManager getOrderIndex: currentTimer]];
         mainProgress.progressBarProgressColor = currentTimer.color;
+        btnSkip.backgroundColor = currentTimer.color;
+        
     } else {
         // Hide skip, playbutton, and current task if all tasks are finished
         viewCurrentTask.hidden = YES;
